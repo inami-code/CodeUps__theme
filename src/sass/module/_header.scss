@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.header {
+  z-index: 1000;
+  position: fixed;
+  background-color: $black;
+  height: rem(80);
+  width: 100%;
+}
+
+.js-header.is-active{
+  position: static;
+  background-color: $green;
+}
+
+.header__inner {
+  height: inherit;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  justify-content: space-between;
+}
+
+.header__logo,
+.header__logo-link {
+  height: inherit;
+}
+
+.header__logo-link a {
+  display: block;
+  height: inherit;
+}
+
+.header__logo-link img {
+  display: block;
+  width: rem(102);
+  height: inherit;
+  object-fit: contain;
+}
