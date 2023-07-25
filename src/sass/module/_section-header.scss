@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.section-header{
+text-align: center;
+}
+
+.section-header__en-title {
+font-family: $english-font-family;
+font-size: rem(32);
+color: $black;
+line-height: calc(40 / 32);
+font-weight: $normal;
+
+@include mq('md') {
+  font-size: rem(40);
+  line-height: 1;
+}
+}
+
+.section-header__en-title::first-letter{
+  color: $green;
+}
+
+.section-header__jp-title {
+color: $green;
+font-size: rem(12);
+line-height: calc(18 / 12);
+margin-top: rem(4);
+}
+
