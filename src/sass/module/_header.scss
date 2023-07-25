@@ -1,15 +1,22 @@
 @use "global" as *;
 
 .header {
-  z-index: 1000;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background-color: $black;
   height: rem(80);
   width: 100%;
+  transition: 0.3s ease;
+  padding: 0 rem(15);
+
+  @include mq("md") {
+    padding: 0 rem(40);
+  }
 }
 
-.js-header.is-active{
-  position: static;
+.header.is-active {
   background-color: $green;
 }
 
@@ -24,6 +31,9 @@
   justify-content: space-between;
 }
 
+.header__logo {
+  z-index: 1000;
+}
 .header__logo,
 .header__logo-link {
   height: inherit;
@@ -39,4 +49,7 @@
   width: rem(102);
   height: inherit;
   object-fit: contain;
+}
+.header__sp-nav {
+  margin-top: rem(92);
 }

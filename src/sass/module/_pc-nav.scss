@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.pc-nav {
+  display: none;
+  @include mq('md') {
+    display: block;
+    height: inherit;
+  }
+}
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.pc-nav__item {
+  height: inherit;
+}
+
+.pc-nav__title {
+  display: grid;
+  place-content: center;
+  height: inherit;
+  text-align: center;
+  color: $white;
+  line-height: 1;
+  padding: 0 rem(20);
+}
+
+
+.pc-nav__title--right{
+  padding-right: 0;
+}
+
+.pc-nav__en-title {
+  font-family: $english-font-family;
+  font-size: rem(18);
+}
+
+.pc-nav__jp-title {
+  font-size: rem(10);
+  margin-top: rem(4);
+}
+
+
+/* 下線アニメーション
+--------------------------------------------------*/
+.pc-nav__title{
+  position: relative;
+}
+
+.pc-nav__title::after{
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 1px;
+  background-color:$white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+.pc-nav__title:hover::after{
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+
+.pc-nav__title--right{
+  position: relative;
+}
+
+.pc-nav__title--right::after{
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+  /*線の形状*/
+  width: 80%;
+  height: 1px;
+  background-color:$white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+.pc-nav__title--right:hover::after{
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
