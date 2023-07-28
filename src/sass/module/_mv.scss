@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+.mv {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+
+.mv__header {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+}
+
+.mv__title {
+  font-size: rem(40);
+  letter-spacing: 0.54em;
+  line-height: 1;
+  font-weight: $regular;
+  font-family: $second-english-font-family;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  @include mq('md') {
+    font-size: rem(80);
+  }
+}
+
+.mv__subtitle {
+font-size: rem(20);
+line-height: 1;
+font-family: $english-font-family;
+text-align: center;
+color: $white;
+margin-top: rem(8);
+}
+
+
+.mv-swiper{
+  height: 100vh;
+  width: 100%;
+}
+
+.mv__image img{
+  height: 100vh;
+  width: 100%;
+}

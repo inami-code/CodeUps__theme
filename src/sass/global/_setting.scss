@@ -14,6 +14,7 @@ $padding-sp: 15px;
 ////////////////////
 
 $english-font-family: 'Gotu', sans-serif;
+$second-english-font-family: 'Lato', sans-serif;
 $japanese-font-family: 'Noto Sans JP', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
@@ -22,8 +23,8 @@ body {
 }
 
 // フォントウェイト
-$regular: 300;
-$normal: 400;
+$regular: 400;
+$medium: 500;
 $bold: 700;
 
 ////////////////////

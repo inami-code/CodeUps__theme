@@ -1,0 +1,102 @@
+@use 'global' as *;
+
+.top-about {
+
+}
+
+.about__inner {
+
+}
+
+
+.about__section-title {
+
+}
+
+
+.about__container {
+position: relative;
+height: rem(661);
+}
+
+.about__background {
+
+}
+
+.about__image1 {
+position: absolute;
+aspect-ratio: 400 / 606;
+max-width: rem(400);
+width: 100%;
+z-index: 100;
+}
+
+.about__image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__image2 {
+position: absolute;
+aspect-ratio: 880 / 581;
+max-width: rem(880);
+width: 100%;
+bottom: 0;
+}
+
+.about__image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__image3 {
+  position: absolute;
+  bottom: rem(-50);
+aspect-ratio: 181 / 194;
+max-width: rem(181);
+width: 100%;
+z-index: 100;
+}
+
+.about__image3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__lead {
+  @include mq('md') {
+    position: absolute;
+    top: 50%;
+    left: rem(200);
+    transform: translateY(-50%);
+    gap: rem(40);
+    z-index: 100;
+    max-width: rem(840);
+    width: 100%;
+    display: flex;
+  }
+}
+
+.about__title {
+font-size: rem(80);
+color: $white;
+font-family: $english-font-family;
+line-height: calc(100 / 80);
+width: 50%;
+font-weight: $regular;
+}
+
+.about__content {
+  width: 50%;
+}
+
+.about__text {
+  color: $white;
+}
+
+.about__button {
+
+}
