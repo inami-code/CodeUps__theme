@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .blog__bg-image {
-  @include mq('md') {
+  @include mq("md") {
     background-image: url(../images/common/blog-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   }
 }
 
-.blog__bg-image::before{
+.blog__bg-image::before {
   content: "";
   position: absolute;
   width: rem(301);
@@ -22,22 +22,20 @@
   background-repeat: no-repeat;
   top: rem(24);
   left: calc(50% - rem(570));
-  z-index: 100
-};
-
-
+  z-index: 100;
+}
 
 .blog__content {
   margin-top: rem(40);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(80);
-}
+  }
 }
 
-.blog__button{
+.blog__button {
   text-align: center;
   margin-top: rem(40);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(80);
   }
 }

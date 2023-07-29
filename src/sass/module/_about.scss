@@ -20,7 +20,7 @@
 }
 
 .about__container::after {
-  @include mq('md') {
+  @include mq("md") {
     position: absolute;
     content: "";
     width: rem(194);
