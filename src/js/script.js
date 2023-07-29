@@ -26,6 +26,7 @@ jQuery(function ($) {
   // campaign Swiper
   const swiper2 = new Swiper(".js-campaign-swiper", {
     loop: true,
+    loopAdditionalSlides: 4,
     spaceBetween: 24,
     width: 289,
     breakpoints: {

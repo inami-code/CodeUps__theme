@@ -25,11 +25,3 @@
   }
 
 }
-
-
-.campaign__slide{
-  @include mq('md') {
-    max-width: rem(280);
-  }
-  max-width: rem(333);
-}

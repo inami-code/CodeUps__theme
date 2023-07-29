@@ -2,22 +2,22 @@
 
 .swiper-button-prev {
   display: none;
-  @include mq('md') {
+  @include mq("md") {
     display: block;
     top: rem(-86);
     left: 50%;
     transform: translateX(rem(160));
     width: rem(80);
     height: rem(80);
-  background-image: url(../images/common/prev-button.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url(../images/common/prev-button.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 /* 次への矢印 */
 .swiper-button-next {
   display: none;
-  @include mq('md') {
+  @include mq("md") {
     display: block;
     top: rem(-86);
     right: 50%;
@@ -25,7 +25,7 @@
     width: rem(80);
     height: rem(80);
     background-image: url(../images/common/next-button.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
