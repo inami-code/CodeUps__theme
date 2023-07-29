@@ -26,8 +26,7 @@
     width: rem(194);
     height: rem(181);
     bottom: 0;
-    right: calc(50% - rem(650));
-
+    right: calc(50% - min(50vw,650px));
     background-image: url(../images/common/about_3.png);
     background-size: cover;
     background-repeat: no-repeat;

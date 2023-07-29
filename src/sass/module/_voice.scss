@@ -16,7 +16,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     top: rem(-190);
-    left: calc(50% - rem(619));
+    left: calc(50% - min(50vw,619px));
   }
 }
 
@@ -30,7 +30,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     bottom: 0;
-    right: calc(50% - rem(550));
+    right: calc(50% - min(50vw,565px));
   }
 }
 

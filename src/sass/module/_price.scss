@@ -18,7 +18,7 @@
   background-image: url(../images/common/price_fish.png);
   background-size: contain;
   background-repeat: no-repeat;
-  left: calc(50% - rem(619));
+  left: calc(50% - min(50vw,619px));
   bottom: rem(60);
 }
 

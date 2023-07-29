@@ -21,7 +21,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   top: rem(24);
-  left: calc(50% - rem(570));
+  left: calc(50% - min(50vw,570px));
   z-index: 100;
 }
 
