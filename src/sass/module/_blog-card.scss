@@ -26,6 +26,10 @@
   object-fit: cover;
 }
 
+.blog-card__body{
+  margin-top: rem(16);
+}
+
 .blog-card__date {
   font-family: $english-font-family;
   font-size: rem(12);
@@ -39,7 +43,8 @@
   line-height: calc(24 / 16);
   font-weight: $medium;
   border-bottom: 1px solid $green;
-  padding: rem(4) 0;
+  padding-bottom: rem(4);
+
 }
 
 .blog-card__text {
@@ -47,5 +52,4 @@
   padding-bottom: rem(24);
   line-height: calc(24 / 16);
   font-size: rem(16);
-  letter-spacing: 0.15em;
 }

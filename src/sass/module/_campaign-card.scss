@@ -31,11 +31,11 @@
   font-size: rem(12);
   color: $green;
   line-height: 1;
-  padding: rem(4) rem(12);
+  padding: rem(8) rem(11);
   border: 1px solid $green;
 
   @include mq("md") {
-    padding: rem(6) rem(16);
+    padding: rem(11) rem(15);
   }
 }
 
@@ -63,7 +63,7 @@
   line-height: 1;
   color: $black;
   text-align: center;
-  margin-top: rem(8);
+  margin-top: rem(12);
   @include mq("md") {
     font-size: rem(16);
     margin-top: rem(16);
@@ -74,11 +74,15 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: rem(16);
-  margin-top: rem(8);
+  gap: rem(18);
+  margin-top: rem(12);
+  @include mq('md') {
+    gap: rem(30);
+  }
 }
 
 .campaign-card__before {
+  font-family: $second-english-font-family;
   font-weight: $bold;
   font-size: rem(20);
   color: $black;
@@ -87,13 +91,15 @@
   text-decoration-style: solid;
   text-decoration-color: #c94800;
   @include mq("md") {
-    font-size:clamp(rem(16), 1.5vw,rem(26));
+    font-size:clamp(rem(16), 10vw,rem(24));
+
   }
 }
 
 .campaign-card__after {
+  font-family: $second-english-font-family;
   font-weight: $bold;
-  font-size: rem(20);
+  font-size: rem(32);
   color: $green;
   line-height: 1;
 

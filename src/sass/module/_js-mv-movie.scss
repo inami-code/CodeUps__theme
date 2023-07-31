@@ -1,0 +1,56 @@
+@use 'global' as *;
+
+.mv-movie{
+  display: none;
+  @include mq('md') {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  } 
+  }
+
+.mv-movie__title {
+  @include mq("md") {
+    font-size: rem(80);
+    letter-spacing: 0.54em;
+    line-height: 1;
+    font-weight: $regular;
+    font-family: $second-english-font-family;
+    text-transform: uppercase;
+    text-align: center;
+    color: $green;
+    transition: 0.5s;
+    transition-delay: 1s;
+  }
+}
+
+.mv-movie__title.is-none {
+  @include mq('md') {
+    opacity: 0;
+  }
+}
+
+
+.mv-movie__subtitle{
+  @include mq("md") {
+    font-size: rem(20);
+    line-height: 1;
+    font-family: $english-font-family;
+    text-align: center;
+    margin-top: rem(8);
+    color: $green;
+    transition: 0.5s;
+    transition-delay: 1s;
+  }
+}
+
+.mv-movie__subtitle.is-none{
+  @include mq('md') {
+    opacity: 0;
+  }
+}

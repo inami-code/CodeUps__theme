@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use "global" as *;
 
 .mv {
   height: 100vh;
@@ -6,48 +6,56 @@
   position: relative;
 }
 
-
 .mv__header {
   content: "";
   position: absolute;
   width: 100%;
-  top: 53%;
+  top: 55.2%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 100;
 }
 
 .mv__title {
   font-size: rem(40);
-  letter-spacing: 0.54em;
-  line-height: 1;
+  letter-spacing: 0.52em;
+  line-height: 1.1;
   font-weight: $regular;
   font-family: $second-english-font-family;
   text-transform: uppercase;
   text-align: center;
   color: $white;
+  padding-left: rem(20);
 
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(80);
+    padding-left: rem(38);
+    letter-spacing: 0.53em;
   }
 }
 
 .mv__subtitle {
-font-size: rem(20);
-line-height: 1;
-font-family: $english-font-family;
-text-align: center;
-color: $white;
-margin-top: rem(8);
+  font-size: rem(20);
+  line-height: 1;
+  font-family: $english-font-family;
+  text-align: center;
+  color: $white;
+  margin-top: rem(12);
 }
 
-
-.mv-swiper{
+.mv__swiper {
   height: 100vh;
   width: 100%;
+  transition: 0.5s;
+  transition-delay: 2s;
+  opacity: 0;
 }
 
-.mv__image img{
+.mv__swiper.js-show {
+  opacity: 1;
+}
+
+.mv__image img {
   height: 100vh;
   width: 100%;
 }

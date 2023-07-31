@@ -25,12 +25,12 @@
 
 .sp-nav__left-text {
   margin-left: rem(22);
-  width: 50%;
+  width: 55%;
 }
 
 .sp-nav__right-text {
-  margin-left: rem(22);
-  width: 50%;
+  margin-left: rem(14);
+  width: 45%;
 }
 
 .sp-nav__container {
@@ -46,11 +46,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   top: rem(12);
-  left: rem(-18);
+  left: rem(-21);
 }
 
 .sp-nav__container:not(:first-child) {
-  margin-top: rem(18);
+  margin-top: rem(16);
 }
 
 .sp-nav__item {

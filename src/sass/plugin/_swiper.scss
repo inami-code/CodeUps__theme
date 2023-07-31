@@ -4,8 +4,8 @@
   display: none;
   @include mq("md") {
     display: block;
-    top: rem(-86);
-    left: 50%;
+    top: rem(-83);
+    left: 54.3%;
     transform: translateX(rem(160));
     width: rem(80);
     height: rem(80);
@@ -19,8 +19,8 @@
   display: none;
   @include mq("md") {
     display: block;
-    top: rem(-86);
-    right: 50%;
+    top: rem(-83);
+    right: 45.7%;
     transform: translateX(rem(400));
     width: rem(80);
     height: rem(80);

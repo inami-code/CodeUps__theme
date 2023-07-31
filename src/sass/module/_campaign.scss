@@ -3,13 +3,13 @@
 .campaign__swiper {
   position: relative;
   padding-left: rem(15);
-  margin-top: rem(24);
+  margin-top: rem(27);
   width: 100%;
   @include mq("md") {
     margin-left: auto;
     max-width: rem(1270);
-    margin-top: rem(40);
-    padding-left: rem(25);
+    margin-top: rem(44);
+    padding-left: rem(10);
   }
 }
 
@@ -20,6 +20,7 @@
 .campaign__button{
   text-align: center;
   margin-top: rem(30);
+  margin-left: rem(-4);
   @include mq('md') {
     margin-top: rem(70);
   }

@@ -3,10 +3,17 @@
 .footer-pc-nav__items {
   display: flex;
 justify-content: center;
+width: 100%;
+gap: rem(40);
 }
 
 .footer-pc-nav__text{
-  width: calc(100% / 4);
+  max-width: calc(25% - rem(40) * 3 / 4);
+  width: 100%;
+}
+
+.footer-pc-nav__text:nth-child(2){
+  margin-left: rem(16);
 }
 
 .footer-pc-nav__container{
