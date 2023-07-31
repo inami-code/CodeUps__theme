@@ -10,10 +10,13 @@
   content: "";
   position: absolute;
   width: 100%;
-  top: 55.2%;
+  top: 49.8%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
+  @include mq("md") {
+    top: 55.2%;
+  }
 }
 
 .mv__title {
@@ -40,7 +43,10 @@
   font-family: $english-font-family;
   text-align: center;
   color: $white;
-  margin-top: rem(12);
+margin-top: rem(8);
+  @include mq("md") {
+    margin-top: rem(12);
+  }
 }
 
 .mv__swiper {

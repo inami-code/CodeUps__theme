@@ -18,6 +18,7 @@
 
 .sp-nav__items {
   display: flex;
+  gap: rem(5);
   justify-content: center;
   max-width: rem(350);
   margin: 0 auto;
@@ -25,12 +26,21 @@
 
 .sp-nav__left-text {
   margin-left: rem(22);
-  width: 55%;
+  width: 50%;
+}
+
+.sp-nav__left-text--footer{
+  width: 54.5%;
 }
 
 .sp-nav__right-text {
   margin-left: rem(14);
-  width: 45%;
+  width: 50%;
+}
+
+.sp-nav__right-text--footer{
+
+  width: 45.5%;
 }
 
 .sp-nav__container {

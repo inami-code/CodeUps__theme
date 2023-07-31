@@ -1,8 +1,11 @@
 @use 'global' as *;
 
 .info {
-padding: rem(102) 0;
+padding: rem(82) 0;
 background: $light-green;
+@include mq('md') {
+  padding: rem(102) 0;
+}
 }
 
 

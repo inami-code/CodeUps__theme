@@ -38,12 +38,16 @@
 
 .hamburger.is-active span:nth-child(1) {
   top: 50%;
-  transform: rotate(35deg);
+  left: rem(-4);
+  width: rem(40);
+  transform: rotate(37deg);
 }
 .hamburger.is-active span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.is-active span:nth-child(3) {
   bottom: 50%;
-  transform: rotate(-35deg);
+  left: rem(-4);
+  width: rem(40);
+  transform: rotate(-37deg);
 }
