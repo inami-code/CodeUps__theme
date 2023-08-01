@@ -29,3 +29,12 @@
     background-repeat: no-repeat;
   }
 }
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  content: none;
+}
+
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  content: none;
+}
