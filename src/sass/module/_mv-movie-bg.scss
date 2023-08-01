@@ -1,15 +1,24 @@
 @use "global" as *;
 
+.mv-movie-bg {
+  @include mq("md") {
+    width: 100vw;
+  }
+}
+
 .mv-movie-bg__container {
   display: none;
   @include mq("md") {
     display: flex;
     height: 100vh;
+    width: 100vw;
   }
 }
 
 .mv-movie-bg__left-image {
   @include mq("md") {
+    width: 50%;
+    aspect-ratio: 720 / 768;
     animation-name: fadeup-left;
     animation-duration: 2s;
     animation-delay: 1s;
@@ -37,6 +46,8 @@
 
 .mv-movie-bg__right-image {
   @include mq("md") {
+    width: 50%;
+    aspect-ratio: 720 / 768;
     animation-name: fadeup-right;
     animation-duration: 2s;
     animation-delay: 1.5s;
