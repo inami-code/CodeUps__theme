@@ -39,7 +39,7 @@
 
 .mv-movie-bg__left-image img {
   @include mq("md") {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 }
@@ -68,7 +68,7 @@
 
 .mv-movie-bg__right-image img {
   @include mq("md") {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 }
