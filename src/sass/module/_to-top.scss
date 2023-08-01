@@ -8,25 +8,23 @@
   border: 1px solid $green;
   border-radius: 50%;
   background-color: $white;
-  z-index: 1000;
+  z-index: 10;
   width: rem(48);
   height: rem(48);
-  @include mq('md') {
+  @include mq("md") {
     right: rem(20);
     width: rem(80);
     height: rem(80);
-    
   }
 }
 
-.to-top a{
+.to-top a {
   display: inline-block;
   width: 100%;
   padding: rem(8) rem(15);
-  @include mq('md') {
+  @include mq("md") {
     padding: rem(20) rem(32);
   }
-
 }
 
 .to-top span {
@@ -37,16 +35,16 @@
   vertical-align: middle;
   position: relative;
   border-radius: rem(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 100;
   width: rem(1);
   height: rem(28);
-  @include mq('md') {
+  @include mq("md") {
     height: rem(40);
   }
 }
 
-.to-top span::after{
+.to-top span::after {
   position: absolute;
   content: "";
   left: rem(-3);
@@ -56,6 +54,6 @@
   background-color: $green;
   transform: rotate(220deg);
   border-radius: rem(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 100;
 }

@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .button {
   display: inline-block;
   position: relative;
@@ -6,44 +7,37 @@
   width: rem(202);
   font-size: rem(14);
   font-family: $english-font-family;
-  color: $white;
   z-index: 10;
+  padding: rem(16) 0;
+  color: $white;
 }
 
-.button::after{
-  content:"";
+.button::after {
+  content: "";
   border: 1px solid $green;
   position: absolute;
   background: $white;
   color: $green;
   top: 0;
   left: 0;
-width: 100%;
-height: 100%;
-transform: scale(0, 1);
-transform-origin: left top;
-transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-z-index: -10;
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -10;
 }
 
-.button::before{
+.button::before {
   content: "";
   position: absolute;
-height: rem(54);
+  height: rem(54);
   width: rem(202);
   background-color: transparent;
   border: 1px solid $green;
   right: rem(-4);
   bottom: rem(-4);
   z-index: -100;
-}
-
-
-.button a{
-  display: inline-block;
-  padding: rem(16) 0;
-  width: 100%;
-  z-index: 100;
 }
 
 .button span {
@@ -56,11 +50,11 @@ height: rem(54);
   vertical-align: middle;
   position: relative;
   border-radius: rem(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 100;
 }
 
-.button span::after{
+.button span::after {
   position: absolute;
   content: "";
   right: rem(-1);
@@ -70,25 +64,25 @@ height: rem(54);
   background-color: $white;
   transform: rotate(40deg);
   border-radius: rem(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 100;
 }
 
-.button a{
-  transition: .3s ease;
+.button {
+  transition: 0.3s ease;
 }
+@media (hover: hover) {
+  .button:hover {
+    color: $green;
+  }
+  .button:hover span {
+    background-color: $green;
+  }
+  .button:hover span::after {
+    background-color: $green;
+  }
 
-.button a:hover{
-  color: $green;
-
-}
-.button a:hover span{
-  background-color: $green;
-}
-.button a:hover span::after{
-  background-color: $green;
-}
-
-.button:hover::after{
-  transform: scale(1, 1);
+  .button:hover::after {
+    transform: scale(1, 1);
+  }
 }

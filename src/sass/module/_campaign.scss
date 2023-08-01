@@ -13,16 +13,16 @@
   }
 }
 
-.campaign__swiper-wrapper{
+.campaign__swiper-wrapper {
   padding-bottom: rem(10);
 }
 
-.campaign__button{
+.campaign__button {
+  display: block;
   text-align: center;
   margin-top: rem(30);
-  margin-left: rem(-4);
-  @include mq('md') {
+  margin: 0 auto;
+  @include mq("md") {
     margin-top: rem(70);
   }
-
 }

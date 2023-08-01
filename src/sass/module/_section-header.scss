@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .section-header {
   text-align: center;
 }
@@ -36,9 +35,6 @@
 
 .section-header__en-title.section-header__en-title--contact {
   font-size: rem(80);
-  @include mq('md') {
-    margin-top: rem(3);
-  }
 }
 
 .section-header__jp-title {
@@ -56,7 +52,7 @@
 
 .section-header__jp-title--contact {
   margin-top: rem(-16);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(-6);
   }
 }

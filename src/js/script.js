@@ -1,14 +1,20 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  //mv
+  // ------------------------------------
+  //mv movie(アニメーション)
+  // ------------------------------------
   $(window).on("load", function () {
-    $(".mv__swiper").addClass("js-show");
-    $(".mv-movie__title").addClass("is-none");
-    $(".mv-movie__subtitle").addClass("is-none");
+    $(".mv__swiper").addClass("is-show");
+    $(".mv-movie-text__title").addClass("is-none");
+    $(".mv-movie-text__subtitle").addClass("is-none");
+    $(".header").addClass("is-show");
+    $(".mv__header").addClass("is-show");
   });
 
+  // ------------------------------------
   //ドロワーメニュー
+  // ------------------------------------
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
@@ -20,17 +26,28 @@ jQuery(function ($) {
       $(".header").addClass("is-active");
     }
   });
+//中の要素をクリックすると消えてスクロールする
+    $(".sp-nav__item a").on("click", function () {
+        $(".js-sp-nav").fadeOut(300);
+        $(".js-hamburger").removeClass("is-active");
+        $("header").removeClass("is-active");
+    });
+  
 
+  // ------------------------------------
   // mv Swiper
+  // ------------------------------------
   const swiper = new Swiper(".js-mv-swiper", {
     loop: true,
     speed: 1500, //スライドの速度
     autoplay: {
       // 自動再生
-      delay: 3000, // 3秒後に次のスライド
+      delay: 7000, // 5秒後に次のスライド
     },
   });
+  // ------------------------------------
   // campaign Swiper
+  // ------------------------------------
   const swiper2 = new Swiper(".js-campaign-swiper", {
     loop: true,
     loopAdditionalSlides: 4,
@@ -49,13 +66,14 @@ jQuery(function ($) {
     },
   });
 
-  //画像アニメーション
-
+  // ------------------------------------
+  // info 画像アニメーション
+  // ------------------------------------
   //要素の取得とスピードの設定
   var box = $(".info__image"),
     speed = 700;
 
-  //.colorboxの付いた全ての要素に対して下記の処理を行う
+  //.js-image-colorの付いた全ての要素に対して下記の処理を行う
   box.each(function () {
     $(this).append('<div class="js-image-color"></div>');
     var color = $(this).find($(".js-image-color")),
@@ -79,11 +97,14 @@ jQuery(function ($) {
     });
   });
 
+  // ------------------------------------
+  // voice 画像アニメーション
+  // ------------------------------------
   //要素の取得とスピードの設定
   var box = $(".voice-card__image"),
     speed = 700;
 
-  //.js-image-color imgの付いた全ての要素に対して下記の処理を行う
+  //.js-image-color の付いた全ての要素に対して下記の処理を行う(img)
   box.each(function () {
     $(this).append('<div class="js-image-color"></div>');
     var color = $(this).find($(".js-image-color")),
@@ -107,11 +128,14 @@ jQuery(function ($) {
     });
   });
 
+  // ------------------------------------
+  // price 画像アニメーション
+  // ------------------------------------
   //要素の取得とスピードの設定
   var box = $(".price__image"),
     speed = 700;
 
-  //.js-image-color pictureの付いた全ての要素に対して下記の処理を行う
+  //.js-image-colorの付いた全ての要素に対して下記の処理を行う(picture)
   box.each(function () {
     $(this).append('<div class="js-image-color"></div>');
     var color = $(this).find($(".js-image-color")),
@@ -135,8 +159,23 @@ jQuery(function ($) {
     });
   });
 
-  // ページトップに戻るボタン
+  // ------------------------------------
+  // スムーススクロール（headerに被らない
+  // ------------------------------------
 
+  $(document).on("click", 'a[href*="#"]', function () {
+    let time = 400;
+    let header = $("header").innerHeight();
+    let target = $(this.hash);
+    if (!target.length) return;
+    let targetY = target.offset().top - header;
+    $("html,body").animate({ scrollTop: targetY }, time, "swing");
+    return false;
+  });
+
+  // ------------------------------------
+  // ページトップに戻るボタン
+  // ------------------------------------
   $(document).ready(function () {
     const pageTop = $(".to-top");
     pageTop.hide();
@@ -156,13 +195,13 @@ jQuery(function ($) {
       );
       return false;
     });
-  
+
     $(window).on("scroll", function () {
       const scrollHeight = $(document).height();
       const scrollPosition = $(window).height() + $(window).scrollTop();
       const footHeight = $("footer").innerHeight();
       const offset = $(window).width() < 768 ? 15 : 20; // スマートフォン表示時は15px、それ以外は20px
-  
+
       if (scrollHeight - scrollPosition <= footHeight) {
         // 下側から（フッターの高さ + offset）に配置
         $(".to-top").css({ position: "absolute", bottom: footHeight + offset });
@@ -172,5 +211,4 @@ jQuery(function ($) {
       }
     });
   });
-  
 });

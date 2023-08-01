@@ -5,7 +5,7 @@
   width: rem(32);
   height: rem(24);
   z-index: 1000;
-  @include mq('md') {
+  @include mq("md") {
     display: none;
   }
 }

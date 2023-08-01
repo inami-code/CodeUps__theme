@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.mv-movie-bg__container {
+  display: none;
+  @include mq("md") {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+.mv-movie-bg__left-image {
+  @include mq("md") {
+    animation-name: fadeup-left;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes fadeup-left {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mv-movie-bg__left-image img {
+  @include mq("md") {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.mv-movie-bg__right-image {
+  @include mq("md") {
+    animation-name: fadeup-right;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes fadeup-right {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mv-movie-bg__right-image img {
+  @include mq("md") {
+    height: 100%;
+    width: 100%;
+  }
+}

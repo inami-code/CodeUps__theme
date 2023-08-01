@@ -1,19 +1,13 @@
 @use "global" as *;
-
-.blog__bg-image {
+.blog {
   @include mq("md") {
-    background-image: url(../images/common/blog-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: rem(500);
-    width: 100%;
-    padding-top: rem(100);
     position: relative;
+    padding-top: rem(100);
   }
 }
 
-.blog__bg-image::before {
-  @include mq('md') {
+.blog::before {
+  @include mq("md") {
     content: "";
     position: absolute;
     width: rem(376);
@@ -22,9 +16,29 @@
     background-size: contain;
     background-repeat: no-repeat;
     top: rem(24);
-    left: calc(50% - min(50vw,618px));
+    left: calc(50% - min(50vw, 618px));
     z-index: 100;
   }
+}
+
+.blog__bg-image {
+  display: none;
+  @include mq("md") {
+    display: block;
+    aspect-ratio: 1440 / 550;
+    width: 100%;
+    height: rem(500);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+.blog__bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .blog__content {
@@ -33,9 +47,9 @@
   margin: 0 auto;
   margin-top: rem(31);
   @include mq("md") {
-    margin-top: rem(80);
+    margin-top: rem(82);
     max-width: rem(1080);
-}
+  }
 }
 
 .blog__button {

@@ -1,23 +1,24 @@
-@use 'global' as *;
+@use "global" as *;
 
-.mv-movie{
+.mv-movie-text {
   display: none;
-  @include mq('md') {
+  @include mq("md") {
     display: block;
     content: "";
     position: absolute;
     width: 100%;
-    top: 53%;
+    top: 55.2%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-  } 
   }
+}
 
-.mv-movie__title {
+.mv-movie-text__title {
   @include mq("md") {
     font-size: rem(80);
-    letter-spacing: 0.54em;
+    padding-left: rem(38);
+    letter-spacing: 0.53em;
     line-height: 1;
     font-weight: $regular;
     font-family: $second-english-font-family;
@@ -29,14 +30,13 @@
   }
 }
 
-.mv-movie__title.is-none {
-  @include mq('md') {
+.mv-movie-text__title.is-none {
+  @include mq("md") {
     opacity: 0;
   }
 }
 
-
-.mv-movie__subtitle{
+.mv-movie-text__subtitle {
   @include mq("md") {
     font-size: rem(20);
     line-height: 1;
@@ -49,8 +49,8 @@
   }
 }
 
-.mv-movie__subtitle.is-none{
-  @include mq('md') {
+.mv-movie-text__subtitle.is-none {
+  @include mq("md") {
     opacity: 0;
   }
 }

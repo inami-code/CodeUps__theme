@@ -4,7 +4,7 @@
   background-color: $green;
   padding-top: rem(48);
   padding-bottom: rem(56);
-  @include mq('md') {
+  @include mq("md") {
     padding-top: rem(80);
     padding-bottom: rem(102);
   }
@@ -77,13 +77,13 @@
 
 .footer__sns-facebook {
   margin-left: rem(11);
-  @include mq('md') {
+  @include mq("md") {
     margin-bottom: rem(2);
   }
 }
 
-.footer__sns-instagram{
-  @include mq('md') {
+.footer__sns-instagram {
+  @include mq("md") {
     margin-bottom: rem(2);
   }
 }

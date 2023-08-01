@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign-card{
+.campaign-card {
   display: flex;
   flex-direction: column;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
@@ -76,7 +76,7 @@
   align-items: end;
   gap: rem(18);
   margin-top: rem(12);
-  @include mq('md') {
+  @include mq("md") {
     gap: rem(30);
   }
 }
@@ -91,8 +91,7 @@
   text-decoration-style: solid;
   text-decoration-color: #c94800;
   @include mq("md") {
-    font-size:clamp(rem(16), 10vw,rem(24));
-
+    font-size: clamp(rem(16), 10vw, rem(24));
   }
 }
 
@@ -104,6 +103,6 @@
   line-height: 1;
 
   @include mq("md") {
-    font-size:clamp(rem(20), 3vw,rem(40));
+    font-size: clamp(rem(20), 3vw, rem(40));
   }
 }

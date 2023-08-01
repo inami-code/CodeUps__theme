@@ -8,12 +8,20 @@
   background-color: rgba(13, 41, 54, 0.68);
   height: rem(80);
   width: 100%;
-  transition: 0.3s ease;
   padding: 0 rem(15);
 
   @include mq("md") {
     padding: 0 rem(40);
     height: rem(90);
+    transition: 0.5s;
+    transition-delay: 5s;
+    opacity: 0;
+  }
+}
+
+.header.is-show {
+  @include mq("md") {
+    opacity: 1;
   }
 }
 

@@ -15,7 +15,7 @@
     background-image: url(../images/common/voice_fish-left.png);
     background-size: contain;
     background-repeat: no-repeat;
-    top: rem(-123);
+    top: rem(-120);
     left: calc(50% - min(50vw, 619px));
   }
 }
@@ -40,7 +40,7 @@
   width: 100%;
   margin: 0 auto;
   @include mq("md") {
-    margin-top: rem(30);
+    margin-top: rem(35);
     display: flex;
     flex-wrap: wrap;
     gap: rem(40);

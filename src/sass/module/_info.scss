@@ -1,22 +1,21 @@
-@use 'global' as *;
+@use "global" as *;
 
 .info {
-padding: rem(82) 0;
-background: $light-green;
-@include mq('md') {
-  padding: rem(102) 0;
+  padding: rem(83) 0;
+  background: $light-green;
+  @include mq("md") {
+    padding: rem(102) 0;
+  }
 }
-}
-
 
 .info__container {
-margin-top: rem(26);
-max-width: rem(600);
-width: 100%;
-margin: 0 auto;
+  margin-top: rem(26);
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
 
-  @include mq('md') {
-    margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(44);
     display: flex;
     gap: rem(48);
     align-items: center;
@@ -25,52 +24,51 @@ margin: 0 auto;
 }
 
 .info__image {
-aspect-ratio: 345 / 227;
-position: relative;
+  aspect-ratio: 345 / 227;
+  position: relative;
 
-@include mq('md') {
-  aspect-ratio: 540 / 356;
-  width: 52.3%;
-}
-}
-
-
-.info__image .js-image-color{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: $green;
+  @include mq("md") {
+    aspect-ratio: 540 / 356;
+    width: 52.3%;
+  }
 }
 
-.info__image img{
+.info__image .js-image-color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+
+.info__image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-    display: block;
+  display: block;
 }
 
 .info__lead {
   margin-top: rem(24);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(-4);
     width: 47.7%;
   }
 }
 
 .info__title {
-font-size: rem(20);
-line-height: calc(24 / 20);
-font-weight: $bold;
-color: $black;
-padding-bottom: rem(6);
-border-bottom: 1px solid $green;
-@include mq('md') {
-  font-size: rem(24);
-  padding-bottom: rem(4);
-}
+  font-size: rem(20);
+  line-height: calc(24 / 20);
+  font-weight: $bold;
+  color: $black;
+  padding-bottom: rem(6);
+  border-bottom: 1px solid $green;
+  @include mq("md") {
+    font-size: rem(24);
+    padding-bottom: rem(4);
+  }
 }
 
 .info__text {
@@ -81,6 +79,6 @@ border-bottom: 1px solid $green;
 }
 
 .info__button {
-text-align: center;
-margin-top: rem(42);
+  text-align: center;
+  margin-top: rem(42);
 }
