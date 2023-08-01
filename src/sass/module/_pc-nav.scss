@@ -39,7 +39,9 @@
 
 .pc-nav__jp-title {
   font-size: rem(10);
+  white-space: nowrap;
   margin-top: rem(8);
+  width: 100%;
 }
 
 /* 下線アニメーション
