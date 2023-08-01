@@ -34,10 +34,8 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul,
@@ -74,7 +72,6 @@ select {
 img:not([alt]) {
   filter: blur(10px);
 }
-
 
 /* フォームリセット */
 input,
