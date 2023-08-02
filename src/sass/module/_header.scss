@@ -16,13 +16,13 @@
     opacity: 0;
     animation-name: fadeIn; /* 定義したアニメーションを指定 */
     animation-duration: 1s; /* アニメーションの時間 */
-    animation-delay: 4s; /* アニメーションの遅延（2秒後に開始） */
+    animation-delay: 4s; /* アニメーションの遅延（4秒後に開始） */
     animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
   }
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
   100% {

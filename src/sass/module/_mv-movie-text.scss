@@ -5,12 +5,12 @@
   @include mq("md") {
     display: block;
     content: "";
-  position: absolute;
-  width: 100%;
-  top: 49.8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
+    position: absolute;
+    width: 100%;
+    top: 49.8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
   }
 }
 
@@ -33,7 +33,7 @@
 }
 
 @keyframes fadeOut {
-  0%{
+  0% {
     opacity: 1;
   }
   100% {
@@ -56,9 +56,8 @@
   }
 }
 
-
 @keyframes fadeOut {
-  0%{
+  0% {
     opacity: 1;
   }
   100% {
