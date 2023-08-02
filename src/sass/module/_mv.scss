@@ -65,7 +65,7 @@
     opacity: 0;
     animation-name: fadeIn; /* 定義したアニメーションを指定 */
     animation-duration: 1s; /* アニメーションの時間 */
-    animation-delay: 3s; /* アニメーションの遅延（2秒後に開始） */
+    animation-delay: 3s; /* アニメーションの遅延（3秒後に開始） */
     animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
   }
 }
