@@ -2,17 +2,6 @@ jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
   // ------------------------------------
-  //mv movie(アニメーション)
-  // ------------------------------------
-  $(window).on("load", function () {
-    $(".mv__swiper").addClass("is-show");
-    $(".mv-movie-text__title").addClass("is-none");
-    $(".mv-movie-text__subtitle").addClass("is-none");
-    $(".header").addClass("is-show");
-    $(".mv__header").addClass("is-show");
-  });
-
-  // ------------------------------------
   //ドロワーメニュー
   // ------------------------------------
   $(".js-hamburger").click(function () {

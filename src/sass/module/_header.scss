@@ -13,14 +13,19 @@
   @include mq("md") {
     padding: 0 rem(40);
     height: rem(90);
-    transition: 0.5s;
-    transition-delay: 5s;
     opacity: 0;
+    animation-name: fadeIn; /* 定義したアニメーションを指定 */
+    animation-duration: 1s; /* アニメーションの時間 */
+    animation-delay: 4s; /* アニメーションの遅延（2秒後に開始） */
+    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
   }
 }
 
-.header.is-show {
-  @include mq("md") {
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

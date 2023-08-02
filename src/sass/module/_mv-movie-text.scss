@@ -5,12 +5,12 @@
   @include mq("md") {
     display: block;
     content: "";
-    position: absolute;
-    width: 100%;
-    top: 55.2%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 49.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
   }
 }
 
@@ -25,13 +25,18 @@
     text-transform: uppercase;
     text-align: center;
     color: $green;
-    transition: 0.5s;
-    transition-delay: 1s;
+    animation-name: fadeOut; /* 定義したアニメーションを指定 */
+    animation-duration: 2s; /* アニメーションの時間 */
+    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+    opacity: 1;
   }
 }
 
-.mv-movie-text__title.is-none {
-  @include mq("md") {
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -44,13 +49,19 @@
     text-align: center;
     margin-top: rem(8);
     color: $green;
-    transition: 0.5s;
-    transition-delay: 1s;
+    animation-name: fadeOut; /* 定義したアニメーションを指定 */
+    animation-duration: 2s; /* アニメーションの時間 */
+    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+    opacity: 1;
   }
 }
 
-.mv-movie-text__subtitle.is-none {
-  @include mq("md") {
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
