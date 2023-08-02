@@ -75,6 +75,7 @@
 .mv__swiper.is-show {
   @include mq("md") {
     opacity: 1;
+    
   }
 }
 
