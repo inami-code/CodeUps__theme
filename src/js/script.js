@@ -202,43 +202,43 @@ jQuery(function ($) {
   });
   
 // ローディング画面
-// $(document).ready(function() {
-//   // Cookieが設定されていない場合に初回アクセスとみなす
-//   if (!document.cookie.includes("visited=true")) {
-//       // 初回アクセス時の処理
-//       $("#js-loading").show();
+$(document).ready(function() {
+  // Cookieが設定されていない場合に初回アクセスとみなす
+  if (!document.cookie.includes("visited=true")) {
+      // 初回アクセス時の処理
+      $("#js-loading").show();
 
-//       // 初回アクセスを示すCookieを設定
-//       document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      // 初回アクセスを示すCookieを設定
+      document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 
-//       // ローディングが完了したらローディングアニメーションを非表示にする
-//       $(window).on("load", function() {
-//           $("#js-loading").fadeOut("slow");
-//       });
-//   } else {
-//       // すでに訪れた場合、ローディングアニメーションを非表示にする
-//       $("#js-loading").hide();
-//   }
-// });
+      // ローディングが完了したらローディングアニメーションを非表示にする
+      $(window).on("load", function() {
+          $("#js-loading").fadeOut("slow");
+      });
+  } else {
+      // すでに訪れた場合、ローディングアニメーションを非表示にする
+      $("#js-loading").hide();
+  }
+});
 
-// $(document).ready(function() {
-//   // Cookieが設定されていない場合に初回アクセスとみなす
-//   if (!document.cookie.includes("visited=true")) {
-//       // 初回アクセス時の処理
-//       $("#js-text").show();
+$(document).ready(function() {
+  // Cookieが設定されていない場合に初回アクセスとみなす
+  if (!document.cookie.includes("visited=true")) {
+      // 初回アクセス時の処理
+      $("#js-text").show();
 
-//       // 初回アクセスを示すCookieを設定
-//       document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      // 初回アクセスを示すCookieを設定
+      document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 
-//       // ローディングが完了したらローディングアニメーションを非表示にする
-//       $(window).on("load", function() {
-//           $("#js-text").fadeOut("slow");
-//       });
-//   } else {
-//       // すでに訪れた場合、ローディングアニメーションを非表示にする
-//       $("#js-text").hide();
-//   }
-// });
+      // ローディングが完了したらローディングアニメーションを非表示にする
+      $(window).on("load", function() {
+          $("#js-text").fadeOut("slow");
+      });
+  } else {
+      // すでに訪れた場合、ローディングアニメーションを非表示にする
+      $("#js-text").hide();
+  }
+});
 
 
 });
