@@ -1,21 +1,21 @@
 @use "global" as *;
 
+
 .campaign__swiper {
   position: relative;
-  padding-left: rem(15);
   margin-top: rem(27);
-  width: 100%;
+  margin-right: calc(50% - 50vw);
   @include mq("md") {
-    margin-left: auto;
-    max-width: rem(1270);
     margin-top: rem(44);
-    padding-left: rem(10);
   }
 }
 
 .campaign__swiper-wrapper {
   padding-bottom: rem(10);
+  display: grid;
+  grid-auto-flow: column;
 }
+
 
 .campaign__button {
   display: block;

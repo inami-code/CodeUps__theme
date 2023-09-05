@@ -18,6 +18,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
+  @include mq('md') {
+    top: 55.8%;
+  }
 }
 
 .mv__title {
@@ -35,22 +38,22 @@
     font-size: rem(80);
     padding-left: rem(38);
     letter-spacing: 0.53em;
-    opacity: 0;
-    animation-name: fadeIn; /* 定義したアニメーションを指定 */
-    animation-duration: 1s; /* アニメーションの時間 */
-    animation-delay: 3s; /* アニメーションの遅延（3秒後に開始） */
-    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+    // opacity: 0;
+    // animation-name: fadeIn; /* 定義したアニメーションを指定 */
+    // animation-duration: 1s; /* アニメーションの時間 */
+    // animation-delay: 3s; /* アニメーションの遅延（3秒後に開始） */
+    // animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 .mv__subtitle {
   font-size: rem(20);
@@ -61,46 +64,54 @@
   margin-top: rem(8);
   @include mq("md") {
     margin-top: rem(12);
-    opacity: 0;
-    animation-name: fadeIn; /* 定義したアニメーションを指定 */
-    animation-duration: 1s; /* アニメーションの時間 */
-    animation-delay: 3s; /* アニメーションの遅延（3秒後に開始） */
-    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+    // opacity: 0;
+    // animation-name: fadeIn; /* 定義したアニメーションを指定 */
+    // animation-duration: 1s; /* アニメーションの時間 */
+    // animation-delay: 3s; /* アニメーションの遅延（3秒後に開始） */
+    // animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 .mv__swiper {
   height: 100vh;
   width: 100%;
-  @include mq("md") {
-    opacity: 0;
-    animation-name: fadeIn; /* 定義したアニメーションを指定 */
-    animation-duration: 2s; /* アニメーションの時間 */
-    animation-delay: 4s; /* アニメーションの遅延（4秒後に開始） */
-    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
-  }
+  // @include mq("md") {
+  //   opacity: 0;
+  //   animation-name: fadeIn; /* 定義したアニメーションを指定 */
+  //   animation-duration: 2s; /* アニメーションの時間 */
+  //   animation-delay: 4s; /* アニメーションの遅延（4秒後に開始） */
+  //   animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+  // }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+.mv__image{
+   aspect-ratio: 375 / 667;
+   @include mq('md') {
+    aspect-ratio: 1440 / 768;
+   }
 }
 
 .mv__image img {
   display: inline-block;
   height: 100vh;
   width: 100%;
+  object-fit: cover;
 }

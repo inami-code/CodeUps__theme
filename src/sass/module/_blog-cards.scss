@@ -3,18 +3,18 @@
 .blog-cards {
   padding: 0 rem(6);
   @include mq("md") {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: rem(1080);
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    // max-width: rem(1080);
+    // width: 100%;
     padding: 0;
+    gap: rem(40);
   }
 }
 
 .blog-cards__item:not(:first-child) {
-  margin-top: rem(40);
+  margin-top: rem(45);
   @include mq("md") {
-    margin-left: rem(40);
     margin-top: 0;
   }
 }

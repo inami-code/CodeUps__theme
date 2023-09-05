@@ -6,11 +6,9 @@
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 }
 
-.campaign-card__image {
-  aspect-ratio: 280 / 188;
-}
 
 .campaign-card__image img {
+  aspect-ratio: 280 / 188;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -53,6 +51,7 @@
   padding-bottom: rem(24);
   padding-left: rem(16);
   padding-right: rem(16);
+  margin-top: auto;
   @include mq("md") {
     padding-bottom: rem(40);
   }

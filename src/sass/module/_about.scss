@@ -1,37 +1,18 @@
 @use "global" as *;
 
-.about__image {
-  max-width: rem(600);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.about__content{
+  position: relative;
   margin-top: rem(28);
-  aspect-ratio: 345 / 212;
-  @include mq("md") {
-    display: none;
-  }
-}
-
-.about__image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about__container {
-  @include mq("md") {
-    background-image: url(../images/common/about_bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-top: rem(212);
-    padding-bottom: rem(219);
-    margin-top: rem(44);
-    position: relative;
+  max-width: 100%;
+  height: inherit;
+  display: flex;
+  @include mq('md') {
+    display: block;
   }
 }
 
-.about__container::after {
+.about__content::after {
   @include mq("md") {
     position: absolute;
     content: "";
@@ -45,18 +26,61 @@
   }
 }
 
+
+
+.about__image-left {
+  aspect-ratio: 345 / 212;
+  width: 100%;
+  z-index: 10;
+  @include mq("md") {
+    width: rem(400);
+    aspect-ratio: 400 / 606;
+    position: absolute;
+    top: rem(-80);
+    left: 0;
+  }
+}
+
+
+.about__image-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.about__image-right {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    background-image: url(../images/common/about_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    max-width: rem(880);
+    width: 81.4814%;
+    padding-top: rem(125);
+    padding-bottom: rem(226);
+    margin-left: auto;
+    margin-top: rem(128);
+  }
+}
+
+
+
 .about__lead {
   max-width: rem(600);
   width: 100%;
   margin: 0 auto;
   @include mq("md") {
-    z-index: 100;
+    z-index: 10;
     max-width: 100%;
     width: 100%;
     display: flex;
-    padding-left: rem(200);
-    padding-right: rem(31);
+    gap: rem(40);
     margin-top: rem(-8);
+    position: relative;
   }
 }
 
@@ -71,14 +95,14 @@
     font-size: rem(80);
     color: $white;
     line-height: calc(100 / 80);
-    width: 51.5%;
+    flex: 0 0 rem(400);
     margin-top: 0;
   }
 }
 
-.about__content {
+.about__text-wrap {
   @include mq("md") {
-    width: 48.5%;
+    flex: 0 1 rem(400);
   }
 }
 
