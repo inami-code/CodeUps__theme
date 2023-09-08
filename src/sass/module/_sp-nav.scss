@@ -10,7 +10,9 @@
   left: 0;
   right: 0;
   overflow: scroll;
+  z-index: 0;
 }
+
 
 .sp-nav.is-active {
   display: block;

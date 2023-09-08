@@ -4,16 +4,19 @@
   display: block;
   padding-left: rem(16);
   padding-right: rem(16);
+  padding-top: rem(16);
+  padding-bottom: rem(24);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
   margin: 0 auto;
   background-color: $white;
+  cursor: pointer;
   @include mq("md") {
     margin: 0;
     position: relative;
   }
 }
 
-.blog-card::after{
+.blog-card::after {
   position: absolute;
   content: "";
   top: 0;
@@ -23,20 +26,31 @@
   width: 100%;
   height: inherit;
   background-color: $light-green;
-  opacity: 0;
-  transition: opacity .3s;
+  visibility: hidden;
 }
 
-
 @media (hover: hover) {
-  .blog-card:hover::after{
+  .blog-card:hover::after {
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
     opacity: 0.3;
   }
 }
 
 .blog-card__image {
-  padding-top: rem(16);
-  aspect-ratio: 300 / 212;
+  aspect-ratio: 300 / 201;
   width: 100%;
 }
 
@@ -71,7 +85,6 @@
 
 .blog-card__text {
   padding-top: rem(16);
-  padding-bottom: rem(24);
   line-height: calc(24 / 16);
   font-size: rem(16);
 }

@@ -18,7 +18,7 @@
     background-image: url(../images/common/price_fish.png);
     background-size: contain;
     background-repeat: no-repeat;
-    left: calc(50% - min(50vw, 619px));
+    left: calc(50% - min(48vw, rem(619)));
     bottom: rem(64);
   }
 }
@@ -125,7 +125,7 @@
 
 .price__button {
   text-align: center;
-  margin-top: rem(40);
+  margin-top: rem(44);
   @include mq("md") {
     margin-top: rem(80);
   }

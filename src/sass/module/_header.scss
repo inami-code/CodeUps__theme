@@ -4,24 +4,28 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(13, 41, 54, 0.68);
   height: rem(80);
   width: 100%;
-  padding: 0 rem(15);
+  transition: background-color .3s;
   @include mq('md') {
     height: rem(90);
   }
 }
 
+
 .header.is-active {
   background-color: $green;
+  z-index: 100;
 }
 
 .header__inner {
   height: inherit;
+padding: 0 rem(15);
   @include mq('md') {
-    padding: 0 rem(25);
+    padding-left:rem(40);
+    padding-right:rem(20);
   }
 }
 
@@ -56,6 +60,5 @@
   }
 }
 .header__sp-nav {
-  padding-top: rem(92);
-  padding-left: rem(3);
+  margin-top: rem(78);
 }
