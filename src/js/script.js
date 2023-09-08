@@ -203,30 +203,29 @@ jQuery(function ($) {
 
   // ローディング画面
   $(document).ready(function () {
-  // Cookieから訪問日時を取得
-  var lastVisit = getCookie("lastVisit");
-  
-  // 現在の日時を取得
-  var now = new Date();
-  
-  // Cookieが設定されておらず、前回の訪問から24時間以上経過した場合
-  if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
-    // 初回アクセス時の処理
-    $("#js-loading").show();
+    // Cookieから訪問日時を取得
+    var lastVisit = getCookie("lastVisit");
     
-    // 現在の日時をCookieに保存
-    document.cookie = "lastVisit=" + now.toUTCString() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    // 現在の日時を取得
+    var now = new Date();
     
-    // ローディングが完了したらローディングアニメーションを非表示にする
-    $(window).on("load", function () {
-      $("#js-loading").fadeOut("slow");
-    });
-  } else {
-    // すでに訪れた場合、ローディングアニメーションを非表示にする
-    $("#js-loading").hide();
-  }
-});
-
+    // 24時間以上経過しているかチェック
+    if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
+      // ローディングアニメーションを表示
+      $("#js-loading").show();
+      
+      // ローディングが完了したら非表示にする
+      $(window).on("load", function () {
+        $("#js-loading").fadeOut("slow", function() {
+          // アニメーションが完了したら、訪問日時をCookieに保存
+          document.cookie = "lastVisit=" + now.toUTCString() + "; expires=" + new Date(now.getTime() + 24 * 60 * 60 * 1000).toUTCString();
+        });
+      });
+    } else {
+      // すでに訪れた場合、ローディングアニメーションを非表示にする
+      $("#js-loading").hide();
+    }
+  });
 // Cookieから指定された名前の値を取得する関数
 function getCookie(name) {
   var cookieValue = null;
@@ -263,46 +262,45 @@ function getCookie(name) {
   // });
 
 
-
-$(document).ready(function () {
-  // Cookieから訪問日時を取得
-  var lastVisit = getCookie("lastVisit");
-
-  // 現在の日時を取得
-  var now = new Date();
-
-  // Cookieが設定されておらず、前回の訪問から24時間以上経過した場合
-  if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
-    // 初回アクセス時の処理
-    $("#js-text").show();
-
-    // 現在の日時をCookieに保存
-    document.cookie = "lastVisit=" + now.toUTCString() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-
-    // ローディングが完了したらローディングアニメーションを非表示にする
-    $(window).on("load", function () {
-      $("#js-text").fadeOut("slow");
-    });
-  } else {
-    // すでに訪れた場合、ローディングアニメーションを非表示にする
-    $("#js-text").hide();
-  }
-});
-
-// Cookieから指定された名前の値を取得する関数
-function getCookie(name) {
-  var cookieValue = null;
-  if (document.cookie && document.cookie !== "") {
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i].trim();
-      if (cookie.substring(0, name.length + 1) === name + "=") {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
+  $(document).ready(function () {
+    // Cookieから訪問日時を取得
+    var lastVisit = getCookie("lastVisit");
+    
+    // 現在の日時を取得
+    var now = new Date();
+    
+    // 24時間以上経過しているかチェック
+    if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
+      // ローディングアニメーションを表示
+      $("#js-text").show();
+      
+      // ローディングが完了したら非表示にする
+      $(window).on("load", function () {
+        $("#js-text").fadeOut("slow", function() {
+          // アニメーションが完了したら、訪問日時をCookieに保存
+          document.cookie = "lastVisit=" + now.toUTCString() + "; expires=" + new Date(now.getTime() + 24 * 60 * 60 * 1000).toUTCString();
+        });
+      });
+    } else {
+      // すでに訪れた場合、ローディングアニメーションを非表示にする
+      $("#js-text").hide();
+    }
+  });
+  
+  // Cookieから指定された名前の値を取得する関数
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      var cookies = document.cookie.split(";");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === name + "=") {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
       }
     }
+    return cookieValue;
   }
-  return cookieValue;
-}
-
+  
 });
