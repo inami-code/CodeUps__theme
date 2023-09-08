@@ -11,12 +11,12 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    top: 55%;
-    left: 51%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100000;
     animation-name: fadeOut; /* 定義したアニメーションを指定 */
-    animation-duration: 3s; /* アニメーションの時間 */
+    animation-duration: 2s; /* アニメーションの時間 */
     animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
     opacity: 1;
     background-color: $white;
@@ -39,7 +39,7 @@
   @include mq("md") {
     font-size: rem(80);
     letter-spacing: 0.53em;
-    text-indent: 0.53em;
+    text-indent: 0.3em;
     line-height: 1;
     font-weight: $regular;
     font-family: $second-english-font-family;

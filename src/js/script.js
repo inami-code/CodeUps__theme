@@ -267,18 +267,18 @@ function getCookie(name) {
 $(document).ready(function () {
   // Cookieから訪問日時を取得
   var lastVisit = getCookie("lastVisit");
-  
+
   // 現在の日時を取得
   var now = new Date();
-  
+
   // Cookieが設定されておらず、前回の訪問から24時間以上経過した場合
   if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
     // 初回アクセス時の処理
     $("#js-text").show();
-    
+
     // 現在の日時をCookieに保存
     document.cookie = "lastVisit=" + now.toUTCString() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-    
+
     // ローディングが完了したらローディングアニメーションを非表示にする
     $(window).on("load", function () {
       $("#js-text").fadeOut("slow");

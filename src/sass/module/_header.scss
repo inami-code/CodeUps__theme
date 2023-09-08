@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   background-color: rgba(13, 41, 54, 0.68);
   height: rem(80);
   width: 100%;
@@ -17,7 +17,6 @@
 
 .header.is-active {
   background-color: $green;
-  z-index: 100;
 }
 
 .header__inner {
