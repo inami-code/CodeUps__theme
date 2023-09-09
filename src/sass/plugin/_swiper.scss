@@ -1,10 +1,15 @@
 @use "global" as *;
 
+.swiper-button-prev,
+.swiper-button-next{
+  margin-top: 0;
+}
+
 .swiper-button-prev {
   display: none;
   @include mq("md") {
     display: block;
-    top: rem(-83);
+    top: rem(-105);
     left: 54%;
     transform: translateX(rem(160));
     width: rem(80);
@@ -19,7 +24,7 @@
   display: none;
   @include mq("md") {
     display: block;
-    top: rem(-83);
+    top: rem(-105);
     right: 46%;
     transform: translateX(rem(400));
     width: rem(80);
@@ -27,6 +32,7 @@
     background-image: url(../images/common/next-button.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center top;
   }
 }
 
