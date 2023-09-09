@@ -1,35 +1,41 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-
-
   // ------------------------------------
   //ローディングアニメーション
   // ------------------------------------
-  $.cookie('myCookie', 'myValue', { 
-    path: '/', 
+  $.cookie("myCookie", "myValue", {
+    path: "/",
     secure: true,
-    sameSite: 'None' 
+    sameSite: "None",
   });
-  
-  $(document).ready(function() {
-    const keyName = 'visited';
+
+  $(document).ready(function () {
+    const keyName = "visited";
     const keyValue = true;
 
     if (!sessionStorage.getItem(keyName)) {
-        // sessionStorageにキーと値を追加
-        sessionStorage.setItem(keyName, keyValue);
+      // sessionStorageにキーと値を追加
+      sessionStorage.setItem(keyName, keyValue);
 
-        // ここに初回アクセス時の処理
-        $(".mv-movie-bg").addClass("is-active");
-        $(".mv-movie-text").addClass("is-active");
+      // ここに初回アクセス時の処理
+      $(".mv-movie-bg").addClass("is-active");
+      // アニメーション終了時にクラスを削除
+      $(".mv-movie-bg").on("animationend", function () {
+        $(this).removeClass("is-active");
+      });
+      $(".mv-movie-text").addClass("is-active");
 
+      // アニメーション終了時にクラスを削除
+      $(".mv-movie-bg").on("animationend", function () {
+        $(this).removeClass("is-active");
+      });
     } else {
-        // ここに通常アクセス時の処理
-        $(".mv-movie-bg").removeClass("is-active");
-        $(".mv-movie-text").removeClass("is-active");
+      // ここに通常アクセス時の処理
+      $(".mv-movie-bg").removeClass("is-active");
+      $(".mv-movie-text").removeClass("is-active");
     }
-});
+  });
 
   // ------------------------------------
   //ドロワーメニュー
@@ -79,7 +85,8 @@ jQuery(function ($) {
       },
     },
     speed: 1000, // 少しゆっくり(デフォルトは300)
-    autoplay: { // 自動再生
+    autoplay: {
+      // 自動再生
       delay: 3000, // 3秒後に次のスライド
     },
     grabCursor: true,
@@ -234,5 +241,4 @@ jQuery(function ($) {
       }
     });
   });
-
 });
