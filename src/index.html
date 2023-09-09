@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"
+    ></script>
     <script defer src="./assets/js/jquery.inview.min.js"></script>
     <script
       defer
@@ -201,13 +205,16 @@
           <h2 class="mv__title">diving</h2>
           <div class="mv__subtitle">into the ocean</div>
         </div>
-        <div id="js-text" class="mv__header--movie mv-movie-text">
-          <h2 class="mv-movie-text__title">diving</h2>
-          <div class="mv-movie-text__subtitle">into the ocean</div>
+        <div class="mv__header--movie">
+          <div class="mv-movie-text">
+            <h2 class="mv-movie-text__title">diving</h2>
+            <div class="mv-movie-text__subtitle">into the ocean</div>
+          </div>
+          <!-- /.mv-movie-text -->
         </div>
         <div class="mv-movie--text__white"></div>
 
-        <div id="js-loading" class="mv__bg-movie mv-movie-bg">
+        <div class="mv__bg-movie mv-movie-bg">
           <div class="mv-movie-bg__container">
             <div class="mv-movie-bg__left-image">
               <img
@@ -417,12 +424,16 @@
         <div class="about__content">
           <div class="about__image-left">
             <picture>
-              <source srcset="./assets/images/common/about_1.jpg" media="(min-width: 768px)" type="image/jpg">
+              <source
+                srcset="./assets/images/common/about_1.jpg"
+                media="(min-width: 768px)"
+                type="image/jpg"
+              />
               <img
-              src="./assets/images/common/about_bg.png"
-              alt="about画像"
-              width="345"
-              height="212"
+                src="./assets/images/common/about_bg.png"
+                alt="about画像"
+                width="345"
+                height="212"
               />
             </picture>
           </div>

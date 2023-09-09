@@ -18,8 +18,16 @@
     animation-name: fadeOut; /* 定義したアニメーションを指定 */
     animation-duration: 3s; /* アニメーションの時間 */
     animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
-    opacity: 1;
     background-color: $white;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.mv-movie-text.is-active {
+  @include mq("md") {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -27,7 +35,7 @@
   0% {
     opacity: 1;
   }
-  60%{
+  60% {
     opacity: 1;
   }
   100% {
@@ -35,7 +43,7 @@
   }
 }
 
-.mv-movie-text__title{
+.mv-movie-text__title {
   @include mq("md") {
     font-size: rem(75);
     letter-spacing: 0.53em;
@@ -46,10 +54,9 @@
     text-transform: uppercase;
     text-align: center;
     color: $green;
-padding-top: rem(70);
+    padding-top: rem(70);
   }
 }
-
 
 .mv-movie-text__subtitle {
   @include mq("md") {
@@ -61,6 +68,3 @@ padding-top: rem(70);
     color: $green;
   }
 }
-
-
-

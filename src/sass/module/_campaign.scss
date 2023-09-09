@@ -1,5 +1,8 @@
 @use "global" as *;
 
+.campaign{
+  overflow: hidden;
+}
 
 .campaign__swiper {
   position: relative;

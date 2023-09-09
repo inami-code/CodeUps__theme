@@ -2,9 +2,16 @@
 
 .mv-movie-bg {
   @include mq("md") {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+visibility: hidden;
+opacity: 0;
   }
+}
+
+.mv-movie-bg.is-active{
+  visibility: visible;
+  opacity: 1;
 }
 
 .mv-movie-bg__container {
@@ -12,7 +19,7 @@
   @include mq("md") {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 }
 

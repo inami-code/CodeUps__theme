@@ -1,6 +1,36 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+
+
+  // ------------------------------------
+  //ローディングアニメーション
+  // ------------------------------------
+  $.cookie('myCookie', 'myValue', { 
+    path: '/', 
+    secure: true,
+    sameSite: 'None' 
+  });
+  
+  $(document).ready(function() {
+    const keyName = 'visited';
+    const keyValue = true;
+
+    if (!sessionStorage.getItem(keyName)) {
+        // sessionStorageにキーと値を追加
+        sessionStorage.setItem(keyName, keyValue);
+
+        // ここに初回アクセス時の処理
+        $(".mv-movie-bg").addClass("is-active");
+        $(".mv-movie-text").addClass("is-active");
+
+    } else {
+        // ここに通常アクセス時の処理
+        $(".mv-movie-bg").removeClass("is-active");
+        $(".mv-movie-text").removeClass("is-active");
+    }
+});
+
   // ------------------------------------
   //ドロワーメニュー
   // ------------------------------------
@@ -47,6 +77,10 @@ jQuery(function ($) {
         spaceBetween: 40,
         width: 333,
       },
+    },
+    speed: 1000, // 少しゆっくり(デフォルトは300)
+    autoplay: { // 自動再生
+      delay: 3000, // 3秒後に次のスライド
     },
     grabCursor: true,
     navigation: {
@@ -201,106 +235,4 @@ jQuery(function ($) {
     });
   });
 
-  // ローディング画面
-  $(document).ready(function () {
-    // Cookieから訪問日時を取得
-    var lastVisit = getCookie("lastVisit");
-    
-    // 現在の日時を取得
-    var now = new Date();
-    
-    // 24時間以上経過しているかチェック
-    if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
-      // ローディングアニメーションを表示
-      $("#js-loading").show();
-      
-      // ローディングが完了したら非表示にする
-      $(window).on("load", function () {
-        $("#js-loading").fadeOut("slow", function() {
-          // アニメーションが完了したら、訪問日時をCookieに保存
-          document.cookie = "lastVisit=" + now.toUTCString() + "; expires=" + new Date(now.getTime() + 24 * 60 * 60 * 1000).toUTCString();
-        });
-      });
-    } else {
-      // すでに訪れた場合、ローディングアニメーションを非表示にする
-      $("#js-loading").hide();
-    }
-  });
-// Cookieから指定された名前の値を取得する関数
-function getCookie(name) {
-  var cookieValue = null;
-  if (document.cookie && document.cookie !== "") {
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i].trim();
-      if (cookie.substring(0, name.length + 1) === name + "=") {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
-      }
-    }
-  }
-  return cookieValue;
-}
-
-  // $(document).ready(function () {
-  //   // Cookieが設定されていない場合に初回アクセスとみなす
-  //   if (!document.cookie.includes("visited=true")) {
-  //     // 初回アクセス時の処理
-  //     $("#js-loading").show();
-
-  //     // 初回アクセスを示すCookieを設定
-  //     document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-
-  //     // ローディングが完了したらローディングアニメーションを非表示にする
-  //     $(window).on("load", function () {
-  //       $("#js-loading").fadeOut("slow");
-  //     });
-  //   } else {
-  //     // すでに訪れた場合、ローディングアニメーションを非表示にする
-  //     $("#js-loading").hide();
-  //   }
-  // });
-
-
-  $(document).ready(function () {
-    // Cookieから訪問日時を取得
-    var lastVisit = getCookie("lastVisit");
-    
-    // 現在の日時を取得
-    var now = new Date();
-    
-    // 24時間以上経過しているかチェック
-    if (!lastVisit || (now - new Date(lastVisit) > 24 * 60 * 60 * 1000)) {
-      // ローディングアニメーションを表示
-      $("#js-text").show();
-      
-      // ローディングが完了したら非表示にする
-      $(window).on("load", function () {
-        $("#js-text").fadeOut("slow", function() {
-          // アニメーションが完了したら、訪問日時をCookieに保存
-          document.cookie = "lastVisit=" + now.toUTCString() + "; expires=" + new Date(now.getTime() + 24 * 60 * 60 * 1000).toUTCString();
-        });
-      });
-    } else {
-      // すでに訪れた場合、ローディングアニメーションを非表示にする
-      $("#js-text").hide();
-    }
-  });
-  
-  // Cookieから指定された名前の値を取得する関数
-  function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== "") {
-      var cookies = document.cookie.split(";");
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        if (cookie.substring(0, name.length + 1) === name + "=") {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
-  
 });
