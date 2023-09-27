@@ -89,7 +89,7 @@
   }
 }
 
-.contact__item {
+.contact__items {
   margin-top: rem(16);
   text-align: center;
   color: $black;
@@ -102,15 +102,8 @@
   }
 }
 
-.contact__tel {
-  margin-top: rem(4);
-}
-
-.contact__time {
-  margin-top: rem(4);
-}
-
-.contact__holiday {
+.contact__item {
+  display: block;
   margin-top: rem(4);
 }
 

@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+.sub-mv{
+  background-image: url(../images/common/campaign-sp_01.jpg);
+  width: 100%;
+  height: rem(460);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @include mq('md') {
+    background-image: url(../images/common/campaign_01.jpg);
+    height: rem(548);
+  }
+}
+
+.sub-mv__title{
+  color: $white;
+  display: grid;
+  place-content: center;
+  height: inherit;
+  font-family: $second-english-font-family;
+  font-weight: $regular;
+  font-size: rem(40);
+  @include mq('md') {
+    font-size: rem(80);
+    padding-top: rem(98);
+  }
+}

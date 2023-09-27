@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.mv-movie-text {
+.mv-movie__text {
   display: none;
   @include mq("md") {
     display: flex;
@@ -24,7 +24,7 @@
   }
 }
 
-.mv-movie-text.is-active {
+.mv-movie__text.is-active {
   @include mq("md") {
     visibility: visible;
     opacity: 1;
@@ -44,7 +44,7 @@
   }
 }
 
-.mv-movie-text__title {
+.mv-movie__title {
   @include mq("md") {
     font-size: rem(75);
     letter-spacing: 0.53em;
@@ -59,7 +59,7 @@
   }
 }
 
-.mv-movie-text__subtitle {
+.mv-movie__subtitle {
   @include mq("md") {
     font-size: rem(20);
     line-height: 1;

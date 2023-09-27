@@ -105,3 +105,81 @@
     font-size: clamp(rem(20), 3vw, rem(40));
   }
 }
+
+
+/*=========================================================
+# 下層ページのみ
+=========================================================*/
+
+.sub-campaign__card > .campaign-card__body {
+  @include mq("md") {
+    padding-top: rem(22);
+    padding-left: rem(24);
+    padding-right: rem(24);
+  }
+}
+
+.sub-campaign__card > .campaign-card__body > .campaign-card__category{
+  @include mq('md') {
+    padding: rem(10) rem(15);
+  }
+}
+
+.sub-campaign__card > .campaign-card__body > .campaign-card__title{
+  @include mq('md') {
+    font-size: rem(24);
+    padding-bottom: 0;
+  }
+}
+
+.sub-campaign__card > .campaign-card__buttom{
+  @include mq('md') {
+    padding-left: rem(24);
+    padding-right: rem(24);
+    padding-bottom: rem(44);
+  }
+}
+
+.sub-campaign__card > .campaign-card__buttom > .campaign-card__text{
+@include mq('md') {
+  margin-top: rem(28);
+}
+}
+
+.sub-campaign__card > .campaign-card__buttom > .campaign-card__price{
+  @include mq('md') {
+    gap: rem(40);
+  }
+}
+
+.campaign-card__pc-wrap{
+    margin-top: rem(24);
+}
+
+.campaign-card__description {
+  text-align: left;
+  font-size: rem(16);
+  color: $black;
+  line-height: calc(24 / 16);
+}
+
+.campaign-card__date {
+font-size: rem(16);
+color: $green;
+font-family: $second-english-font-family;
+font-weight: $bold;
+text-align: center;
+margin-top: rem(30);
+}
+
+.campaign-card__info {
+  font-size: rem(14);
+  color: $green;
+  font-family: $japanese-font-family;
+  text-align: center;
+}
+
+.campaign-card__button {
+text-align: center;
+margin-top: rem(16);
+}

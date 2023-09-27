@@ -27,9 +27,7 @@
   height: auto;
   position: static;
   margin-top: rem(30);
-  @include mq("md") {
-    display: none;
-  }
+
 }
 
 .footer__pc-nav {

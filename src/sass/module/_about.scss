@@ -6,7 +6,6 @@
   width: 100%;
   max-width: 100%;
   height: inherit;
-  display: flex;
   @include mq('md') {
     display: block;
     margin-top: 0;
@@ -51,9 +50,8 @@
 
 
 .about__image-right {
-  display: none;
+  display: block;
   @include mq("md") {
-    display: block;
     content: "";
     background-image: url(../images/common/about_2.jpg);
     background-size: cover;

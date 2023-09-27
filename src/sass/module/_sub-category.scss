@@ -1,0 +1,52 @@
+@use 'global' as *;
+
+.sub-category {
+  margin-top: rem(50);
+  position: relative;
+  @include mq('md') {
+    margin-top: rem(150);
+  }
+}
+
+.sub-category::before{
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/voice_fish-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: rem(-25);
+  left: calc(50% - min(46vw, rem(619)));
+  z-index: -10;
+  @include mq('md') {
+    width: rem(300);
+    height: rem(138);
+    top: rem(-70);
+  }
+}
+
+
+.sub-category__items {
+display: grid;
+gap: rem(16) rem(21);
+grid-template-columns: repeat(2,1fr);
+@include mq('md') {
+  gap: rem(32);
+  grid-template-columns: repeat(4,rem(162));
+}
+}
+
+.sub-category__item {
+display: inline-block;
+color: $green;
+border: 1px solid $green;
+text-align: center;
+font-size: rem(14);
+padding: rem(6) 0;
+}
+
+.sub-category__item.is-active{
+  color: $white;
+  background-color: $green;
+}
