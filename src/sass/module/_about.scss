@@ -67,6 +67,12 @@
 }
 
 
+.about__image-right.about__image-right--sub{
+  @include mq('md') {
+    padding-bottom: rem(261);
+  }
+}
+
 
 .about__lead {
   max-width: rem(600);
@@ -95,6 +101,20 @@
     line-height: calc(100 / 80);
     flex: 0 0 rem(400);
     margin-top: 0;
+  }
+}
+
+.about__title.about__title--sub{
+  content: "";
+  position: absolute;
+  top: rem(24);
+  left: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  color: $white;
+  margin-top: 0;
+  @include mq('md') {
+    position: static;
   }
 }
 

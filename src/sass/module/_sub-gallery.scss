@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.sub-gallery__section-title {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(120);
+  }
+}
+
+.sub-gallery__items {
+  margin-top: rem(40);
+}
+
+.sub-gallery__item {
+  cursor: pointer;
+}
+
+.sub-gallery__item img {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.sub-gallery__item:not(:first-child) {
+  margin-top: rem(8);
+}
