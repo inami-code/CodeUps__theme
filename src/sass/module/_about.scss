@@ -29,7 +29,7 @@
 
 
 .about__image-left {
-  aspect-ratio: 345 / 212;
+  aspect-ratio: 345 / 228;
   width: 100%;
   z-index: 10;
   @include mq("md") {
@@ -85,6 +85,7 @@
     display: flex;
     gap: rem(40);
     position: relative;
+    align-items: center;
   }
 }
 
@@ -115,6 +116,7 @@
   margin-top: 0;
   @include mq('md') {
     position: static;
+    line-height: 1.2;
   }
 }
 
@@ -128,7 +130,7 @@
   color: $black;
   font-size: rem(16);
   line-height: calc(24 / 16);
-  margin-top: rem(16);
+  margin-top: rem(40);
   @include mq("md") {
     color: $white;
     margin-top: 0;

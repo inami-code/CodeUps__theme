@@ -1,15 +1,11 @@
 @use 'global' as *;
 
-.sub-about {
-
-}
-
 
 .sub-about__section {
   position: relative;
   margin-top: rem(52);
   @include mq('md') {
-    margin-top: rem(278);
+    margin-top: rem(230);
   }
 }
 
@@ -23,16 +19,26 @@
   background-repeat: no-repeat;
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
-  z-index: -10;
+  z-index: 0;
   @include mq('md') {
     width: rem(300);
     height: rem(138);
-    top: rem(-170);
+    top: rem(-150);
   }
 }
 
-
-
-.sub-about__content {
-
+.sub-about__section::before{
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    width: rem(109);
+    height: rem(50);
+    background-image: url(../images/common/contact-fish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: rem(301);
+    height: rem(138);
+    bottom: rem(-180);
+    right: calc(50% - min(48vw, rem(640)));
+  }
 }

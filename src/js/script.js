@@ -58,7 +58,6 @@ jQuery(function ($) {
     $(".js-header").removeClass("is-active");
   });
 
-
   // ------------------------------------
   // # ハンバーガーメニュー展開時背景を固定
   // ------------------------------------
@@ -262,3 +261,22 @@ jQuery(function ($) {
     });
   });
 });
+// ------------------------------------
+// モーダルウインドウ
+// ------------------------------------
+$(".js-modal-open img").on("click", function () {
+  //クリックしたら
+  $(".js-modal-overlay").html($(this).prop("outerHTML"));
+  $(".js-modal-overlay").fadeIn(200);
+  //fadeInで表示する。
+  $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効
+  return false;
+});
+
+$(".js-modal-overlay").on("click", function () {
+  //そして、fadeInで表示する。
+  $(".js-modal-overlay").fadeOut(200);
+  $('body').removeAttr('overflow-y', 'hidden');  // 本文の縦スクロールを無効
+  return false;
+});
+

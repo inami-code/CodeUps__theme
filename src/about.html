@@ -211,34 +211,36 @@
     <div class="sub-about">
       <div class="sub-about__inner inner">
         <div class="sub-about__section">
-            <div class="about__image-left">
-              <picture>
-                <source
-                  srcset="./assets/images/common/about_1.jpg"
-                  media="(min-width: 768px)"
-                  type="image/jpg"
-                />
-                <img
-                  src="./assets/images/common/about_2.jpg"
-                  alt="about画像"
-                  width="345"
-                  height="228"
-                />
-              </picture>
-            </div>
-            <div class="about__image-right about__image-right--sub">
-              <div class="about__lead">
-                <h3 class="about__title about__title--sub">Dive into<br />the Ocean</h3>
-                <div class="about__text-wrap">
-                  <p class="about__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                  </p>
-                </div>
+          <div class="about__image-left">
+            <picture>
+              <source
+                srcset="./assets/images/common/about_1.jpg"
+                media="(min-width: 768px)"
+                type="image/jpg"
+              />
+              <img
+                src="./assets/images/common/about_2.jpg"
+                alt="about画像"
+                width="345"
+                height="228"
+              />
+            </picture>
+          </div>
+          <div class="about__image-right about__image-right--sub">
+            <div class="about__lead">
+              <h3 class="about__title about__title--sub">
+                Dive into<br />the Ocean
+              </h3>
+              <div class="about__text-wrap">
+                <p class="about__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
     <div class="sub-gallery">
       <div class="sub-gallery__inner inner">
@@ -246,8 +248,9 @@
           <p class="section-header__en-title">Gallery</p>
           <h2 class="section-header__jp-title">フォト</h2>
         </div>
+        <div class="sub-gallery__modal js-modal-overlay"></div>
         <div class="sub-gallery__items">
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/price_pc.jpg"
               alt="ギャラリー画像1"
@@ -255,7 +258,7 @@
               height="523"
             />
           </div>
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/campaign_2.jpg"
               alt="ギャラリー画像2"
@@ -263,7 +266,7 @@
               height="219"
             />
           </div>
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/gallery_1.jpg"
               alt="ギャラリー画像3"
@@ -271,7 +274,7 @@
               height="219"
             />
           </div>
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/gallery_2.jpg"
               alt="ギャラリー画像4"
@@ -279,7 +282,7 @@
               height="219"
             />
           </div>
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/gallery_3.jpg"
               alt="ギャラリー画像5"
@@ -287,7 +290,7 @@
               height="219"
             />
           </div>
-          <div class="sub-gallery__item">
+          <div class="sub-gallery__item sub-gallery__item--img js-modal-open">
             <img
               src="./assets/images/common/gallery_4.jpg"
               alt="ギャラリー画像6"
@@ -296,6 +299,7 @@
             />
           </div>
         </div>
+
       </div>
     </div>
 
@@ -475,102 +479,6 @@
             </div>
           </div>
         </nav>
-
-        <!-- <nav class="footer__pc-nav footer-pc-nav">
-          <div class="footer-pc-nav__items">
-            <div class="footer-pc-nav__text">
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#campaign">キャンペーン</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ライセンス取得</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">貸切体験ダイビング</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ナイトダイビング</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#about">私たちについて</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-pc-nav__text">
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#">ダイビング情報</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ライセンス講習</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">体験ダイビング</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ファンダイビング</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#blog">ブログ</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-pc-nav__text">
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#voice">お客様の声</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#price">料金一覧</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ライセンス講習</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">体験ダイビング</a>
-                </li>
-                <li class="footer-pc-nav__item">
-                  <a href="#">ファンダイビング</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-pc-nav__text">
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#">よくある質問</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#">プライバシーポリシー</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#">利用規約</a>
-                </li>
-              </ul>
-
-              <ul class="footer-pc-nav__container">
-                <li class="footer-pc-nav__item footer-pc-nav__item--bold">
-                  <a href="#contact">お問い合わせ</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav> -->
       </div>
       <div class="footer__copyright">
         <small
