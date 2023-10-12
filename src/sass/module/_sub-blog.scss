@@ -1,0 +1,60 @@
+@use 'global' as *;
+
+.sub-blog__inner{
+  position: relative;
+  @include mq('md') {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(70);
+  }
+}
+
+.sub-blog__inner::before{
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/voice_fish-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: rem(-24);
+  left: calc(50% - min(46vw, rem(619)));
+  @include mq('md') {
+    width: rem(300);
+    height: rem(138);
+    top: rem(75);
+  z-index: -10;
+  }
+}
+
+.sub-blog__page{
+  @include mq('md') {
+    flex: 1 1 auto;
+  }
+}
+
+.sub-blog__content {
+margin-top: rem(52);
+@include mq('md') {
+  margin-top: rem(150);;
+}
+}
+
+.sub-blog__pagination{
+  margin-top: rem(80);
+}
+
+.sub-blog__widget{
+  margin-top: rem(85);
+  @include mq('md') {
+    margin-top: rem(154);
+    flex: 0 0 rem(294);
+  }
+}
+
+.sub-blog__widget-content{
+  padding: 0 rem(25);
+  @include mq('md') {
+    padding: 0;
+  }
+}

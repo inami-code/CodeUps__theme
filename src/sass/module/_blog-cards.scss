@@ -4,11 +4,8 @@
   padding: 0 rem(6);
   @include mq("md") {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    // max-width: rem(1080);
-    // width: 100%;
-    padding: 0;
-    gap: rem(40);
+    grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+    gap: rem(80) rem(40);
   }
 }
 

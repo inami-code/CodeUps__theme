@@ -290,3 +290,13 @@ $(".tab-menu__item").on("click", function () {
   const index = $(this).index();
   $(".js-tab-content").hide().eq(index).fadeIn(300);
 });
+
+
+
+// ------------------------------------
+// サイドバーのアーカイブアコーディオン
+// ------------------------------------
+$(".js-accordion-archive").on("click", function () {
+  $(this).next(".archive__month-wrap").slideToggle(300);//中身を表示
+  $(this).toggleClass("is-open", 300);// 矢印のアニメーション
+});

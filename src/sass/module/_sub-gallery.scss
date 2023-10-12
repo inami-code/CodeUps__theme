@@ -39,7 +39,7 @@
 
 .sub-gallery__item--img:nth-child(6n+2),
 .sub-gallery__item--img:nth-child(6n+3){
-  aspect-ratio: 219 / 345;
+  aspect-ratio: 345 / 219;
   @include mq("md") {
     aspect-ratio: 580 / 369;
     grid-column: 6 / span 6;
@@ -48,7 +48,7 @@
 }
 .sub-gallery__item--img:nth-child(6n+4),
 .sub-gallery__item--img:nth-child(6n+5){
-  aspect-ratio: 219 / 345;
+  aspect-ratio: 345 / 219;
   @include mq("md") {
     aspect-ratio: 580 / 369;
     grid-column: 1 / span 6;

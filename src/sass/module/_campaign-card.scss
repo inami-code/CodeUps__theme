@@ -6,9 +6,11 @@
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 }
 
+.campaign-card__image{
+  aspect-ratio: 280 / 188;
+}
 
 .campaign-card__image img {
-  aspect-ratio: 280 / 188;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -111,7 +113,13 @@
 # 下層ページのみ
 =========================================================*/
 
-.sub-campaign__card > .campaign-card__body {
+.campaign-card__image.campaign-card__image--widget{
+  aspect-ratio: 294 / 188;
+  height: rem(188);
+}
+
+
+.campaign-card__body.campaign-card__body--sub-page{
   @include mq("md") {
     padding-top: rem(22);
     padding-left: rem(24);
@@ -119,20 +127,21 @@
   }
 }
 
-.sub-campaign__card > .campaign-card__body > .campaign-card__category{
+.campaign-card__category.campaign-card__category--sub-page{
   @include mq('md') {
     padding: rem(10) rem(15);
   }
 }
 
-.sub-campaign__card > .campaign-card__body > .campaign-card__title{
+.campaign-card__title.campaign-card__title--sub-page{
   @include mq('md') {
     font-size: rem(24);
     padding-bottom: 0;
   }
 }
 
-.sub-campaign__card > .campaign-card__bottom{
+
+.campaign-card__bottom.campaign-card__bottom--sub-page{
   @include mq('md') {
     padding-left: rem(24);
     padding-right: rem(24);
@@ -140,18 +149,56 @@
   }
 }
 
-.sub-campaign__card > .campaign-card__bottom > .campaign-card__text{
-@include mq('md') {
-  margin-top: rem(28);
-}
+.campaign-card__text.campaign-card__text--sub-page{
+  @include mq('md') {
+    margin-top: rem(28);
+  }
 }
 
-.sub-campaign__card > .campaign-card__bottom > .campaign-card__price{
+.campaign-card__price.campaign-card__price--sub-page{
   @include mq('md') {
     gap: rem(40);
   }
 }
 
+.campaign-card__title.campaign-card__title--widget{
+  text-align: center;
+}
+
+.campaign-card__body.campaign-card__body--widget{
+@include mq('md') {
+  padding-top: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
+}
+}
+
+.campaign-card__bottom.campaign-card__bottom--widget{
+  @include mq("md") {
+    padding-bottom: rem(24);
+  }
+}
+
+.campaign-card__text.campaign-card__text--widget  {
+  @include mq("md") {
+    font-size: rem(14);
+    margin-top: rem(12);
+  }
+}
+
+.campaign-card__before.campaign-card__before--widget {
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+
+.campaign-card__after.campaign-card__after--widget {
+  @include mq("md") {
+  font-size: rem(32);
+  }
+}
+
+/*=========================================================*/
 .campaign-card__pc-wrap{
     margin-top: rem(24);
 }

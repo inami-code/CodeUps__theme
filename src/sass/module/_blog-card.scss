@@ -49,6 +49,10 @@
   }
 }
 
+.blog-card.blog-card--widget::after {
+  display: none;
+}
+
 .blog-card__image {
   aspect-ratio: 300 / 201;
   width: 100%;
@@ -58,6 +62,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.blog-card__image.blog-card__image--widget {
+  overflow: hidden;
+}
+
+.blog-card__image.blog-card__image--widget img {
+  transition: transform 0.5s;
+}
+
+.blog-card.blog-card--widget:hover
+  .blog-card__image.blog-card__image--widget
+  img {
+  transform: scale(1.1);
 }
 
 .blog-card__body {

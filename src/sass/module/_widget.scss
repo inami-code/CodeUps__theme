@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+
+.widget__article-items{
+  margin-top: rem(28);
+}
+
+.widget__review{
+  margin-top: rem(88);
+}
+
+.widget__campaign{
+  margin-top: rem(95);
+}
+
+
+.widget__campaign-cards{
+  margin-top: rem(29);
+}
+
+
+.widget__campaign-card:not(:first-child){
+  margin-top: rem(40);
+}
+
+.widget__button{
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.widget__archive{
+  margin-top: rem(88);
+}
+
+.widget__archive-content{
+margin-top: rem(35);
+}

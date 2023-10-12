@@ -32,6 +32,13 @@
   }
 }
 
+.sub-mv--blog {
+  background-image: url(../images/common/blog_sub-mv_sp.jpg);
+  @include mq("md") {
+    background-image: url(../images/common/blog_sub-mv_pc.jpg);
+  }
+}
+
 .sub-mv__title {
   color: $white;
   display: grid;

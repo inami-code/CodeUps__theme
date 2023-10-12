@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.archive__list:not(:first-child) {
+  margin-top: rem(12);
+}
+
+.archive__year,
+.archive__month {
+  font-size: rem(24);
+  color: $green;
+  margin-left: rem(32);
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.archive__year::before,
+.archive__month::before {
+  content: "";
+  position: absolute;
+  top: rem(3);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(12) 0 rem(12) rem(18);
+  border-color: transparent transparent transparent $green;
+}
+
+.archive__year::before {
+  left: rem(-30);
+  transition: transform 0.3s ease-in-out;
+}
+
+.archive__month::before {
+  left: rem(-25);
+}
+
+.archive__year.is-open::before {
+  transform: rotate(90deg);
+}
+
+.archive__year:not(:first-child) {
+  margin-top: rem(13);
+}
+
+.archive__month-wrap:not(.is-open) {
+  display: none;
+}
+
+.archive__month {
+  margin-left: rem(56);
+  margin-top: rem(15);
+}

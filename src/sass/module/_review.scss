@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.review__item{
+  display: block;
+  margin-top: rem(30);
+}
+
+.review__img{
+  aspect-ratio: 294 / 218;
+}
+
+.review__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review__age{
+margin-top: rem(16);
+color: $black;
+font-size: rem(12);
+}
+
+.review__title{
+  color: $black;
+  font-size: rem(24);
+  font-weight: $regular;
+  margin-top: rem(8);
+}
