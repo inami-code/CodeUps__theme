@@ -1,0 +1,58 @@
+@use 'global' as *;
+
+
+.tab-container__content {
+border: 1px solid $green;
+padding: rem(24);
+display: none;
+@include mq('md') {
+  padding: rem(28) rem(24);
+}
+}
+
+.tab-container__flex{
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+    gap: rem(48);
+  }
+}
+
+.tab-container__left{
+  @include mq('md') {
+    flex: 1 1 50%;
+  }
+}
+
+.tab-container__title {
+font-size: rem(24);
+font-weight: $bold;
+line-height: 1;
+color: $black;
+padding-bottom: rem(7);
+border-bottom: 1px solid $green;
+}
+
+.tab-container__text {
+margin-top: rem(8);
+font-size: rem(16);
+line-height: calc(24 / 16);
+color: $black;
+}
+
+.tab-container__right {
+margin-top: rem(8);
+aspect-ratio: 297 / 189;
+@include mq('md') {
+  flex: 0 1 50%;
+  margin: 0;
+}
+}
+.tab-container__right img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+

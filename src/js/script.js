@@ -276,7 +276,17 @@ $(".js-modal-open img").on("click", function () {
 $(".js-modal-overlay").on("click", function () {
   //そして、fadeInで表示する。
   $(".js-modal-overlay").fadeOut(200);
-  $('body').removeAttr('overflow-y', 'hidden');  // 本文の縦スクロールを無効
+  $('body').css('overflow-y', 'auto');  // 本文の縦スクロールを無効
   return false;
 });
 
+// ------------------------------------
+// タブメニュー
+// ------------------------------------
+$(".js-tab-content:first-of-type").css("display", "flex");
+$(".tab-menu__item").on("click", function () {
+  $(".is-active").removeClass("is-active");
+  $(this).addClass("is-active");
+  const index = $(this).index();
+  $(".js-tab-content").hide().eq(index).fadeIn(300);
+});
