@@ -1,44 +1,44 @@
-@use 'global' as *;
+@use "global" as *;
 
 .pagination {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
-
 
 .pagination__prev {
-border: 1px solid $green;
-color: $green;
-padding: rem(17) rem(18);
-position: relative;
-}
-
-/* 矢印
---------------------------------------------------*/
-.pagination__prev::before,
-.pagination__prev::after{
-  content: ""; /* 疑似要素に指定必須 */
-  width: rem(16); /* 線の長さを指定 */
-  height: rem(1); /* 線の幅を指定 */
-  display: inline-block; /* インラインブロックにする */
-  border-radius: 2px; /* 線を角丸にする */
-  background-color: $green;   /* 線の色を指定 */
-  position: absolute; /* 相対位置に指定 */
-  right: rem(12); /* 右から12pxの位置に配置 */
+  border: 1px solid $green;
+  color: $green;
+  padding: rem(17) rem(18);
+  position: relative;
 }
 
 .pagination__prev::before{
-  top: calc(50% - 6px);
-  transform: rotate(-45deg); /* -45度回転させる */
+  content: "";
+  position: absolute;
+  width: rem(8);
+  height: rem(16);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/common/pagination-prev.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background .3s;
 }
 
-.pagination__prev::after{
-  bottom: calc(50% - 6px);
-  transform: rotate(45deg); /* 45度回転させる */
+.pagination__prev:hover {
+  background-color: $green;
+  transition: background .3s;
 }
 
-// --------------------------------------------------
+.pagination__prev:hover.pagination__prev::before{
+  background-image: url(../images/common/pagination-prev_white.png);
+}
+
+
+
+
+
 .pagination__number {
   border: 1px solid $green;
   color: $green;
@@ -50,11 +50,11 @@ position: relative;
   margin-left: rem(12);
 }
 
-.pagination__number--first{
+.pagination__number--first {
   margin-left: rem(42);
 }
 
-.pagination__number.is-active{
+.pagination__number.is-active {
   background-color: $green;
   color: $white;
 }
@@ -67,28 +67,33 @@ position: relative;
   position: relative;
 }
 
-
-/* 矢印
---------------------------------------------------*/
-.pagination__next::before,
-.pagination__next::after{
-  content: ""; /* 疑似要素に指定必須 */
-  width: rem(16); /* 線の長さを指定 */
-  height: rem(1); /* 線の幅を指定 */
-  display: inline-block; /* インラインブロックにする */
-  border-radius: 2px; /* 線を角丸にする */
-  background-color: $green;   /* 線の色を指定 */
-  position: absolute; /* 相対位置に指定 */
-  right: rem(12); /* 右から12pxの位置に配置 */
-}
-
 .pagination__next::before{
-  top: calc(50% - 6px);
-  transform: rotate(45deg); /* 45度回転させる */
+  content: "";
+  position: absolute;
+  width: rem(8);
+  height: rem(16);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/common/pagination-next.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background .3s;
 }
 
-.pagination__next::after{
-  bottom: calc(50% - 6px);
-  transform: rotate(-45deg); /* -45度回転させる */
+.pagination__next:hover {
+  background-color: $green;
+  transition: background .3s;
 }
-// --------------------------------------------------
+
+.pagination__next:hover.pagination__next::before{
+  background-image: url(../images/common/pagination-next_white.png);
+}
+
+.pagination__next--page-blog {
+  margin-left: rem(82);
+}
+
+
+
+

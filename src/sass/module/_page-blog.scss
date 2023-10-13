@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.page-blog__date {
+  font-family: $english-font-family;
+  font-size: rem(14);
+  line-height: 1;
+  color: $black;
+}
+
+.page-blog__title {
+  font-size: rem(24);
+  font-weight: $regular;
+  color: $black;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $green;
+  margin-top: rem(7);
+  @include mq('md') {
+    font-size: rem(32);
+    padding-bottom: 0;
+  }
+}
+
+.page-blog__img {
+  aspect-ratio: 345 / 231;
+  margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(38);
+  }
+}
+
+.page-blog__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page-blog__text {
+  margin-top: rem(24);
+  font-size: rem(16);
+  color: $black;
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.page-blog__lists {
+  margin-top: rem(24);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.page-blog__list {
+  font-size: rem(16);
+  color: $black;
+  line-height: calc(24 / 16);
+  position: relative;
+  margin-left: rem(28);
+}
+
+.page-blog__list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: rem(-26);
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/starfish-blue.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-blog__list:not(:first-child) {
+  margin-top: rem(4);
+}
