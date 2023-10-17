@@ -17,7 +17,7 @@
   @include mq('md') {
     margin-top: rem(83);
     grid-template-columns: repeat(11,1fr);
-    grid-template-row: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
   }
 }
 

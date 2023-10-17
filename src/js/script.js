@@ -299,4 +299,15 @@ $(".tab-menu__item").on("click", function () {
 $(".js-accordion-archive").on("click", function () {
   $(this).next(".archive__month-wrap").slideToggle(300);//中身を表示
   $(this).toggleClass("is-open", 300);// 矢印のアニメーション
+  
+});
+
+
+// ------------------------------------
+// FAQ
+// ------------------------------------
+$(".faq-box__q").on('click', function(){
+
+  $(this).next().slideToggle();
+  $(this).children('.faq-box__icon').toggleClass('is-close');
 });

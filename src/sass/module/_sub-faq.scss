@@ -1,0 +1,31 @@
+@use 'global' as *;
+
+.sub-faq {
+  position: relative;
+}
+
+
+.sub-faq::before{
+  content: "";
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/voice_fish-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: rem(-25);
+  left: calc(50% - min(46vw, rem(619)));
+  z-index: 0;
+  @include mq('md') {
+    width: rem(300);
+    height: rem(138);
+    top: rem(-73);
+  }
+}
+
+.sub-faq__items {
+  margin-top: rem(52);
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}

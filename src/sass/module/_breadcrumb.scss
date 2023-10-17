@@ -4,10 +4,23 @@
 margin-top: rem(8);
 }
 
+.breadcrumb--404{
+  margin-top: 0;
+  padding-top: rem(88);
+  background-color: $green;
+  @include mq('md') {
+    padding-top: rem(99);
+  }
+}
+
 .breadcrumb__text{
   font-size: rem(14);
   color: $black;
 
+}
+
+.breadcrumb__text--404{
+  color: $white;
 }
 
 .breadcrumb__text span{

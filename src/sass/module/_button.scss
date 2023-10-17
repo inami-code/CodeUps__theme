@@ -11,6 +11,12 @@
   padding: rem(16) 0;
   color: $white;
   text-align: center;
+  transition: 0.3s ease;
+}
+
+.button--white{
+  background: $white;
+  color: $green;
 }
 
 .button::after {
@@ -29,6 +35,11 @@
   z-index: -10;
 }
 
+.button--white::after{
+  background-color: $green;
+  border: 1px solid $white;
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -39,6 +50,10 @@
   right: rem(-4);
   bottom: rem(-4);
   z-index: -100;
+}
+
+.button--white::before{
+  border: 1px solid $white;
 }
 
 .button span {
@@ -55,6 +70,10 @@
   z-index: 100;
 }
 
+.button--white span{
+  background-color: $green;
+}
+
 .button span::after {
   position: absolute;
   content: "";
@@ -69,18 +88,31 @@
   z-index: 100;
 }
 
-.button {
-  transition: 0.3s ease;
+.button--white span::after{
+  background-color: $green;
 }
+
+
 @media (hover: hover) {
   .button:hover {
     color: $green;
   }
+  .button--white:hover {
+    color: $white;
+  }
+
   .button:hover span {
     background-color: $green;
   }
+  .button--white:hover span {
+    background-color: $white;
+  }
+
   .button:hover span::after {
     background-color: $green;
+  }
+  .button--white:hover span::after {
+    background-color: $white;
   }
 
   .button:hover::after {

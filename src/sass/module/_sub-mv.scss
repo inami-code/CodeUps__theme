@@ -55,10 +55,22 @@
   }
 }
 .sub-mv--faq {
-  text-transform: uppercase;
   background-image: url(../images/common/faq_sub-mv_sp.jpg);
   @include mq("md") {
     background-image: url(../images/common/faq_sub-mv_pc.jpg);
+  }
+}
+.sub-mv--contact {
+  background-image: url(../images/common/contact_sub-mv_sp.jpg);
+  @include mq("md") {
+    background-image: url(../images/common/contact_sub-mv_pc.jpg);
+  }
+}
+
+.sub-mv--sitemap {
+  background-image: url(../images/common/sitemap_sub-mv_sp.jpg);
+  @include mq("md") {
+    background-image: url(../images/common/sitemap_sub-mv_pc.jpg);
   }
 }
 

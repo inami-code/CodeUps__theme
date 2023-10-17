@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.sub-404 {
+  background-color: $green;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.sub-404__content {
+  text-align: center;
+  padding-top: rem(55);
+  padding-bottom: rem(48);
+  position: relative;
+  z-index: 100;
+  @include mq("md") {
+    padding-top: rem(130);
+    padding-bottom: rem(160);
+  }
+}
+
+.sub-404__title {
+  font-size: rem(80);
+  font-family: $second-english-font-family;
+  letter-spacing: 0.5em;
+  line-height: 1;
+  color: $white;
+  font-weight: $regular;
+  text-indent: 0.5em;
+  @include mq("md") {
+    font-size: rem(160);
+  }
+}
+
+.sub-404__text {
+  font-size: rem(16);
+  font-family: $second-english-font-family;
+  line-height: calc(24 / 16);
+  color: $white;
+  font-weight: $regular;
+  margin-top: rem(5);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.sub-404__button {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.sub-404__icon {
+  position: absolute;
+  top: 0;
+  left: 4.5%;
+  width: rem(340);
+  height: rem(293);
+  aspect-ratio: 328 / 293;
+  @include mq("md") {
+    width: rem(690);
+    height: rem(594);
+    top: 3%;
+    left: 13%;
+  }
+}
+
+.sub-404__icon svg {
+  fill: rgba(13, 41, 54, 0.1);
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
