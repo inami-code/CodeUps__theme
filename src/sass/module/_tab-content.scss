@@ -10,7 +10,8 @@ display: none;
 }
 }
 
-.tab-container__flex{
+.tab-container__content.is-active{
+  display: block;
   @include mq('md') {
     display: flex;
     align-items: center;
@@ -43,11 +44,23 @@ color: $black;
 .tab-container__right {
 margin-top: rem(8);
 aspect-ratio: 297 / 189;
+position: relative;
 @include mq('md') {
   flex: 0 1 50%;
   margin: 0;
 }
 }
+
+.tab-container__right .js-image-color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+
 .tab-container__right img{
   object-fit: cover;
   width: 100%;

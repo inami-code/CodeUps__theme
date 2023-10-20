@@ -88,9 +88,15 @@
                 <li class="sp-nav__item sp-nav__item--bold">
                   <a href="information.html">ダイビング情報</a>
                 </li>
-                <li class="sp-nav__item"><a href="information.html">ライセンス講習</a></li>
-                <li class="sp-nav__item"><a href="information.html">体験ダイビング</a></li>
-                <li class="sp-nav__item"><a href="information.html">ファンダイビング</a></li>
+                <li class="sp-nav__item">
+                  <a href="information.html?active-tab=tab-1">ライセンス講習</a>
+                </li>
+                <li class="sp-nav__item">
+                  <a href="information.html?active-tab=tab-3">体験ダイビング</a>
+                </li>
+                <li class="sp-nav__item">
+                  <a href="information.html?active-tab=tab-2">ファンダイビング</a>
+                </li>
               </ul>
 
               <ul class="sp-nav__container">
@@ -215,7 +221,7 @@
         <div class="sub-info__tab-nav tab-menu">
           <nav class="tab-menu__container">
             <ul class="tab-menu__items">
-              <li class="tab-menu__item is-active">
+              <li class="tab-menu__item js-tab-item is-active" data-tab="tab-1">
                 <div class="tab-menu__icon">
                   <svg>
                     <use href="#tab_icon01" />
@@ -225,7 +231,7 @@
                   ライセンス<br class="u-mobile" />講習
                 </p>
               </li>
-              <li class="tab-menu__item">
+              <li class="tab-menu__item js-tab-item" data-tab="tab-2">
                 <div class="tab-menu__icon">
                   <svg>
                     <use href="#tab_icon02" />
@@ -235,7 +241,7 @@
                   ファン<br class="u-mobile" />ダイビング
                 </p>
               </li>
-              <li class="tab-menu__item">
+              <li class="tab-menu__item js-tab-item" data-tab="tab-3">
                 <div class="tab-menu__icon">
                   <svg>
                     <use href="#tab_icon03" />
@@ -249,7 +255,7 @@
           </nav>
         </div>
         <div class="sub-info__tab-container tab-container">
-          <div id="tab1" class="tab-container__content js-tab-content">
+          <div  class="tab-container__content js-tab-content is-active" data-tab="tab-1">
             <div class="tab-container__flex">
               <div class="tab-container__left">
                 <h2 class="tab-container__title">ライセンス講習</h2>
@@ -273,7 +279,7 @@
               </div>
             </div>
           </div>
-          <div id="tab2" class="tab-container__content js-tab-content">
+          <div id="tab2" class="tab-container__content js-tab-content" data-tab="tab-2">
             <div class="tab-container__flex">
               <div class="tab-container__left">
                 <h2 class="tab-container__title">ファンダイビング</h2>
@@ -297,7 +303,7 @@
               </div>
             </div>
           </div>
-          <div id="tab3" class="tab-container__content js-tab-content">
+          <div id="tab3" class="tab-container__content js-tab-content" data-tab="tab-3">
             <div class="tab-container__flex">
               <div class="tab-container__left">
                 <h2 class="tab-container__title">体験ダイビング</h2>
@@ -443,9 +449,15 @@
                   <li class="sp-nav__item sp-nav__item--bold">
                     <a href="information.html">ダイビング情報</a>
                   </li>
-                  <li class="sp-nav__item"><a href="information.html">ライセンス講習</a></li>
-                  <li class="sp-nav__item"><a href="information.html">体験ダイビング</a></li>
-                  <li class="sp-nav__item"><a href="information.html">ファンダイビング</a></li>
+                  <li class="sp-nav__item">
+                    <a href="information.html?active-tab=tab-1">ライセンス講習</a>
+                  </li>
+                  <li class="sp-nav__item">
+                    <a href="information.html?active-tab=tab-3">体験ダイビング</a>
+                  </li>
+                  <li class="sp-nav__item">
+                    <a href="information.html?active-tab=tab-2">ファンダイビング</a>
+                  </li>
                 </ul>
 
                 <ul class="sp-nav__container">

@@ -39,11 +39,19 @@ grid-template-columns: repeat(2,1fr);
 
 .sub-category__item {
 display: inline-block;
+background-color: $white;
 color: $green;
 border: 1px solid $green;
 text-align: center;
 font-size: rem(14);
 padding: rem(6) 0;
+cursor: pointer;
+transition: all .3s;
+}
+
+.sub-category__item:hover{
+  color: $white;
+  background-color: $green;
 }
 
 .sub-category__item.is-active{

@@ -10,6 +10,7 @@
   color: $green;
   padding: rem(17) rem(18);
   position: relative;
+  cursor: pointer;
 }
 
 .pagination__prev::before{
@@ -48,6 +49,13 @@
   font-size: rem(16);
   font-weight: $bold;
   margin-left: rem(12);
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.pagination__number:hover{
+  background-color: $green;
+  color: $white;
 }
 
 .pagination__number--first {
@@ -65,6 +73,7 @@
   padding: rem(17) rem(18);
   margin-left: rem(40);
   position: relative;
+  cursor: pointer;
 }
 
 .pagination__next::before{

@@ -59,7 +59,7 @@ jQuery(function ($) {
   });
 
   // ------------------------------------
-  // # ハンバーガーメニュー展開時背景を固定
+  // ハンバーガーメニュー展開時背景を固定
   // ------------------------------------
   $(function () {
     var state = false;
@@ -207,20 +207,37 @@ jQuery(function ($) {
       }
     });
   });
-
   // ------------------------------------
-  // スムーススクロール（headerに被らない
+  // 下層ページ information 画像アニメーション
   // ------------------------------------
+  //要素の取得とスピードの設定
+  var box = $(".tab-container__right"),
+    speed = 700;
 
-  $(document).on("click", 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $("header").innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $("html,body").animate({ scrollTop: targetY }, time, "swing");
-    return false;
+  //.js-image-colorの付いた全ての要素に対して下記の処理を行う(picture)
+  box.each(function () {
+    $(this).append('<div class="js-image-color"></div>');
+    var color = $(this).find($(".js-image-color")),
+      image = $(this).find("picture");
+    var counter = 0;
+
+    image.css("opacity", "0");
+    color.css("width", "0%");
+    //inviewを使って背景色が画面に現れたら処理をする
+    color.on("inview", function () {
+      if (counter == 0) {
+        $(this)
+          .delay(200)
+          .animate({ width: "100%" }, speed, function () {
+            image.css("opacity", "1");
+            $(this).css({ left: "0", right: "auto" });
+            $(this).animate({ width: "0%" }, speed);
+          });
+        counter = 1;
+      }
+    });
   });
+
 
   // ------------------------------------
   // ページトップに戻るボタン
@@ -240,7 +257,7 @@ jQuery(function ($) {
         {
           scrollTop: 0,
         },
-        500
+        1000
       );
       return false;
     });
@@ -261,6 +278,7 @@ jQuery(function ($) {
     });
   });
 });
+
 // ------------------------------------
 // モーダルウインドウ
 // ------------------------------------
@@ -283,12 +301,28 @@ $(".js-modal-overlay").on("click", function () {
 // ------------------------------------
 // タブメニュー
 // ------------------------------------
-$(".js-tab-content:first-of-type").css("display", "flex");
-$(".tab-menu__item").on("click", function () {
-  $(".is-active").removeClass("is-active");
-  $(this).addClass("is-active");
-  const index = $(this).index();
-  $(".js-tab-content").hide().eq(index).fadeIn(300);
+
+function getParam(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+let tabPram = ['tab-1', 'tab-2', 'tab-3'];
+let pram = getParam('active-tab');
+if (pram && $.inArray(pram, tabPram) !== -1) {
+  $('.js-tab-item,.js-tab-content').removeClass('is-active');
+  $('[data-tab="' + pram + '"]').addClass('is-active');
+}
+
+$('.js-tab-item').on('click', function() {
+  let dataPram = $(this).data('tab');
+  $('.js-tab-item,.js-tab-content').removeClass('is-active');
+  $('[data-tab="' + dataPram + '"]').addClass('is-active');
 });
 
 

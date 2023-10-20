@@ -29,9 +29,9 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 81px; /* 固定ヘッダの高さ分 */
-  @media screen and (min-width: 1200px) {
-    scroll-padding-top: 91px; /* 固定ヘッダの高さ分 */
+  scroll-padding-top: 80px; /* 固定ヘッダの高さ分 */
+  @media screen and (min-width: 768px) {
+    scroll-padding-top: 90px; /* 固定ヘッダの高さ分 */
   }
 }
 
