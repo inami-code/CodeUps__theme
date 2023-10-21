@@ -15,15 +15,22 @@
 
 .faq-box__q {
   background-color: $green;
-  color: $white;
-  font-size: rem(16);
   padding: rem(16);
   position: relative;
   @include mq('md') {
-    font-size: rem(20);
     padding: rem(26) rem(40);
   }
 }
+
+.faq-box__q h2{
+  color: $white;
+  font-size: rem(16);
+  font-weight: $regular;
+  @include mq('md') {
+    font-size: rem(20);
+  }
+}
+
 
 .faq-box__icon {
   position: absolute;

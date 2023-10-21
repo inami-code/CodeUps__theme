@@ -49,7 +49,7 @@
   <body>
     <header class="header js-header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a class="header__logo-link" href="index.html">
             <img
               src="./assets/images/common/codeups_logo.svg"
@@ -58,7 +58,7 @@
               height="38"
             />
           </a>
-        </h1>
+        </div>
         <button class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
@@ -217,7 +217,7 @@
     <div class="sub-contact">
       <div class="sub-contact__inner inner">
         <div class="sub-contact__form form">
-          <form action="" method="post" id="">
+          <form action="contact-thanks.html" method="post">
             <dl class="form__item">
               <dt>
                 <label for="your-name">お名前<span>必須</span></label>
@@ -259,7 +259,7 @@
             </dl>
             <dl class="form__item">
               <dt>
-                <label for="your-item">お問合せ項目<span>必須</span></label>
+                <label>お問合せ項目<span>必須</span></label>
               </dt>
               <dd class="form__checkbox">
                 <label
@@ -293,7 +293,7 @@
                 <label for="campaign">キャンペーン</label>
               </dt>
               <dd class="form__campaign">
-                <select name="campaign" class="form__select">
+                <select name="campaign" class="form__select" id="campaign">
                   <option value="">キャンペーン内容を選択</option>
                   <option value="セレクト1">セレクト1</option>
                   <option value="セレクト2">セレクト2</option>
@@ -317,7 +317,7 @@
             >
           </div>
           <div class="form__button">
-            <a href="#" class="button">Send<span></span></a>
+            <a href="contact-thanks.html" class="button">Send<span></span></a>
           </div>
         </div>
       </div>
