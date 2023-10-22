@@ -2,6 +2,10 @@
 
 .sub-contact{
   position: relative;
+  margin-top: rem(51);
+  @include mq('md') {
+    margin-top: rem(150);
+}
 }
 
 .sub-contact::before{
@@ -19,12 +23,5 @@
     width: rem(300);
     height: rem(138);
     top: rem(-150);
-  }
-}
-
-.sub-contact__form{
-  margin-top: rem(51);
-  @include mq('md') {
-    margin-top: rem(150);
   }
 }

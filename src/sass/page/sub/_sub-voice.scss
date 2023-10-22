@@ -1,21 +1,20 @@
-@use 'global' as *;
+@use "global" as *;
 
-.sub-voice__voice-cards{
+.sub-voice__voice-cards {
   margin-top: rem(40);
 }
 
-.sub-voice__voice-cards{
-  @include mq('md') {
+.sub-voice__voice-cards {
+  @include mq("md") {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: rem(80) rem(40);
   }
 }
 
-.sub-voice__pagination{
+.sub-voice__pagination {
   margin-top: rem(80);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(70);
   }
 }
-

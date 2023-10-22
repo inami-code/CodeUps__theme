@@ -1,7 +1,11 @@
 @use 'global' as *;
 
 .sub-price{
+  margin-top: rem(50);
   position: relative;
+  @include mq('md') {
+    margin-top: rem(150);
+  }
 }
 
 .sub-price::before{
@@ -20,11 +24,4 @@
     height: rem(138);
     top: rem(-70);
   }
-}
-
-.sub-price__table {
-margin-top: rem(50);
-@include mq('md') {
-  margin-top: rem(150);
-}
 }
