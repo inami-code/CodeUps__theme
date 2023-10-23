@@ -14,10 +14,10 @@
   grid-auto-flow: dense;
   gap: rem(8);
   width: 100%;
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(83);
-    grid-template-columns: repeat(11,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
@@ -26,8 +26,7 @@
   width: 100%;
 }
 
-
-.sub-gallery__item--img:nth-child(6n+1){
+.sub-gallery__item--img:nth-child(6n + 1) {
   aspect-ratio: 345 / 523;
   @include mq("md") {
     aspect-ratio: 492 / 746;
@@ -37,8 +36,8 @@
   }
 }
 
-.sub-gallery__item--img:nth-child(6n+2),
-.sub-gallery__item--img:nth-child(6n+3){
+.sub-gallery__item--img:nth-child(6n + 2),
+.sub-gallery__item--img:nth-child(6n + 3) {
   aspect-ratio: 345 / 219;
   @include mq("md") {
     aspect-ratio: 580 / 369;
@@ -46,8 +45,8 @@
     grid-row: span 1;
   }
 }
-.sub-gallery__item--img:nth-child(6n+4),
-.sub-gallery__item--img:nth-child(6n+5){
+.sub-gallery__item--img:nth-child(6n + 4),
+.sub-gallery__item--img:nth-child(6n + 5) {
   aspect-ratio: 345 / 219;
   @include mq("md") {
     aspect-ratio: 580 / 369;
@@ -56,7 +55,7 @@
   }
 }
 
-.sub-gallery__item--img:nth-child(6n+6){
+.sub-gallery__item--img:nth-child(6n + 6) {
   aspect-ratio: 345 / 523;
   @include mq("md") {
     aspect-ratio: 492 / 746;
@@ -64,24 +63,24 @@
     grid-row: 3 / span 2;
     height: 100%;
   }
-  }
+}
 
-  .sub-gallery__item img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+.sub-gallery__item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 /*=========================================================
 # モーダルウインドウ
 =========================================================*/
-.sub-gallery__modal{
+.sub-gallery__modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(32,32,32,0.8);
+  background-color: rgba(32, 32, 32, 0.8);
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -89,19 +88,19 @@
   aspect-ratio: 586 / 920;
 }
 
-.sub-gallery__modal img{
+.sub-gallery__modal img {
   display: block;
   position: absolute;
   object-fit: cover;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 10000;
   max-width: calc(100% - 24px * 2);
   max-height: rem(586);
   width: 100%;
   height: 100%;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(920);
   }
 }

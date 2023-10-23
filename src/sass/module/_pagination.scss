@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.pagination__prev::before{
+.pagination__prev::before {
   content: "";
   position: absolute;
   width: rem(8);
@@ -24,21 +24,17 @@
   background-image: url(../images/common/pagination-prev.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .pagination__prev:hover {
   background-color: $green;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-.pagination__prev:hover.pagination__prev::before{
+.pagination__prev:hover.pagination__prev::before {
   background-image: url(../images/common/pagination-prev_white.png);
 }
-
-
-
-
 
 .pagination__number {
   border: 1px solid $green;
@@ -50,10 +46,10 @@
   font-weight: $bold;
   margin-left: rem(12);
   cursor: pointer;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-.pagination__number:hover{
+.pagination__number:hover {
   background-color: $green;
   color: $white;
 }
@@ -76,7 +72,7 @@
   cursor: pointer;
 }
 
-.pagination__next::before{
+.pagination__next::before {
   content: "";
   position: absolute;
   width: rem(8);
@@ -87,22 +83,18 @@
   background-image: url(../images/common/pagination-next.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .pagination__next:hover {
   background-color: $green;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-.pagination__next:hover.pagination__next::before{
+.pagination__next:hover.pagination__next::before {
   background-image: url(../images/common/pagination-next_white.png);
 }
 
 .pagination__next--page-blog {
   margin-left: rem(82);
 }
-
-
-
-

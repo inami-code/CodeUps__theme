@@ -1,37 +1,34 @@
-@use 'global' as *;
+@use "global" as *;
 
-
-.widget__article-items{
+.widget__article-items {
   margin-top: rem(28);
 }
 
-.widget__review{
+.widget__review {
   margin-top: rem(88);
 }
 
-.widget__campaign{
+.widget__campaign {
   margin-top: rem(95);
 }
 
-
-.widget__campaign-cards{
+.widget__campaign-cards {
   margin-top: rem(29);
 }
 
-
-.widget__campaign-card:not(:first-child){
+.widget__campaign-card:not(:first-child) {
   margin-top: rem(40);
 }
 
-.widget__button{
+.widget__button {
   margin-top: rem(40);
   text-align: center;
 }
 
-.widget__archive{
+.widget__archive {
   margin-top: rem(88);
 }
 
-.widget__archive-content{
-margin-top: rem(35);
+.widget__archive-content {
+  margin-top: rem(35);
 }

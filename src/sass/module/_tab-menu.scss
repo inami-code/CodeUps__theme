@@ -14,54 +14,53 @@
   padding: rem(10) 0;
   width: 100%;
   box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
-  @include mq('md') {
+  @include mq("md") {
     padding: rem(13) 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: rem(8);
-    transition: all .2s;
+    transition: all 0.2s;
     width: rem(300);
   }
 }
 
 /* is-active付与
 --------------------------------------------------*/
-.tab-menu__item.is-active{
+.tab-menu__item.is-active {
   background-color: $green;
 }
 
-.tab-menu__item.is-active .tab-menu__icon svg{
-fill: #fff;
-  }
+.tab-menu__item.is-active .tab-menu__icon svg {
+  fill: #fff;
+}
 
-  .tab-menu__item.is-active .tab-menu__title{
-    color: $white;
-  }
+.tab-menu__item.is-active .tab-menu__title {
+  color: $white;
+}
 
-  // --------------------------------------------------
+// --------------------------------------------------
 
-.tab-menu__icon{
+.tab-menu__icon {
   display: none;
-  @include mq('md') {
+  @include mq("md") {
     display: block;
     width: rem(64);
     height: rem(64);
-  } 
   }
+}
 
-.tab-menu__icon svg{
+.tab-menu__icon svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  fill: #408F95;
+  fill: #408f95;
 }
 
-
-.tab-menu__title{
+.tab-menu__title {
   font-size: rem(14);
   color: $green;
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(24);
-}
+  }
 }

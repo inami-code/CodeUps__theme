@@ -8,12 +8,11 @@
   background-color: rgba(13, 41, 54, 0.68);
   height: rem(80);
   width: 100%;
-  transition: background-color .3s;
-  @include mq('md') {
+  transition: background-color 0.3s;
+  @include mq("md") {
     height: rem(90);
   }
 }
-
 
 .header.is-active {
   background-color: $green;
@@ -24,14 +23,12 @@
   align-items: center;
   justify-content: space-between;
   height: inherit;
-padding: 0 rem(15);
-  @include mq('md') {
-    padding-left:rem(40);
-    padding-right:rem(20);
+  padding: 0 rem(15);
+  @include mq("md") {
+    padding-left: rem(40);
+    padding-right: rem(20);
   }
 }
-
-
 
 .header__logo {
   z-index: 1000;

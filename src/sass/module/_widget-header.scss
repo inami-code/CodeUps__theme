@@ -1,14 +1,13 @@
-@use 'global' as *;
-
+@use "global" as *;
 
 .widget-header {
-display: flex;
-align-items: center;
-gap: rem(14);
-position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(14);
+  position: relative;
 }
 
-.widget-header::after{
+.widget-header::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -20,21 +19,20 @@ position: relative;
 }
 
 .widget-header__icon {
-width: rem(40);
-height: rem(35);
-margin-left: rem(28);
+  width: rem(40);
+  height: rem(35);
+  margin-left: rem(28);
 }
 
-.widget-header__icon svg{
-  fill: #0D2936;
+.widget-header__icon svg {
+  fill: #0d2936;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .widget-header__title {
-font-size: rem(24);
-font-weight: $regular;
-color: $black;
+  font-size: rem(24);
+  font-weight: $regular;
+  color: $black;
 }
-

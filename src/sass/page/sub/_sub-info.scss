@@ -1,10 +1,10 @@
-@use 'global' as *;
+@use "global" as *;
 
-.sub-info{
+.sub-info {
   position: relative;
 }
 
-.sub-info::after{
+.sub-info::after {
   content: "";
   position: absolute;
   width: rem(120);
@@ -15,7 +15,7 @@
   top: rem(-95);
   left: calc(50% - min(46vw, rem(619)));
   z-index: -10;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(300);
     height: rem(138);
     top: rem(-63);
@@ -23,16 +23,15 @@
 }
 
 .sub-info__tab-nav {
-margin-top: rem(121);
-@include mq('md') {
-margin-top: rem(141);
+  margin-top: rem(121);
+  @include mq("md") {
+    margin-top: rem(141);
+  }
 }
-}
-
 
 .sub-info__tab-container {
-margin-top: rem(14);
-@include mq('md') {
-  margin-top: rem(25);
-}
+  margin-top: rem(14);
+  @include mq("md") {
+    margin-top: rem(25);
+  }
 }

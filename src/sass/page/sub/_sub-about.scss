@@ -1,15 +1,14 @@
-@use 'global' as *;
-
+@use "global" as *;
 
 .sub-about__section {
   position: relative;
   margin-top: rem(52);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(230);
   }
 }
 
-.sub-about__section::after{
+.sub-about__section::after {
   content: "";
   position: absolute;
   width: rem(120);
@@ -20,15 +19,15 @@
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
   z-index: 0;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(300);
     height: rem(138);
     top: rem(-150);
   }
 }
 
-.sub-about__section::before{
-  @include mq('md') {
+.sub-about__section::before {
+  @include mq("md") {
     content: "";
     position: absolute;
     width: rem(109);

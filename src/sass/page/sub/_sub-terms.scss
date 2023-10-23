@@ -1,23 +1,23 @@
 @use "global" as *;
 
-.sub-terms{
+.sub-terms {
   margin-top: rem(52);
   max-width: rem(800);
   width: 100%;
   margin: 0 auto;
   position: relative;
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(150);
   }
 }
 
-.sub-terms__inner.inner{
-  @include mq('md') {
+.sub-terms__inner.inner {
+  @include mq("md") {
     padding: 0;
   }
 }
 
-.sub-terms::before{
+.sub-terms::before {
   content: "";
   position: absolute;
   width: rem(120);
@@ -28,55 +28,54 @@
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
   z-index: -10;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(300);
     height: rem(138);
     top: rem(-70);
   }
 }
 
-.sub-terms__title{
+.sub-terms__title {
   font-size: rem(24);
   color: $black;
   font-weight: $regular;
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(32);
   }
 }
 
-.sub-terms__text{
+.sub-terms__text {
   font-size: rem(16);
   line-height: calc(32 / 16);
   color: $black;
   margin-top: rem(20);
   line-break: strict;
-  @include mq('md') {
+  @include mq("md") {
     line-height: calc(32.3 / 16);
   }
 }
 
-.sub-terms__text ol li{
+.sub-terms__text ol li {
   text-indent: rem(-16);
   padding-left: rem(23);
   list-style-type: decimal;
   list-style: inside;
 }
 
-.sub-terms__text ol{
+.sub-terms__text ol {
   margin-top: rem(32);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(30);
   }
 }
 
-
-.sub-terms__text p{
+.sub-terms__text p {
   margin-top: rem(28);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(30);
   }
 }
 
-.sub-terms__text p:first-child{
+.sub-terms__text p:first-child {
   margin-top: rem(40);
 }

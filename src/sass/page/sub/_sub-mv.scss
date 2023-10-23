@@ -26,7 +26,6 @@
   }
 }
 
-
 .sub-mv--info {
   background-image: url(../images/common/info_sub-mv_sp.jpg);
   @include mq("md") {
@@ -74,7 +73,6 @@
   }
 }
 
-
 .sub-mv__title {
   color: $white;
   display: grid;
@@ -89,7 +87,6 @@
   }
 }
 
-
-.sub-mv__title.sub-mv__title--faq{
+.sub-mv__title.sub-mv__title--faq {
   text-transform: uppercase;
 }

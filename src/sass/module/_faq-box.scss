@@ -8,7 +8,7 @@
 
 .faq-box:not(:first-child) {
   margin-top: rem(41);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(38);
   }
 }
@@ -17,20 +17,19 @@
   background-color: $green;
   padding: rem(16);
   position: relative;
-  @include mq('md') {
+  @include mq("md") {
     padding: rem(26) rem(40);
   }
 }
 
-.faq-box__q h2{
+.faq-box__q h2 {
   color: $white;
   font-size: rem(16);
   font-weight: $regular;
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(20);
   }
 }
-
 
 .faq-box__icon {
   position: absolute;
@@ -39,7 +38,7 @@
   right: rem(16);
   width: rem(28);
   height: rem(28);
-  @include mq('md') {
+  @include mq("md") {
     right: rem(40);
   }
 }
@@ -66,7 +65,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .faq-box__a {

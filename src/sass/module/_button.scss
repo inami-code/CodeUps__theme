@@ -14,7 +14,7 @@
   transition: 0.3s ease;
 }
 
-.button--white{
+.button--white {
   background: $white;
   color: $green;
 }
@@ -35,7 +35,7 @@
   z-index: -10;
 }
 
-.button--white::after{
+.button--white::after {
   background-color: $green;
   border: 1px solid $white;
 }
@@ -52,7 +52,7 @@
   z-index: -100;
 }
 
-.button--white::before{
+.button--white::before {
   border: 1px solid $white;
 }
 
@@ -70,7 +70,7 @@
   z-index: 100;
 }
 
-.button--white span{
+.button--white span {
   background-color: $green;
 }
 
@@ -88,10 +88,9 @@
   z-index: 100;
 }
 
-.button--white span::after{
+.button--white span::after {
   background-color: $green;
 }
-
 
 @media (hover: hover) {
   .button:hover {

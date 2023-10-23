@@ -14,7 +14,7 @@
   padding-bottom: rem(4);
   border-bottom: 1px solid $green;
   margin-top: rem(7);
-  @include mq('md') {
+  @include mq("md") {
     font-size: rem(32);
     padding-bottom: 0;
   }
@@ -23,7 +23,7 @@
 .page-blog__img {
   aspect-ratio: 345 / 231;
   margin-top: rem(24);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(38);
   }
 }
@@ -39,14 +39,14 @@
   margin-top: rem(24);
   font-size: rem(16);
   color: $black;
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(40);
   }
 }
 
 .page-blog__lists {
   margin-top: rem(24);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(40);
   }
 }

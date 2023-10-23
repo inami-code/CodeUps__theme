@@ -39,7 +39,7 @@
 .footer-pc-nav__item {
   font-size: rem(16);
   line-height: calc(18 / 16);
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .footer-pc-nav__item--bold {
@@ -53,8 +53,8 @@
   color: $white;
 }
 
-@media (hover:hover){
-  .footer-pc-nav__item:hover{
-    opacity: .7;
+@media (hover: hover) {
+  .footer-pc-nav__item:hover {
+    opacity: 0.7;
   }
 }

@@ -1,14 +1,13 @@
 @use "global" as *;
 
-.campaign{
+.campaign {
   overflow: hidden;
 
-
   .swiper-button-prev,
-  .swiper-button-next{
+  .swiper-button-next {
     margin-top: 0;
   }
-  
+
   .swiper-button-prev {
     display: none;
     @include mq("md") {
@@ -39,17 +38,16 @@
       background-position: center top;
     }
   }
-  
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-    content: none;
-  }
-  
-  
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-    content: none;
-  }
-  
 
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    content: none;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: none;
+  }
 }
 
 .campaign__swiper {
@@ -66,7 +64,6 @@
   display: grid;
   grid-auto-flow: column;
 }
-
 
 .campaign__button {
   display: block;

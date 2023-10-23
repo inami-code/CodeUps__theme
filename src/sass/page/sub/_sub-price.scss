@@ -1,14 +1,14 @@
-@use 'global' as *;
+@use "global" as *;
 
-.sub-price{
+.sub-price {
   margin-top: rem(50);
   position: relative;
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(150);
   }
 }
 
-.sub-price::before{
+.sub-price::before {
   content: "";
   position: absolute;
   width: rem(120);
@@ -19,7 +19,7 @@
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
   z-index: -10;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(300);
     height: rem(138);
     top: rem(-70);
