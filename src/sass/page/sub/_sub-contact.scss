@@ -2,11 +2,6 @@
 
 .sub-contact {
   position: relative;
-  margin-top: rem(51);
-
-  @include mq("md") {
-    margin-top: rem(150);
-  }
 }
 
 .sub-contact::before {
