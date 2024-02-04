@@ -70,6 +70,7 @@
   text-align: center;
   margin-top: rem(30);
   margin: 0 auto;
+  height: rem(57);
   @include mq("md") {
     margin-top: rem(70);
   }

@@ -96,6 +96,7 @@
   .button:hover {
     color: $green;
   }
+
   .button--white:hover {
     color: $white;
   }
@@ -103,6 +104,7 @@
   .button:hover span {
     background-color: $green;
   }
+
   .button--white:hover span {
     background-color: $white;
   }
@@ -110,6 +112,7 @@
   .button:hover span::after {
     background-color: $green;
   }
+
   .button--white:hover span::after {
     background-color: $white;
   }

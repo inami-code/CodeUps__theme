@@ -211,7 +211,7 @@ jQuery(function ($) {
   // 下層ページ information 画像アニメーション
   // ------------------------------------
   //要素の取得とスピードの設定
-  var box = $(".tab-container__right"),
+  var box = $(".tab-content__right"),
     speed = 700;
 
   //.js-image-colorの付いた全ての要素に対して下記の処理を行う(picture)

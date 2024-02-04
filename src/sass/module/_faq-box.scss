@@ -1,13 +1,9 @@
 @use "global" as *;
 
-.faq-box {
-  max-width: rem(700);
-  width: 100%;
-  margin: 0 auto;
-}
 
 .faq-box:not(:first-child) {
   margin-top: rem(41);
+
   @include mq("md") {
     margin-top: rem(38);
   }
@@ -17,6 +13,8 @@
   background-color: $green;
   padding: rem(16);
   position: relative;
+  cursor: pointer;
+
   @include mq("md") {
     padding: rem(26) rem(40);
   }
@@ -26,6 +24,7 @@
   color: $white;
   font-size: rem(16);
   font-weight: $regular;
+
   @include mq("md") {
     font-size: rem(20);
   }
@@ -38,6 +37,7 @@
   right: rem(16);
   width: rem(28);
   height: rem(28);
+
   @include mq("md") {
     right: rem(40);
   }
@@ -71,6 +71,7 @@
 .faq-box__a {
   padding: rem(24) rem(16);
   border: 1px solid $green;
+
   @include mq("md") {
     margin-top: rem(16);
     padding: rem(40);

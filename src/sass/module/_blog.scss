@@ -1,4 +1,5 @@
 @use "global" as *;
+
 .blog {
   @include mq("md") {
     position: relative;
@@ -23,6 +24,7 @@
 
 .blog__bg-image {
   display: none;
+
   @include mq("md") {
     display: block;
     aspect-ratio: 1440 / 550;
@@ -35,6 +37,7 @@
     z-index: -1;
   }
 }
+
 .blog__bg-image img {
   width: 100%;
   height: 100%;
@@ -45,6 +48,7 @@
   width: 100%;
   margin: 0 auto;
   margin-top: rem(31);
+
   @include mq("md") {
     margin-top: rem(82);
     max-width: rem(1080);
@@ -54,6 +58,7 @@
 .blog__button {
   text-align: center;
   margin-top: rem(40);
+
   @include mq("md") {
     margin-top: rem(80);
   }

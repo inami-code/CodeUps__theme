@@ -1,11 +1,7 @@
 @use "global" as *;
 
 .sub-category {
-  margin-top: rem(50);
   position: relative;
-  @include mq("md") {
-    margin-top: rem(150);
-  }
 }
 
 .sub-category::before {
@@ -19,6 +15,7 @@
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
   z-index: -10;
+
   @include mq("md") {
     width: rem(300);
     height: rem(138);
@@ -30,6 +27,7 @@
   display: grid;
   gap: rem(16) rem(21);
   grid-template-columns: repeat(2, 1fr);
+
   @include mq("md") {
     gap: rem(32);
     grid-template-columns: repeat(4, rem(162));

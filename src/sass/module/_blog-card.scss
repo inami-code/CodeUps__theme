@@ -10,6 +10,7 @@
   margin: 0 auto;
   background-color: $white;
   cursor: pointer;
+
   @include mq("md") {
     margin: 0;
     position: relative;
@@ -72,9 +73,7 @@
   transition: transform 0.5s;
 }
 
-.blog-card.blog-card--widget:hover
-  .blog-card__image.blog-card__image--widget
-  img {
+.blog-card.blog-card--widget:hover .blog-card__image.blog-card__image--widget img {
   transform: scale(1.1);
 }
 
@@ -96,6 +95,7 @@
   font-weight: $medium;
   border-bottom: 1px solid $green;
   padding-bottom: rem(4);
+
   @include mq("md") {
     margin-top: rem(2);
   }

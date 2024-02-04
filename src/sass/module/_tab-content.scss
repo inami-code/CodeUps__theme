@@ -1,16 +1,18 @@
 @use "global" as *;
 
-.tab-container__content {
+.tab-content__content {
   border: 1px solid $green;
   padding: rem(24);
   display: none;
+
   @include mq("md") {
     padding: rem(28) rem(24);
   }
 }
 
-.tab-container__content.is-active {
+.tab-content__content.is-active {
   display: block;
+
   @include mq("md") {
     display: flex;
     align-items: center;
@@ -18,13 +20,13 @@
   }
 }
 
-.tab-container__left {
+.tab-content__left {
   @include mq("md") {
     flex: 1 1 50%;
   }
 }
 
-.tab-container__title {
+.tab-content__title {
   font-size: rem(24);
   font-weight: $bold;
   line-height: 1;
@@ -33,24 +35,25 @@
   border-bottom: 1px solid $green;
 }
 
-.tab-container__text {
+.tab-content__text {
   margin-top: rem(8);
   font-size: rem(16);
   line-height: calc(24 / 16);
   color: $black;
 }
 
-.tab-container__right {
+.tab-content__right {
   margin-top: rem(8);
   aspect-ratio: 297 / 189;
   position: relative;
+
   @include mq("md") {
     flex: 0 1 50%;
     margin: 0;
   }
 }
 
-.tab-container__right .js-image-color {
+.tab-content__right .js-image-color {
   position: absolute;
   top: 0;
   right: 0;
@@ -60,7 +63,7 @@
   background-color: $green;
 }
 
-.tab-container__right img {
+.tab-content__right img {
   object-fit: cover;
   width: 100%;
   height: 100%;

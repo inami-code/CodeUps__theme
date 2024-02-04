@@ -15,6 +15,7 @@
   top: rem(-25);
   left: calc(50% - min(46vw, rem(619)));
   z-index: 0;
+
   @include mq("md") {
     width: rem(300);
     height: rem(138);
@@ -22,9 +23,8 @@
   }
 }
 
-.sub-faq__items {
-  margin-top: rem(52);
-  @include mq("md") {
-    margin-top: rem(150);
-  }
+.sub-faq__inner.inner {
+  max-width: rem(700);
+  width: 100%;
+  margin: 0 auto;
 }

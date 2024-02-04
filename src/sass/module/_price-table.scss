@@ -1,61 +1,46 @@
 @use "global" as *;
 
-.price-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+.price-table__item {
   border: 1px solid $green;
-  width: 100%;
-  max-width: rem(700);
-  margin-left: auto;
-  margin-right: auto;
-  @include mq("md") {
+
+  @include mq('md') {
     display: flex;
+    width: 100%;
   }
 }
 
-.price-table:not(:first-child) {
-  margin-top: rem(36);
-  @include mq("md") {
-    margin-top: rem(80);
+.price-table__item:not(:first-child) {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(70);
   }
 }
 
-.price-table__head {
-  background-color: $green;
-  @include mq("md") {
-    flex: 0 0 28.5%;
-  }
-}
 
-.price-table__head tr,
-.price-table__head th {
-  @include mq("md") {
-    display: grid;
-    place-content: center;
-    height: 100%;
-  }
-}
-
-.price-table__lead {
+.price-table__title {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  gap: rem(12);
+  padding: rem(6) 0;
+  gap: rem(8);
+  background-color: $green;
+
   @include mq("md") {
     display: grid;
+    place-content: center;
+    flex: 0 1 28%;
+    padding: 0;
   }
 }
 
-.price-table__title {
+.price-table__title p {
   font-size: rem(16);
   line-height: 1;
   font-weight: $bold;
   color: $white;
-  padding: rem(8) 0;
-  @include mq("md") {
-    padding: 0;
-  }
+  text-align: center;
 }
 
 .price-table__icon {
@@ -63,6 +48,7 @@
   height: rem(24);
   aspect-ratio: 1 / 1;
   fill: #fff;
+
   @include mq("md") {
     width: rem(60);
     height: rem(60);
@@ -77,19 +63,34 @@
   display: inline-block;
 }
 
-.price-table__body {
-  padding: 0;
-  @include mq("md") {
-    flex: 0 0 71.5%;
+.price-table__content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 70%;
+  position: relative;
+  @include mq('md') {
+    flex: 0 1 72%;
   }
 }
 
+.price-table__content::after{
+position: absolute;
+content: "";
+top: 0;
+left: 68%;
+width: rem(1);
+height: 100%;
+background-color: $green;
+}
+
 .price-table__row {
-  height: rem(60);
-  max-width: 100%;
+  display: flex;
+  align-items: center;
   width: 100%;
-  @include mq("md") {
-    height: rem(58.5);
+  min-height: rem(60);
+  height: 100%;
+  @include mq('md') {
+    min-height: auto;
   }
 }
 
@@ -97,33 +98,34 @@
   border-top: 1px solid $green;
 }
 
-.price-table__course {
+.price-table__cource {
+  flex: 0 1 68%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: rem(6) 0;
   font-size: rem(16);
-  font-weight: $regular;
   line-height: calc(24 / 16);
-  width: calc(240 / 346) * 100%;
-  padding-top: 0;
-  padding-left: rem(16);
-  padding-right: 0;
-  padding-bottom: 0;
-  @include mq("md") {
-    width: calc(340 / 502) * 100%;
+  height: inherit;
+  min-height: inherit;
+  @include mq('md') {
+    padding: rem(18) rem(16);
     text-align: left;
+    justify-content: start;
   }
 }
 
 .price-table__price {
-  border-left: 1px solid $green;
+  flex: 0 1 32%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
   text-align: right;
-  font-size: rem(16);
-  line-height: calc(24 / 16);
-  width: calc(106 / 346) * 100%;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: rem(16);
-  padding-bottom: 0;
-  @include mq("md") {
-    width: rem(162);
+  padding: rem(6) rem(16);
+  height: inherit;
+  min-height: inherit;
+  @include mq('md') { 
+    padding: rem(18) rem(16);
   }
 }

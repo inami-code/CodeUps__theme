@@ -9,6 +9,7 @@
   height: rem(80);
   width: 100%;
   transition: background-color 0.3s;
+
   @include mq("md") {
     height: rem(90);
   }
@@ -24,6 +25,7 @@
   justify-content: space-between;
   height: inherit;
   padding: 0 rem(15);
+
   @include mq("md") {
     padding-left: rem(40);
     padding-right: rem(20);
@@ -33,6 +35,7 @@
 .header__logo {
   z-index: 1000;
 }
+
 .header__logo,
 .header__logo-link {
   height: inherit;
@@ -48,6 +51,7 @@
   width: rem(102);
   height: inherit;
   object-fit: contain;
+
   @include mq("md") {
     width: rem(133);
   }

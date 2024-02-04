@@ -14,6 +14,7 @@
 
 .sub-mv--campaign {
   background-image: url(../images/common/campaign-sp_01.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/campaign_01.jpg);
   }
@@ -21,6 +22,7 @@
 
 .sub-mv--about {
   background-image: url(../images/common/about_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/about_sub-mv_pc.jpg);
   }
@@ -28,6 +30,7 @@
 
 .sub-mv--info {
   background-image: url(../images/common/info_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/info_sub-mv_pc.jpg);
   }
@@ -35,6 +38,7 @@
 
 .sub-mv--blog {
   background-image: url(../images/common/blog_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/blog_sub-mv_pc.jpg);
   }
@@ -42,6 +46,7 @@
 
 .sub-mv--voice {
   background-image: url(../images/common/voice_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/voice_sub-mv_pc.jpg);
   }
@@ -49,18 +54,23 @@
 
 .sub-mv--price {
   background-image: url(../images/common/price_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/price_sub-mv_pc.jpg);
   }
 }
+
 .sub-mv--faq {
   background-image: url(../images/common/faq_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/faq_sub-mv_pc.jpg);
   }
 }
+
 .sub-mv--contact {
   background-image: url(../images/common/contact_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/contact_sub-mv_pc.jpg);
   }
@@ -68,6 +78,7 @@
 
 .sub-mv--sitemap {
   background-image: url(../images/common/sitemap_sub-mv_sp.jpg);
+
   @include mq("md") {
     background-image: url(../images/common/sitemap_sub-mv_pc.jpg);
   }
@@ -81,6 +92,7 @@
   font-family: $second-english-font-family;
   font-weight: $regular;
   font-size: rem(40);
+
   @include mq("md") {
     font-size: rem(80);
     padding-top: rem(98);

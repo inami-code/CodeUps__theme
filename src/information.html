@@ -1,73 +1,373 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="noindex" />
-    <!-- meta情報 -->
-    <title>CodeUps</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!-- ogp -->
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="robots" content="noindex" />
-    <!-- ファビコン -->
-    <link rel="icon" href="./assets/images/common/favicon.ico" />
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- JavaScript -->
-    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"
-    ></script>
-    <script defer src="./assets/js/jquery.inview.min.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-    ></script>
-    <script defer src="./assets/js/script.js"></script>
-  </head>
-  <body>
-    <header class="header js-header">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a class="header__logo-link" href="index.html">
-            <img
-              src="./assets/images/common/codeups_logo.svg"
-              alt="CodeUpsロゴ"
-              width="102"
-              height="38"
-            />
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="noindex">
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- ogp -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta name="robots" content="noindex">
+  <!-- ファビコン -->
+  <link rel="icon" href="./assets/images/common/favicon.ico">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- JavaScript -->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a class="header__logo-link" href="index.html">
+          <img src="./assets/images/common/codeups_logo.svg" alt="CodeUpsロゴ" width="102" height="38">
+        </a>
+      </div>
+      <button class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <div class="sp-nav__items sp-nav__items--drawer-height">
+          <div class="sp-nav__left-text">
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="campaign.html">キャンペーン</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="campaign.html">ライセンス取得</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="campaign.html">貸切体験ダイビング</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="campaign.html">ナイトダイビング</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="about.html">私たちについて</a>
+              </li>
+            </ul>
+            <ul class="sp-nav__container sp-nav__container--mt">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="information.html">ダイビング情報</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="information.html?active-tab=tab-1">ライセンス講習</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="information.html?active-tab=tab-3">体験ダイビング</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="information.html?active-tab=tab-2">ファンダイビング</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="blog.html">ブログ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sp-nav__right-text">
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="voice.html">お客様の声</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="price.html">料金一覧</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="price.html#table1">ライセンス講習</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="price.html#table2">体験ダイビング</a>
+              </li>
+              <li class="sp-nav__item">
+                <a href="price.html#table3">ファンダイビング</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container sp-nav__container--mt">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="faq.html">よくある質問</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="privacy-policy.html">プライバシー<br>ポリシー</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="terms-of-service.html">利用規約</a>
+              </li>
+            </ul>
+
+            <ul class="sp-nav__container">
+              <li class="sp-nav__item sp-nav__item--bold">
+                <a href="contact.html">お問い合わせ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="campaign.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Campaign</div>
+              <div class="pc-nav__jp-title">キャンペーン</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="about.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">About us</div>
+              <div class="pc-nav__jp-title">私たちについて</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="information.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Information</div>
+              <div class="pc-nav__jp-title">ダイビング情報</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="blog.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Blog</div>
+              <div class="pc-nav__jp-title">ブログ</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="voice.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Voice</div>
+              <div class="pc-nav__jp-title">お客様の声</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="price.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Price</div>
+              <div class="pc-nav__jp-title">料金一覧</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="faq.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">FAQ</div>
+              <div class="pc-nav__jp-title">よくある質問</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="contact.html" class="pc-nav__title">
+              <div class="pc-nav__en-title">Contact</div>
+              <div class="pc-nav__jp-title">お問合せ</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 下層ページのメインビュー -->
+  <div class="sub-mv sub-mv--info">
+    <h1 class="sub-mv__title">Information</h1>
+  </div>
+  <!-- パンくずリスト -->
+  <div class="breadcrumb">
+    <div class="breadcrumb__inner inner">
+      <p class="breadcrumb__text">TOP<span>&gt;</span>ダイビング情報</p>
+    </div>
+  </div>
+
+  <div class="sub-info top-sub-info">
+    <div class="sub-info__inner inner">
+      <div class="sub-info__tab-nav tab-menu">
+        <nav class="tab-menu__container">
+          <ul class="tab-menu__items">
+            <li class="tab-menu__item js-tab-item is-active" data-tab="tab-1">
+              <div class="tab-menu__icon">
+                <svg>
+                  <use href="#tab_icon01">
+                  </use>
+                </svg>
+              </div>
+              <p class="tab-menu__title">
+                ライセンス<br class="u-mobile">講習
+              </p>
+            </li>
+            <li class="tab-menu__item js-tab-item" data-tab="tab-2">
+              <div class="tab-menu__icon">
+                <svg>
+                  <use href="#tab_icon02">
+                  </use>
+                </svg>
+              </div>
+              <p class="tab-menu__title">
+                ファン<br class="u-mobile">ダイビング
+              </p>
+            </li>
+            <li class="tab-menu__item js-tab-item" data-tab="tab-3">
+              <div class="tab-menu__icon">
+                <svg>
+                  <use href="#tab_icon03">
+                  </use>
+                </svg>
+              </div>
+              <div class="tab-menu__title">
+                体験<br class="u-mobile">ダイビング
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sub-info__tab-content tab-content">
+        <div class="tab-content__content js-tab-content is-active" data-tab="tab-1">
+          <div class="tab-content__left">
+            <h2 class="tab-content__title">ライセンス講習</h2>
+            <div class="tab-content__text">
+              泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+            </div>
+          </div>
+          <div class="tab-content__right">
+            <picture>
+              <source srcset="./assets/images/common/info_diver.webp" type="image/webp">
+              <img src="./assets/images/common/info_diver.jpg" alt="ダイビングしている写真" width="297" height="189">
+            </picture>
+          </div>
+
+        </div>
+        <div id="tab2" class="tab-content__content js-tab-content" data-tab="tab-2">
+          <div class="tab-content__left">
+            <h2 class="tab-content__title">ファンダイビング</h2>
+            <div class="tab-content__text">
+              ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+            </div>
+          </div>
+          <div class="tab-content__right">
+            <picture>
+              <source srcset="./assets/images/common/gallery_3.webp" type="image/webp">
+              <img src="./assets/images/common/gallery_3.jpg" alt="海の中たくさんの魚の画像" width="297" height="189">
+            </picture>
+          </div>
+
+        </div>
+        <div id="tab3" class="tab-content__content js-tab-content" data-tab="tab-3">
+          <div class="tab-content__left">
+            <h2 class="tab-content__title">体験ダイビング</h2>
+            <div class="tab-content__text">
+              ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+            </div>
+          </div>
+          <div class="tab-content__right">
+            <picture>
+              <source srcset="./assets/images/common/gallery_1.webp" type="image/webp">
+              <img src="./assets/images/common/gallery_1.jpg" alt="海の中2匹の魚の画像" width="297" height="189">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact" class="contact top-footer-contact">
+    <div class="contact__inner inner">
+      <div class="contact__content">
+        <div class="contact__left">
+          <div class="contact__border">
+            <div class="contact__image">
+              <img src="./assets/images/common/codeups_logo-green.svg" alt="CodeUpsロゴ" width="174" height="65">
+            </div>
+          </div>
+          <div class="contact__left-wrapper">
+            <div class="contact__items">
+              <p class="contact__item">沖縄県那覇市1-1</p>
+              <a class="contact__item" href="tel:0120-000-0000">TEL:0120-000-0000</a>
+              <p class="contact__item">営業時間:8:30-19:00</p>
+              <p class="contact__item">定休日:毎週火曜日</p>
+            </div>
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3958837720074!2d127.67604647419331!3d26.216323339672694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5699d1d8938ef%3A0x2bb9259fb716a776!2z44CSOTAwLTAwMzIg5rKW57iE55yM6YKj6KaH5biC5p2-5bGx77yR5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1690556177764!5m2!1sja!2sjp"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="contact__right">
+          <div class="contact__section-title section-header">
+            <p class="section-header__en-title section-header__en-title--contact">
+              Contact
+            </p>
+            <h2 class="section-header__jp-title section-header__jp-title--contact">
+              お問い合わせ
+            </h2>
+          </div>
+          <p class="contact__text">ご予約・お問い合わせはコチラ</p>
+          <div class="contact__button">
+            <a href="contact.html" class="button">
+              Contact us<span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer top-footer">
+    <div class="footer__inner inner">
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <a class="footer__logo-link" href="#">
+            <img src="./assets/images/common/codeups_logo.svg" alt="CodeUpsロゴ" width="120" height="45">
           </a>
         </div>
-        <button class="header__drawer hamburger js-hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="header__sp-nav sp-nav js-sp-nav">
-          <div class="sp-nav__items sp-nav__items--drawer-height">
-            <div class="sp-nav__left-text">
+        <div class="footer__sns">
+          <div class="footer__sns-instagram">
+            <a href="#" target="_blank"><img src="./assets/images/common/facebook-logo.svg" alt="フェイスブックロゴ" width="24"
+                height="24"></a>
+          </div>
+          <div class="footer__sns-facebook">
+            <a href="#" target="_blank"><img src="./assets/images/common/instagram-logo.svg" alt="インスタグラムロゴ" width="24"
+                height="24"></a>
+          </div>
+        </div>
+      </div>
+      <nav class="footer__sp-nav sp-nav">
+        <div class="sp-nav__items">
+          <div class="sp-nav__left-text">
+            <div class="sp-nav__text-wrap">
               <ul class="sp-nav__container">
                 <li class="sp-nav__item sp-nav__item--bold">
                   <a href="campaign.html">キャンペーン</a>
@@ -88,6 +388,8 @@
                   <a href="about.html">私たちについて</a>
                 </li>
               </ul>
+            </div>
+            <div class="sp-nav__text-wrap">
               <ul class="sp-nav__container sp-nav__container--mt">
                 <li class="sp-nav__item sp-nav__item--bold">
                   <a href="information.html">ダイビング情報</a>
@@ -99,9 +401,7 @@
                   <a href="information.html?active-tab=tab-3">体験ダイビング</a>
                 </li>
                 <li class="sp-nav__item">
-                  <a href="information.html?active-tab=tab-2"
-                    >ファンダイビング</a
-                  >
+                  <a href="information.html?active-tab=tab-2">ファンダイビング</a>
                 </li>
               </ul>
 
@@ -111,8 +411,9 @@
                 </li>
               </ul>
             </div>
-
-            <div class="sp-nav__right-text">
+          </div>
+          <div class="sp-nav__right-text">
+            <div class="sp-nav__text-wrap">
               <ul class="sp-nav__container">
                 <li class="sp-nav__item sp-nav__item--bold">
                   <a href="voice.html">お客様の声</a>
@@ -133,7 +434,9 @@
                   <a href="price.html#table3">ファンダイビング</a>
                 </li>
               </ul>
+            </div>
 
+            <div class="sp-nav__text-wrap">
               <ul class="sp-nav__container sp-nav__container--mt">
                 <li class="sp-nav__item sp-nav__item--bold">
                   <a href="faq.html">よくある質問</a>
@@ -142,7 +445,7 @@
 
               <ul class="sp-nav__container">
                 <li class="sp-nav__item sp-nav__item--bold">
-                  <a href="privacy-policy.html">プライバシー<br />ポリシー</a>
+                  <a href="privacy-policy.html">プライバシー<br class="u-mobile">ポリシー</a>
                 </li>
               </ul>
 
@@ -159,478 +462,66 @@
               </ul>
             </div>
           </div>
-        </nav>
-        <nav class="header__pc-nav pc-nav">
-          <ul class="pc-nav__items">
-            <li class="pc-nav__item">
-              <a href="campaign.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Campaign</div>
-                <div class="pc-nav__jp-title">キャンペーン</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="about.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">About us</div>
-                <div class="pc-nav__jp-title">私たちについて</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="information.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Information</div>
-                <div class="pc-nav__jp-title">ダイビング情報</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="blog.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Blog</div>
-                <div class="pc-nav__jp-title">ブログ</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="voice.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Voice</div>
-                <div class="pc-nav__jp-title">お客様の声</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="price.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Price</div>
-                <div class="pc-nav__jp-title">料金一覧</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="faq.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">FAQ</div>
-                <div class="pc-nav__jp-title">よくある質問</div>
-              </a>
-            </li>
-            <li class="pc-nav__item">
-              <a href="contact.html" class="pc-nav__title">
-                <div class="pc-nav__en-title">Contact</div>
-                <div class="pc-nav__jp-title">お問合せ</div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- 下層ページのメインビュー -->
-    <div class="sub-mv sub-mv--info">
-      <h1 class="sub-mv__title">Information</h1>
-    </div>
-    <!-- パンくずリスト -->
-    <div class="breadcrumb">
-      <div class="breadcrumb__inner inner">
-        <p class="breadcrumb__text">TOP<span>></span>ダイビング情報</p>
-      </div>
-    </div>
-
-    <div class="sub-info">
-      <div class="sub-info__inner inner">
-        <div class="sub-info__tab-nav tab-menu">
-          <nav class="tab-menu__container">
-            <ul class="tab-menu__items">
-              <li class="tab-menu__item js-tab-item is-active" data-tab="tab-1">
-                <div class="tab-menu__icon">
-                  <svg>
-                    <use href="#tab_icon01" />
-                  </svg>
-                </div>
-                <p class="tab-menu__title">
-                  ライセンス<br class="u-mobile" />講習
-                </p>
-              </li>
-              <li class="tab-menu__item js-tab-item" data-tab="tab-2">
-                <div class="tab-menu__icon">
-                  <svg>
-                    <use href="#tab_icon02" />
-                  </svg>
-                </div>
-                <p class="tab-menu__title">
-                  ファン<br class="u-mobile" />ダイビング
-                </p>
-              </li>
-              <li class="tab-menu__item js-tab-item" data-tab="tab-3">
-                <div class="tab-menu__icon">
-                  <svg>
-                    <use href="#tab_icon03" />
-                  </svg>
-                </div>
-                <div class="tab-menu__title">
-                  体験<br class="u-mobile" />ダイビング
-                </div>
-              </li>
-            </ul>
-          </nav>
         </div>
-        <div class="sub-info__tab-container tab-container">
-          <div
-            class="tab-container__content js-tab-content is-active"
-            data-tab="tab-1"
-          >
-            <div class="tab-container__flex">
-              <div class="tab-container__left">
-                <h2 class="tab-container__title">ライセンス講習</h2>
-                <div class="tab-container__text">
-                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
-                </div>
-              </div>
-              <div class="tab-container__right">
-                <picture>
-                  <source
-                    srcset="./assets/images/common/info_diver.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./assets/images/common/info_diver.jpg"
-                    alt="ダイビングしている写真"
-                    width="297"
-                    height="189"
-                  />
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div
-            id="tab2"
-            class="tab-container__content js-tab-content"
-            data-tab="tab-2"
-          >
-            <div class="tab-container__flex">
-              <div class="tab-container__left">
-                <h2 class="tab-container__title">ファンダイビング</h2>
-                <div class="tab-container__text">
-                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                </div>
-              </div>
-              <div class="tab-container__right">
-                <picture>
-                  <source
-                    srcset="./assets/images/common/gallery_3.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./assets/images/common/gallery_3.jpg"
-                    alt="海の中たくさんの魚の画像"
-                    width="297"
-                    height="189"
-                  />
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div
-            id="tab3"
-            class="tab-container__content js-tab-content"
-            data-tab="tab-3"
-          >
-            <div class="tab-container__flex">
-              <div class="tab-container__left">
-                <h2 class="tab-container__title">体験ダイビング</h2>
-                <div class="tab-container__text">
-                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
-                </div>
-              </div>
-              <div class="tab-container__right">
-                <picture>
-                  <source
-                    srcset="./assets/images/common/gallery_1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./assets/images/common/gallery_1.jpg"
-                    alt="海の中2匹の魚の画像"
-                    width="297"
-                    height="189"
-                  />
-                </picture>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </nav>
     </div>
-
-    <section id="contact" class="contact page-foot-contact">
-      <div class="contact__inner inner">
-        <div class="contact__content">
-          <div class="contact__left">
-            <div class="contact__border">
-              <div class="contact__image">
-                <img
-                  src="./assets/images/common/codeups_logo-green.svg"
-                  alt="CodeUpsロゴ"
-                  width="174"
-                  height="65"
-                />
-              </div>
-            </div>
-            <div class="contact__left-wrapper">
-              <div class="contact__items">
-                <p class="contact__item">沖縄県那覇市1-1</p>
-                <a class="contact__item" href="tel:0120-000-0000"
-                  >TEL:0120-000-0000</a
-                >
-                <p class="contact__item">営業時間:8:30-19:00</p>
-                <p class="contact__item">定休日:毎週火曜日</p>
-              </div>
-              <div class="contact__map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3958837720074!2d127.67604647419331!3d26.216323339672694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5699d1d8938ef%3A0x2bb9259fb716a776!2z44CSOTAwLTAwMzIg5rKW57iE55yM6YKj6KaH5biC5p2-5bGx77yR5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1690556177764!5m2!1sja!2sjp"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="contact__right">
-            <div class="contact__section-title section-header">
-              <p
-                class="section-header__en-title section-header__en-title--contact"
-              >
-                Contact
-              </p>
-              <h2
-                class="section-header__jp-title section-header__jp-title--contact"
-              >
-                お問い合わせ
-              </h2>
-            </div>
-            <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-            <div class="contact__button">
-              <a href="contact.html" class="button">
-                Contact us<span></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="footer" class="footer top-footer">
-      <div class="footer__inner inner">
-        <div class="footer__wrapper">
-          <div class="footer__logo">
-            <a class="footer__logo-link" href="#">
-              <img
-                src="./assets/images/common/codeups_logo.svg"
-                alt="CodeUpsロゴ"
-                width="120"
-                height="45"
-              />
-            </a>
-          </div>
-          <div class="footer__sns">
-            <div class="footer__sns-instagram">
-              <a href="#" target="_blank"
-                ><img
-                  src="./assets/images/common/facebook-logo.svg"
-                  alt="フェイスブックロゴ"
-                  width="24"
-                  height="24"
-              /></a>
-            </div>
-            <div class="footer__sns-facebook">
-              <a href="#" target="_blank"
-                ><img
-                  src="./assets/images/common/instagram-logo.svg"
-                  alt="インスタグラムロゴ"
-                  width="24"
-                  height="24"
-              /></a>
-            </div>
-          </div>
-        </div>
-        <nav class="footer__sp-nav sp-nav">
-          <div class="sp-nav__items">
-            <div class="sp-nav__left-text">
-              <div class="sp-nav__text-wrap">
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="campaign.html">キャンペーン</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="campaign.html">ライセンス取得</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="campaign.html">貸切体験ダイビング</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="campaign.html">ナイトダイビング</a>
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="about.html">私たちについて</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="sp-nav__text-wrap">
-                <ul class="sp-nav__container sp-nav__container--mt">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="information.html">ダイビング情報</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="information.html?active-tab=tab-1"
-                      >ライセンス講習</a
-                    >
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="information.html?active-tab=tab-3"
-                      >体験ダイビング</a
-                    >
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="information.html?active-tab=tab-2"
-                      >ファンダイビング</a
-                    >
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="blog.html">ブログ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="sp-nav__right-text">
-              <div class="sp-nav__text-wrap">
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="voice.html">お客様の声</a>
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="price.html">料金一覧</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="price.html#table1">ライセンス講習</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="price.html#table2">体験ダイビング</a>
-                  </li>
-                  <li class="sp-nav__item">
-                    <a href="price.html#table3">ファンダイビング</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="sp-nav__text-wrap">
-                <ul class="sp-nav__container sp-nav__container--mt">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="faq.html">よくある質問</a>
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="privacy-policy.html"
-                      >プライバシー<br class="u-mobile" />ポリシー</a
-                    >
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="terms-of-service.html">利用規約</a>
-                  </li>
-                </ul>
-
-                <ul class="sp-nav__container">
-                  <li class="sp-nav__item sp-nav__item--bold">
-                    <a href="contact.html">お問い合わせ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="footer__copyright">
-        <small
-          >Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small
-        >
-      </div>
-    </footer>
-
-    <div class="to-top">
-      <a href="#"><span></span></a>
+    <div class="footer__copyright">
+      <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
     </div>
+  </footer>
 
-    <!-- svgスプラウト -->
-    <svg style="display: none">
-      <!-- svgオブジェクト01 -->
-      <symbol id="tab_icon01" viewBox="0 0 61 56">
-        <path
-          d="M55.7626 24.9055C55.7561 24.5942 55.6719 24.2897 55.5179 24.0204C55.085 23.255 54.1325 22.768 52.6891 22.5726C51.8539 22.4595 51.0686 22.321 50.355 22.1609C48.1676 21.6668 45.9261 21.464 43.6871 21.5577C41.8034 21.6296 39.9247 21.8025 38.0589 22.0757C37.6636 22.1367 37.2045 22.211 36.6955 22.2937C32.9157 22.9061 25.2258 24.1516 20.4493 23.1914C19.8004 21.9483 19.6886 20.8376 20.1174 19.887C21.0484 17.8223 24.2006 16.8551 25.3419 16.5666C26.6929 18.6611 28.4101 19.95 30.4502 20.4C34.2449 21.2368 37.74 18.8528 37.887 18.7512C37.9993 18.6733 38.084 18.561 38.1287 18.4307C38.1735 18.3004 38.176 18.159 38.1359 18.0272C38.0957 17.8953 38.015 17.78 37.9056 17.698C37.7962 17.6161 37.6639 17.5718 37.5279 17.5717C37.1831 17.547 36.8504 17.4321 36.5624 17.238C35.9271 16.8463 35.4075 16.2882 35.0582 15.6223C33.7579 13.1911 31.8808 12.2848 30.8026 11.9528C32.9971 6.61926 30.1438 3.13315 30.0152 2.98092L29.9977 2.96182C29.3095 2.20962 29.6965 0.846008 29.7001 0.834547C29.7362 0.714509 29.737 0.586417 29.7025 0.465912C29.668 0.345406 29.5997 0.237701 29.5058 0.155948C29.412 0.0741952 29.2968 0.0219311 29.1742 0.0055379C29.0516 -0.0108553 28.9269 0.00933183 28.8154 0.063634C25.7848 1.53574 23.9802 4.27825 23.5958 7.99434C23.4591 9.40501 23.5082 10.8279 23.7417 12.2254C22.2798 12.1258 20.8122 12.1578 19.3558 12.3209C18.7802 12.3782 7.8524 13.567 3.00233 22.3311C0.86774 26.1884 0.66821 30.8194 2.46812 34.7188C3.93635 37.9003 6.36365 40.3484 9.68581 42.0087C8.71483 43.0519 7.91764 44.2485 7.32553 45.5515C5.27019 50.0701 0.925528 49.4071 0.74294 49.3767C0.608302 49.3536 0.469915 49.375 0.348196 49.4378C0.226477 49.5006 0.127874 49.6015 0.0669346 49.7255C0.00599538 49.8494 -0.0140521 49.99 0.00975009 50.1265C0.0335523 50.2629 0.0999435 50.388 0.199128 50.4832C2.26445 52.4659 4.89917 53.6339 7.46143 53.4502C12.3232 53.1016 16.3027 48.8398 17.7869 47.0057C18.3981 46.2403 19.0769 45.5331 19.8148 44.8929C19.8425 44.8957 19.8703 44.8967 19.8981 44.8958C22.9888 44.6958 26.9524 44.913 26.9826 44.9149C27.0872 44.9224 27.1896 44.9275 27.2939 44.934C26.1099 45.7858 25.1314 46.8986 24.4318 48.189C23.4091 50.0508 20.7889 53.9384 16.7348 53.9661C17.4647 53.4066 18.0354 52.6607 18.3885 51.8044C18.7416 50.9481 18.8645 50.0121 18.7448 49.0919C18.7369 49.0065 18.7124 48.9235 18.6726 48.8479C18.6328 48.7722 18.5785 48.7053 18.513 48.6511C18.4475 48.597 18.372 48.5566 18.2909 48.5323C18.2098 48.5081 18.1248 48.5004 18.0408 48.5099C17.9567 48.5193 17.8754 48.5456 17.8015 48.5873C17.7276 48.6289 17.6627 48.6851 17.6104 48.7525C17.5581 48.8199 17.5196 48.8972 17.497 48.9799C17.4745 49.0625 17.4684 49.1489 17.4791 49.234C17.5993 50.1982 17.3768 51.1743 16.8516 51.987C16.2829 52.8118 15.4504 53.4113 14.4954 53.6838C14.3561 53.7137 14.2306 53.7903 14.1392 53.9011C14.0478 54.0119 13.9956 54.1507 13.991 54.2951C13.9864 54.4396 14.0297 54.5815 14.114 54.698C14.1982 54.8146 14.3185 54.8991 14.4557 54.9381C15.1961 55.1526 15.9619 55.2631 16.7318 55.2665C21.4349 55.2665 24.3956 50.9088 25.5443 48.8174C26.2127 47.5737 27.1819 46.5228 28.3606 45.7638C28.8069 45.4846 29.2751 45.2432 29.7604 45.0419C29.7679 45.0387 29.7741 45.0339 29.7814 45.0305C29.9806 45.033 30.1799 45.0358 30.3768 45.0358C43.2886 45.0358 51.0942 39.6194 53.9889 37.1385C54.6775 36.5478 55.5498 36.2231 56.4516 36.2217H58.028C58.689 36.2307 59.3375 36.0384 59.8897 35.6697C61.2935 34.7078 61.0987 33.1562 60.7527 32.3352C60.7768 31.3475 60.6221 26.7075 55.7626 24.9055ZM16.8028 46.1859C15.7272 47.5147 11.8695 51.8739 7.38143 52.1607C5.64666 52.2714 3.97758 51.7628 2.40016 50.6467C4.22096 50.428 6.93456 49.4949 8.48713 46.0816C8.50426 46.0419 10.2387 42.0929 12.9538 41.4042C13.1164 41.3615 13.2558 41.2553 13.3417 41.1088C13.4276 40.9623 13.4529 40.7873 13.4122 40.6219C13.3714 40.4565 13.268 40.3142 13.1243 40.2259C12.9806 40.1375 12.8084 40.1104 12.6451 40.1504C11.9562 40.3347 11.3084 40.6511 10.7367 41.0825C7.42849 39.5529 5.0332 37.23 3.62143 34.1708C1.99508 30.648 2.1788 26.4586 4.11273 22.9641C8.65767 14.7507 19.3786 13.6169 19.4863 13.6066C19.4891 13.6066 19.4916 13.6052 19.4944 13.6049C19.4972 13.6045 19.4998 13.6049 19.5025 13.6049C19.5296 13.6016 22.2164 13.279 24.4504 13.6031C24.5545 13.6181 24.6606 13.6067 24.7593 13.57C24.858 13.5332 24.9462 13.4723 25.016 13.3926C25.0859 13.3129 25.1352 13.2169 25.1597 13.1132C25.1841 13.0094 25.1829 12.9012 25.1561 12.798C24.8082 11.2557 24.7101 9.66624 24.8657 8.09195C25.165 5.27914 26.3249 3.17842 28.3188 1.83009C28.3178 2.56349 28.5778 3.27261 29.0511 3.8269C29.2339 4.05229 31.6999 7.23966 29.3259 12.1247C29.2802 12.2188 29.2577 12.3227 29.2604 12.4276C29.2631 12.5324 29.2909 12.635 29.3414 12.7265C29.392 12.818 29.4637 12.8956 29.5504 12.9527C29.6372 13.0097 29.7363 13.0445 29.8392 13.054C29.8644 13.0563 32.3768 13.3203 33.9397 16.2396C34.3984 17.1099 35.0796 17.8386 35.9119 18.3491C35.9187 18.353 35.9254 18.3572 35.9322 18.3614C34.7062 18.9296 32.7251 19.5838 30.7128 19.1361C28.9058 18.735 27.3826 17.5125 26.1861 15.5016C26.119 15.3889 26.0196 15.2997 25.9011 15.246C25.7827 15.1922 25.6509 15.1764 25.5234 15.2007C25.314 15.2405 20.3761 16.2154 18.9611 19.3468C18.4905 20.3903 18.4619 21.5302 18.873 22.7487C18.2279 22.5226 17.6382 22.1584 17.1439 21.6807C16.7715 21.3105 16.4889 20.8576 16.3183 20.3578C16.2926 20.2767 16.2514 20.2016 16.197 20.1367C16.1426 20.0719 16.0761 20.0186 16.0013 19.9799C15.9266 19.9412 15.845 19.9179 15.7613 19.9113C15.6777 19.9047 15.5935 19.915 15.5138 19.9416C15.434 19.9681 15.3602 20.0104 15.2967 20.066C15.2331 20.1216 15.1809 20.1894 15.1433 20.2655C15.1056 20.3416 15.0831 20.4245 15.0772 20.5094C15.0712 20.5944 15.0818 20.6797 15.1085 20.7604C15.3396 21.4499 15.7258 22.0753 16.2364 22.5871C19.8671 26.3295 30.9451 24.5342 36.8967 23.5698C37.4018 23.4879 37.8567 23.4141 38.25 23.3538C40.0706 23.0875 41.9038 22.9191 43.7419 22.8491C45.8702 22.7599 48.0008 22.9525 50.08 23.4222C50.8286 23.5901 51.6497 23.7352 52.5205 23.8531C53.8503 24.033 54.2125 24.3636 54.4875 24.8977C54.1884 24.9953 53.8796 25.0594 53.5667 25.0887C53.0597 25.1389 52.5486 25.1268 52.0444 25.0528C48.7179 24.6291 45.3413 25.1733 42.3079 26.6221C40.1967 27.6661 38.3412 29.1743 36.8762 31.0369C35.4934 32.7606 31.6433 36.7752 25.7733 36.8228C25.6063 36.8263 25.4474 36.8963 25.3307 37.0176C25.2141 37.1389 25.1491 37.3019 25.1497 37.4714C25.1504 37.6409 25.2167 37.8034 25.3343 37.9238C25.4519 38.0441 25.6114 38.1128 25.7784 38.115H25.7837C32.1944 38.0632 36.3674 33.7183 37.8637 31.8527C39.2104 30.1383 40.9164 28.7497 42.858 27.7879C45.6667 26.4453 48.7938 25.9409 51.8744 26.3335C52.4803 26.4213 53.0944 26.4347 53.7035 26.3734C54.1846 26.3307 54.6574 26.219 55.1076 26.0415C58.2168 27.0979 59.1332 29.4414 59.3914 30.9733C58.2853 30.2141 56.9887 29.7911 55.6538 29.7541H55.6463C48.5758 29.1288 42.6804 34.6042 42.2251 35.0388C36.9626 39.3374 28.3898 40.4252 28.3044 40.4359C28.2919 40.4375 28.2791 40.4396 28.2667 40.4417L23.8272 41.2578C23.5885 41.2945 21.6636 41.6479 19.0891 43.8218C18.2545 44.5341 17.4889 45.3257 16.8028 46.1859ZM53.1405 36.1745C51.4334 37.6074 49.5684 38.8347 47.5828 39.8318C48.1036 38.9825 48.5335 38.0793 48.8653 37.1374C48.9234 36.9765 48.9161 36.7988 48.8451 36.6433C48.774 36.4879 48.645 36.3674 48.4865 36.3085C48.408 36.2793 48.3246 36.2661 48.241 36.2696C48.1575 36.2732 48.0754 36.2933 47.9996 36.329C47.8464 36.4011 47.7277 36.532 47.6696 36.6929C46.3896 40.2394 44.6931 41.1272 44.6505 41.1486C44.6449 41.1513 44.6404 41.1553 44.6349 41.1579C43.4666 41.6172 42.2753 42.0139 41.066 42.3464C41.836 41.3685 42.4179 40.2523 42.7813 39.0561C43.894 35.5956 45.0966 34.4228 45.2743 34.2637C46.6541 33.3033 48.1437 32.5165 49.7105 31.9207C49.3236 32.4888 48.9907 33.0928 48.7162 33.7246C48.6795 33.8016 48.6587 33.8854 48.655 33.9709C48.6513 34.0563 48.6649 34.1417 48.6949 34.2216C48.7248 34.3016 48.7705 34.3745 48.8292 34.4359C48.8879 34.4972 48.9584 34.5458 49.0362 34.5786C49.1922 34.6265 49.3594 34.6206 49.5117 34.5619C49.664 34.5031 49.7928 34.3948 49.878 34.2539C50.9468 31.8401 52.1161 31.2816 52.3038 31.2048C53.3788 31.0049 54.4752 30.9512 55.5642 31.0452C55.5874 31.0473 55.6126 31.0478 55.6361 31.0476H55.6532C55.2547 31.7001 54.9557 32.41 54.7663 33.1531C54.4521 34.2702 53.8967 35.3023 53.1405 36.1745ZM34.6838 43.5284C35.078 43.0641 35.401 42.5421 35.6418 41.9801C35.6448 41.9728 35.648 41.9652 35.6508 41.9579C35.6572 41.9417 36.2707 40.3889 37.1379 39.4114C38.9841 38.6842 40.735 37.7291 42.351 36.5674C42.0568 37.2495 41.7964 37.9461 41.571 38.6546C40.4404 42.1716 38.4011 42.9439 38.1882 43.0159C37.0774 43.23 35.9109 43.4052 34.6838 43.5289V43.5284ZM21.6862 43.5297C23.0804 42.6914 23.9877 42.5409 24.0167 42.5365C24.0211 42.5365 24.025 42.534 24.0293 42.5334C24.0337 42.5328 24.0399 42.5334 24.0453 42.5319L28.1075 41.785C27.6992 42.5026 27.1411 43.1207 26.4723 43.596C25.538 43.5559 23.6324 43.4907 21.6862 43.5303V43.5297ZM28.2932 43.6944C28.8698 43.0678 29.3246 42.3363 29.6335 41.5384C31.4828 41.2113 33.3069 40.7517 35.0923 40.1632C34.8608 40.5867 34.6534 41.0233 34.4711 41.4708C33.8052 43.0016 32.7341 43.5624 32.4382 43.6928C31.117 43.7545 29.7361 43.7601 28.2929 43.6949L28.2932 43.6944ZM59.1772 34.5993C58.8355 34.8231 58.4356 34.9383 58.029 34.9299H56.4516C56.1001 34.9311 55.7497 34.9695 55.4061 35.0445C55.6507 34.5481 55.8476 34.0288 55.9941 33.4941C56.3518 32.1761 56.8536 31.521 57.0724 31.2837C58.0291 31.5615 58.8943 32.096 59.5768 32.8309C59.6894 33.0979 60.0071 34.0308 59.1768 34.5998L59.1772 34.5993Z"
-        />
-        <path
-          d="M15.632 18.3503C15.7106 18.3793 15.7941 18.3922 15.8776 18.3884C15.9612 18.3846 16.0432 18.3641 16.1189 18.3281C16.1946 18.2921 16.2626 18.2412 16.319 18.1785C16.3753 18.1158 16.4189 18.0424 16.4473 17.9626C16.4836 17.8607 16.5229 17.7598 16.5649 17.6598C16.5976 17.5818 16.6149 17.4979 16.6157 17.4131C16.6165 17.3282 16.6008 17.2441 16.5695 17.1654C16.5383 17.0867 16.492 17.015 16.4335 16.9545C16.3749 16.8939 16.3052 16.8456 16.2282 16.8124C16.1513 16.7792 16.0687 16.7617 15.9851 16.7609C15.9015 16.7601 15.8185 16.776 15.741 16.8077C15.6634 16.8394 15.5928 16.8864 15.5331 16.9458C15.4734 17.0052 15.4259 17.076 15.3931 17.154C15.3419 17.2761 15.2939 17.3995 15.2499 17.5231C15.2214 17.6028 15.2088 17.6875 15.2126 17.7723C15.2164 17.857 15.2366 17.9402 15.2721 18.017C15.3076 18.0938 15.3576 18.1628 15.4194 18.22C15.4811 18.2772 15.5534 18.3215 15.632 18.3503Z"
-        />
-        <path
-          d="M32.2644 31.1229C32.3978 31.1231 32.5279 31.0804 32.636 31.001L33.2451 30.556C33.3797 30.4549 33.4696 30.304 33.4954 30.1361C33.5212 29.9682 33.4808 29.7968 33.3829 29.6589C33.285 29.521 33.1375 29.4278 32.9724 29.3995C32.8072 29.3712 32.6378 29.41 32.5006 29.5075L31.8917 29.9526C31.7823 30.0325 31.7007 30.1455 31.6587 30.2754C31.6167 30.4053 31.6164 30.5454 31.6578 30.6756C31.6992 30.8057 31.7803 30.9191 31.8893 30.9995C31.9983 31.0799 32.1296 31.1231 32.2644 31.1229Z"
-        />
-        <path
-          d="M21.4239 30.6779C21.7756 30.6779 22.0607 30.3886 22.0607 30.0317C22.0607 29.6748 21.7756 29.3855 21.4239 29.3855C21.0722 29.3855 20.7871 29.6748 20.7871 30.0317C20.7871 30.3886 21.0722 30.6779 21.4239 30.6779Z"
-        />
-        <path
-          d="M14.5643 35.6319C14.439 35.6445 14.3202 35.6945 14.2228 35.7756C14.1255 35.8568 14.0541 35.9653 14.0176 36.0876C13.9811 36.2099 13.9811 36.3405 14.0177 36.4627C14.0543 36.585 14.1258 36.6935 14.2232 36.7746C14.3205 36.8556 14.4394 36.9055 14.5647 36.9181C14.6901 36.9306 14.8162 36.9051 14.9273 36.8448C15.0383 36.7846 15.1293 36.6923 15.1887 36.5796C15.248 36.4668 15.2731 36.3388 15.2608 36.2116C15.2526 36.1272 15.2281 36.0452 15.1886 35.9703C15.1492 35.8954 15.0956 35.8292 15.0309 35.7754C14.9662 35.7215 14.8917 35.6811 14.8117 35.6565C14.7316 35.6319 14.6475 35.6236 14.5643 35.6319Z"
-        />
-        <path
-          d="M11.287 28.1631C11.1616 28.1757 11.0428 28.2257 10.9455 28.3068C10.8482 28.3879 10.7768 28.4965 10.7402 28.6188C10.7037 28.7411 10.7038 28.8716 10.7404 28.9939C10.777 29.1162 10.8485 29.2247 10.9458 29.3057C11.0432 29.3868 11.1621 29.4367 11.2874 29.4492C11.4127 29.4617 11.5389 29.4362 11.6499 29.376C11.761 29.3157 11.852 29.2234 11.9113 29.1107C11.9707 28.998 11.9958 28.87 11.9834 28.7428C11.9753 28.6583 11.9507 28.5763 11.9113 28.5014C11.8719 28.4265 11.8183 28.3603 11.7536 28.3064C11.6889 28.2526 11.6144 28.2122 11.5343 28.1876C11.4543 28.163 11.3702 28.1547 11.287 28.1631Z"
-        />
-      </symbol>
-      <!-- svgオブジェクト02 -->
-      <symbol id="tab_icon02" viewBox="0 0 63 65">
-        <path
-          d="M34.5028 34.0437C34.4581 33.8823 34.3521 33.7455 34.2081 33.6632C34.0642 33.5809 33.8939 33.56 33.7347 33.6049C33.6337 33.6337 33.5323 33.6617 33.4305 33.6887C33.3488 33.7074 33.2717 33.7426 33.2037 33.7922C33.1357 33.8418 33.0783 33.9048 33.0349 33.9774C32.9914 34.05 32.9628 34.1307 32.9508 34.2148C32.9388 34.2988 32.9436 34.3845 32.9649 34.4667C32.9862 34.5488 33.0236 34.6257 33.0749 34.6929C33.1262 34.76 33.1902 34.816 33.2633 34.8575C33.3364 34.8989 33.4169 34.925 33.5001 34.9342C33.5834 34.9434 33.6676 34.9355 33.7477 34.9109C33.8559 34.882 33.9634 34.8524 34.0703 34.8222C34.2292 34.7769 34.364 34.6696 34.4451 34.5237C34.5262 34.3777 34.5469 34.2052 34.5028 34.0437Z"
-        />
-        <path
-          d="M61.0541 37.9705C58.4859 38.6208 55.795 38.5796 53.2473 37.8511C53.6608 36.5762 53.8967 35.249 53.9481 33.9078C54.1208 29.1756 52.0234 25.2698 47.8825 22.6124C45.9507 21.3873 43.8228 20.5144 41.5947 20.0331C40.4088 19.7725 39.2433 19.5941 38.3419 19.4782C38.536 18.7239 38.7791 17.9835 39.0697 17.2618C39.1183 17.1492 39.1335 17.0246 39.1135 16.9033C39.0934 16.782 39.039 16.6693 38.9567 16.579C38.8745 16.4886 38.7682 16.4245 38.6506 16.3946C38.5331 16.3646 38.4095 16.37 38.295 16.4102C35.312 17.4663 32.6826 19.3537 30.7077 21.856C28.2393 22.1416 26.3176 23.1534 25.1489 24.7854C25.1443 24.792 25.1391 24.7995 25.1346 24.8063C25.0125 24.9915 22.3069 28.9993 17.5834 28.5153C19.1559 27.0299 22.005 23.752 22.713 18.9691C23.6477 12.6584 21.9594 8.09767 20.8844 5.95945C22.8907 6.66398 26.5781 8.6828 28.2142 14.234C28.2808 14.4873 29.0325 17.1183 31.9481 18.8822C32.0901 18.9681 32.2598 18.9932 32.4201 18.9521C32.5803 18.9109 32.7179 18.8068 32.8025 18.6628C32.8871 18.5187 32.9119 18.3464 32.8713 18.1838C32.8308 18.0213 32.7282 17.8817 32.5863 17.7958C30.0477 16.2604 29.424 13.9296 29.4186 13.9088C29.4166 13.9001 29.4142 13.8913 29.4116 13.8826C26.8859 5.29535 19.9598 4.38117 19.6661 4.34695C19.5461 4.33289 19.4246 4.3545 19.3165 4.40916C19.2084 4.46382 19.1182 4.54918 19.057 4.65485C18.9958 4.76052 18.9661 4.88197 18.9717 5.00442C18.9772 5.12687 19.0177 5.24506 19.0881 5.34461C19.1252 5.39594 22.6971 10.5647 21.4805 18.7816C20.5892 24.7999 15.8514 28.3521 15.8043 28.3874C15.7083 28.4578 15.634 28.5545 15.5902 28.6662C15.5464 28.7779 15.5348 28.9 15.557 29.0181C15.5791 29.1362 15.6339 29.2455 15.715 29.3331C15.7962 29.4207 15.9002 29.483 16.015 29.5128C16.7734 29.7126 17.5536 29.8149 18.3371 29.8174C23.1327 29.8174 25.9599 25.8183 26.161 25.524C26.937 24.4425 28.1012 23.7086 29.6286 23.3309C28.2224 25.4665 27.1744 27.8236 26.5269 30.3066C26.2774 31.3273 25.8562 32.2966 25.2818 33.1719C24.8967 33.7584 24.4365 34.2903 23.9132 34.7538C20.4201 34.7619 16.9305 34.5284 13.4687 34.0549C13.4598 34.0535 13.4509 34.0524 13.442 34.0515C4.67762 33.1036 1.38661 37.8449 1.25079 38.0472C1.19763 38.1264 1.16289 38.2167 1.14918 38.3115C1.13548 38.4063 1.14317 38.503 1.17167 38.5943C2.15909 41.7583 3.76025 44.6899 5.88092 47.2166C8.15003 51.2492 12.5239 54.4678 15.8036 56.4616C19.4826 58.698 24.7748 59.9692 28.0123 59.9692C31.7604 59.9603 35.454 59.0576 38.7951 57.3338C39.9893 58.1476 42.0496 59.1146 45.1044 59.1146C46.4889 59.1042 47.8673 58.9275 49.2108 58.5882C49.3262 58.5596 49.4311 58.4983 49.5133 58.4114C49.5954 58.3245 49.6515 58.2157 49.6748 58.0976C49.6982 57.9795 49.6878 57.8571 49.645 57.7448C49.6022 57.6324 49.5288 57.5348 49.4332 57.4634C49.4184 57.4523 47.9373 56.3287 46.7348 54.075C46.6959 54.0019 46.6431 53.9373 46.5796 53.8849C46.5161 53.8325 46.443 53.7933 46.3646 53.7695C46.2861 53.7458 46.2038 53.7379 46.1224 53.7465C46.041 53.755 45.962 53.7798 45.89 53.8193C45.818 53.8588 45.7544 53.9123 45.7027 53.9768C45.6511 54.0413 45.6125 54.1155 45.5892 54.1951C45.5658 54.2747 45.5582 54.3582 45.5667 54.4409C45.5751 54.5235 45.5996 54.6036 45.6386 54.6767C46.2052 55.7455 46.9125 56.7312 47.7409 57.6067C44.035 58.2617 41.5447 57.4692 40.0697 56.6421C45.0608 53.7617 48.3685 49.7685 49.7606 47.8662C49.9998 47.879 50.2435 47.8867 50.4918 47.8867C52.0623 47.9013 53.6192 47.5909 55.0674 46.9744C58.1394 45.6372 60.4119 42.8811 61.8214 38.7827C61.8592 38.6726 61.8662 38.554 61.8417 38.44C61.8173 38.326 61.7622 38.2211 61.6826 38.1369C61.6031 38.0527 61.5021 37.9925 61.391 37.9628C61.2798 37.9332 61.1627 37.9353 61.0526 37.969L61.0541 37.9705ZM28.0113 58.7049C25.5812 58.7049 19.9347 57.4989 16.4442 55.3769C13.3959 53.5237 9.37186 50.586 7.17946 46.962C8.28474 46.0503 12.1111 43.6257 18.3981 47.1482C18.5374 47.2234 21.8664 49.0096 26.8583 49.8617C31.4135 50.6392 38.2399 50.7317 45.0375 46.8362C46.0922 47.2496 47.1884 47.5446 48.3064 47.716C45.6562 51.1382 38.5946 58.7049 28.0113 58.7049ZM54.5859 45.81C50.1533 47.7455 45.3011 45.5798 45.2526 45.5577C45.1625 45.5156 45.0636 45.4963 44.9646 45.5015C44.8655 45.5066 44.7691 45.5361 44.6837 45.5874C38.1338 49.4451 31.5106 49.3667 27.1078 48.6219C22.3061 47.8096 19.0185 46.0507 18.9934 46.0371C14.6598 43.6092 11.3593 43.8196 9.35278 44.4235C8.29763 44.7348 7.3111 45.2486 6.44663 45.9369C4.70525 43.7194 3.3566 41.2119 2.46076 38.5261C3.21176 37.6277 6.32489 34.5563 13.2969 35.3065C13.8565 35.3913 23.1626 36.7611 31.0261 35.4867C31.1873 35.458 31.3308 35.3661 31.4258 35.2308C31.5208 35.0956 31.5596 34.9279 31.5338 34.7639C31.508 34.6 31.4197 34.4528 31.2879 34.3544C31.1561 34.2559 30.9915 34.214 30.8295 34.2376C29.1282 34.5023 27.4126 34.662 25.6922 34.716C25.9134 34.4485 26.1209 34.1696 26.3137 33.8804C26.9684 32.8848 27.4489 31.782 27.7341 30.6206C28.2984 28.3951 30.6073 21.2286 37.4263 18.1192C36.5419 20.8576 35.1885 27.0006 39.4116 30.2855C38.6606 31.261 37.561 32.0849 36.1154 32.7455C36.0407 32.7796 35.9735 32.8282 35.9174 32.8887C35.8613 32.9492 35.8175 33.0203 35.7885 33.0979C35.7595 33.1756 35.7459 33.2583 35.7484 33.3413C35.7509 33.4243 35.7694 33.506 35.8031 33.5817C35.8367 33.6574 35.8846 33.7257 35.9442 33.7826C36.0038 33.8395 36.0739 33.8839 36.1504 33.9134C36.2269 33.9428 36.3084 33.9566 36.3902 33.9541C36.472 33.9516 36.5525 33.9327 36.6271 33.8986C39.4419 32.6125 41.1411 30.743 41.6772 28.3417C41.6794 28.3321 41.6814 28.3229 41.6829 28.3128C41.7014 28.2097 42.0987 25.7639 39.6919 23.8242C39.5624 23.7199 39.3974 23.6721 39.2332 23.6912C39.069 23.7103 38.9189 23.7949 38.8161 23.9263C38.7133 24.0576 38.6661 24.2251 38.685 24.3917C38.7038 24.5584 38.7872 24.7106 38.9166 24.815C40.6716 26.2289 40.4794 27.9245 40.4574 28.0815C40.3692 28.4687 40.2402 28.8452 40.0725 29.2044C37.466 27.0733 37.534 23.4232 38.0576 20.7173C38.9496 20.8292 40.1359 21.0067 41.3394 21.2716C41.346 21.2733 41.3536 21.2748 41.3605 21.2761C43.4453 21.7356 45.4365 22.5561 47.2467 23.7017C51.0234 26.1381 52.8585 29.5562 52.7012 33.8608C52.6547 35.0766 52.4417 36.2799 52.0685 37.4361C51.5886 37.2389 51.1216 37.011 50.6702 36.7538C50.5261 36.6715 50.3557 36.6507 50.1964 36.6959C50.0372 36.7411 49.9022 36.8487 49.8211 36.9949C49.74 37.1412 49.7195 37.3141 49.7641 37.4757C49.8086 37.6373 49.9146 37.7743 50.0588 37.8565C54.085 40.1521 58.2526 39.812 60.236 39.4525C58.9429 42.5995 57.0453 44.7356 54.5859 45.8096V45.81Z"
-        />
-        <path
-          d="M19.7411 38.888L18.9926 39.192C18.9161 39.2226 18.8464 39.2681 18.7874 39.3261C18.7284 39.3841 18.6812 39.4533 18.6487 39.5298C18.6161 39.6063 18.5988 39.6886 18.5977 39.772C18.5966 39.8553 18.6118 39.9381 18.6423 40.0154C18.6728 40.0928 18.7181 40.1633 18.7756 40.2229C18.8331 40.2824 18.9016 40.3298 18.9772 40.3624C19.0528 40.395 19.134 40.4121 19.2161 40.4127C19.2983 40.4133 19.3797 40.3975 19.4558 40.3661L20.2044 40.062C20.2808 40.0315 20.3505 39.9859 20.4096 39.928C20.4686 39.87 20.5157 39.8007 20.5483 39.7242C20.5808 39.6477 20.5981 39.5654 20.5992 39.4821C20.6003 39.3987 20.5852 39.316 20.5546 39.2386C20.5241 39.1612 20.4788 39.0907 20.4213 39.0312C20.3639 38.9716 20.2953 38.9242 20.2197 38.8916C20.1441 38.859 20.0629 38.842 19.9808 38.8413C19.8987 38.8407 19.8172 38.8566 19.7411 38.888Z"
-        />
-        <path
-          d="M32.4096 39.8868C32.4746 39.7345 32.478 39.5624 32.419 39.4075C32.3601 39.2527 32.2435 39.1276 32.0945 39.0592C31.9455 38.9907 31.7759 38.9845 31.6224 39.0418C31.4689 39.0991 31.3437 39.2153 31.2739 39.3654C31.2163 39.494 29.891 42.5431 32.2459 45.088C32.3633 45.2026 32.5183 45.269 32.6811 45.2742C32.8439 45.2794 33.0028 45.2231 33.127 45.1162C33.1867 45.0594 33.2349 44.9912 33.2686 44.9155C33.3023 44.8398 33.321 44.7581 33.3236 44.6751C33.3262 44.5921 33.3126 44.5093 33.2836 44.4316C33.2547 44.3539 33.2109 44.2828 33.1548 44.2223C31.3827 42.3071 32.3643 39.9902 32.4096 39.8868Z"
-        />
-        <path
-          d="M35.962 39.1864C36.0302 39.0336 36.0357 38.8596 35.9775 38.7026C35.9192 38.5457 35.8018 38.4187 35.6513 38.3495C35.5007 38.2803 35.3292 38.2747 35.1745 38.3338C35.0199 38.393 34.8947 38.512 34.8265 38.6648C34.7691 38.7934 33.4437 41.8424 35.7988 44.3873C35.9216 44.5201 36.4473 44.616 36.6798 44.4155C36.7407 44.3595 36.7899 44.2915 36.8244 44.2158C36.8588 44.14 36.8779 44.058 36.8805 43.9746C36.8831 43.8912 36.8692 43.8081 36.8395 43.7303C36.8097 43.6525 36.7649 43.5815 36.7076 43.5217C34.9362 41.6074 35.9161 39.2921 35.962 39.1864Z"
-        />
-        <path
-          d="M39.1683 37.8382C39.2334 37.6859 39.2368 37.5138 39.1778 37.359C39.1189 37.2041 39.0023 37.079 38.8533 37.0106C38.7043 36.9422 38.5347 36.9359 38.3812 36.9932C38.2277 37.0505 38.1025 37.1668 38.0327 37.3169C37.975 37.4455 36.6498 40.4945 39.0047 43.0396C39.1274 43.1723 39.6486 43.284 39.8856 43.0678C39.9459 43.0113 39.9944 42.9432 40.0285 42.8675C40.0625 42.7918 40.0814 42.7099 40.084 42.6268C40.0866 42.5436 40.0728 42.4607 40.0435 42.3829C40.0143 42.3052 39.97 42.2341 39.9134 42.1739C38.1405 40.2578 39.1242 37.939 39.1683 37.8382Z"
-        />
-      </symbol>
-      <!-- svgオブジェクト03 -->
-      <symbol id="tab_icon03" viewBox="0 0 64 66">
-        <path
-          d="M16.8257 41.8201C16.2331 41.8068 15.6545 41.6342 15.1489 41.3201L4.81293 35.2024C4.34535 35.0057 3.94574 34.6727 3.6646 34.2456C3.38345 33.8185 3.2334 33.3164 3.2334 32.8028C3.2334 32.2891 3.38345 31.787 3.6646 31.3599C3.94574 30.9328 4.34535 30.5998 4.81293 30.4031L9.01773 27.9353C10.8771 26.9045 12.8518 26.1043 14.8993 25.5519L22.3233 23.74C24.4167 23.2945 26.5679 23.2002 28.6913 23.4607L38.2273 24.9154C39.9298 25.0653 41.6361 24.675 43.1105 23.7984L46.5025 21.4799C46.7139 21.3353 46.9732 21.2817 47.2234 21.331C47.4737 21.3803 47.6944 21.5285 47.8369 21.743C47.9795 21.9574 48.0323 22.2205 47.9837 22.4745C47.9351 22.7284 47.7891 22.9523 47.5777 23.097L44.1601 25.4155C42.294 26.556 40.1124 27.0484 37.9457 26.8183L28.4097 25.3895C26.5313 25.1697 24.6305 25.253 22.7777 25.6363L15.3601 27.4677C13.492 27.9757 11.6897 28.706 9.99053 29.6433L5.76013 32.0916C5.60527 32.1507 5.46648 32.2463 5.3552 32.3705C5.24392 32.4947 5.16335 32.644 5.12013 32.806C5.16335 32.9681 5.24392 33.1173 5.3552 33.2416C5.46648 33.3658 5.60527 33.4613 5.76013 33.5204L16.1025 39.638C16.2314 39.7395 16.3816 39.8093 16.5415 39.842C16.7014 39.8747 16.8666 39.8693 17.0241 39.8264C17.1424 39.7125 17.2329 39.5722 17.2885 39.4166C17.344 39.2611 17.3631 39.0945 17.3441 38.9302L17.4465 32.0981C17.4465 31.8398 17.5477 31.592 17.7277 31.4093C17.9077 31.2266 18.1519 31.124 18.4065 31.124C18.6611 31.124 18.9053 31.2266 19.0854 31.4093C19.2654 31.592 19.3665 31.8398 19.3665 32.0981L19.2833 38.9561C19.3176 39.4656 19.217 39.9751 18.9919 40.4319C18.7668 40.8886 18.4255 41.276 18.0033 41.5539C17.6405 41.7457 17.2345 41.8375 16.8257 41.8201Z"
-        />
-        <path
-          d="M54.6371 33.4035C54.1172 33.4049 53.602 33.3035 53.1203 33.1048L51.4755 32.4554C49.8883 31.8059 47.4371 30.7019 45.9971 29.9875L43.4371 28.6887C43.3178 28.6364 43.2101 28.5601 43.1206 28.4643C43.0312 28.3686 42.9619 28.2554 42.9168 28.1316C42.8718 28.0078 42.852 27.876 42.8587 27.7443C42.8653 27.6125 42.8983 27.4835 42.9556 27.3651C43.0129 27.2466 43.0933 27.1412 43.1919 27.0552C43.2905 26.9693 43.4053 26.9045 43.5294 26.8649C43.6534 26.8254 43.784 26.8117 43.9134 26.8249C44.0428 26.8381 44.1682 26.8778 44.2819 26.9417L46.8419 28.2406C48.2435 28.9354 50.6435 30.02 52.1859 30.6499L53.8307 31.2994C54.0866 31.404 54.3604 31.4565 54.6363 31.4537C54.9121 31.451 55.1848 31.393 55.4386 31.2833C55.6924 31.1735 55.9224 31.014 56.1154 30.814C56.3085 30.6139 56.4607 30.3772 56.5635 30.1174L58.8803 24.2725C58.9235 24.1485 58.9909 24.0346 59.0786 23.9378C59.1662 23.8409 59.2723 23.7631 59.3904 23.7089C59.5085 23.6548 59.6362 23.6255 59.7658 23.6228C59.8954 23.6201 60.0242 23.644 60.1444 23.6931C60.2646 23.7423 60.3737 23.8156 60.4653 23.9087C60.5568 24.0018 60.6288 24.1128 60.6769 24.2349C60.7251 24.357 60.7484 24.4877 60.7454 24.6192C60.7424 24.7507 60.7132 24.8802 60.6595 24.9999L58.3427 30.8448C58.0446 31.596 57.5331 32.2403 56.8733 32.6959C56.2135 33.1515 55.4352 33.3978 54.6371 33.4035Z"
-        />
-        <path
-          d="M59.5197 43.6126C59.3406 43.6094 59.1659 43.5553 59.0155 43.4566C58.8651 43.3579 58.7449 43.2185 58.6685 43.0541L56.5181 38.1898C56.2511 37.6369 55.8036 37.195 55.2517 36.9392C54.6997 36.6834 54.0775 36.6297 53.4909 36.7871L53.0109 36.9364C51.3981 37.43 48.7485 38.2353 47.1165 38.6704L43.2765 39.742C43.034 39.8023 42.7779 39.7644 42.5625 39.6363C42.347 39.5082 42.1893 39.2999 42.1227 39.0557C42.0561 38.8116 42.0858 38.5507 42.2057 38.3284C42.3255 38.1061 42.5259 37.9399 42.7645 37.8651L46.6045 36.7936C48.2301 36.339 50.8541 35.5661 52.4605 35.0726L52.9405 34.9232C53.9673 34.6415 55.0588 34.7327 56.0263 35.1809C56.9939 35.6292 57.7768 36.4063 58.2397 37.3781L60.3901 42.2423C60.4549 42.3901 60.4825 42.552 60.4702 42.7133C60.458 42.8746 60.4063 43.0302 60.32 43.1662C60.2336 43.3022 60.1152 43.4142 59.9755 43.4922C59.8358 43.5701 59.6791 43.6115 59.5197 43.6126Z"
-        />
-        <path
-          d="M31.4239 44.0997C30.6452 44.1082 29.868 44.0276 29.1071 43.8594L20.8575 41.9111C20.6097 41.8517 20.3953 41.6948 20.2615 41.475C20.1276 41.2551 20.0853 40.9904 20.1439 40.7389C20.2025 40.4874 20.3571 40.2698 20.5737 40.134C20.7904 39.9982 21.0513 39.9553 21.2991 40.0148L29.5487 41.9631C31.3113 42.2941 33.1273 42.1781 34.8351 41.6254L36.9023 40.8395C38.7627 40.1577 40.7754 40.0248 42.7071 40.4564L45.0303 41.1772C45.2756 41.2539 45.4808 41.4263 45.6008 41.6565C45.7208 41.8866 45.7458 42.1558 45.6703 42.4047C45.5948 42.6536 45.4249 42.8618 45.198 42.9836C44.9712 43.1054 44.706 43.1308 44.4607 43.0541L42.1375 42.3332C40.6113 42.0321 39.0335 42.1509 37.5679 42.6774L35.5071 43.4438C34.1919 43.8931 32.8116 44.1149 31.4239 44.0997Z"
-        />
-        <path
-          d="M11.5137 33.5009C12.2418 33.5009 12.8321 32.9019 12.8321 32.1631C12.8321 31.4242 12.2418 30.8253 11.5137 30.8253C10.7856 30.8253 10.1953 31.4242 10.1953 32.1631C10.1953 32.9019 10.7856 33.5009 11.5137 33.5009Z"
-        />
-        <path
-          d="M24.1029 36.8585C23.8852 36.8594 23.6737 36.7852 23.5031 36.6482C23.3324 36.5111 23.2127 36.3193 23.1636 36.1041C23.1145 35.889 23.1389 35.6633 23.2328 35.464C23.3267 35.2648 23.4846 35.1039 23.6805 35.0076L27.3797 33.1957H24.9605H21.6773C21.5512 33.1948 21.4265 33.1688 21.3104 33.1191C21.1942 33.0693 21.0889 32.9968 21.0003 32.9058C20.9118 32.8147 20.8417 32.7068 20.7943 32.5883C20.7468 32.4698 20.7228 32.343 20.7237 32.215C20.7228 32.0866 20.7473 31.9593 20.7957 31.8407C20.8441 31.722 20.9155 31.6144 21.0055 31.5242C21.0956 31.434 21.2026 31.363 21.3202 31.3155C21.4378 31.2679 21.5635 31.2448 21.6901 31.2474H24.9733C25.9781 31.2474 27.6293 31.2474 28.6341 31.2474H29.8309C30.8677 31.2474 31.4309 31.5721 31.5845 32.228C31.7381 32.884 31.3477 33.449 30.4389 33.8971L24.5573 36.7805C24.4143 36.8436 24.2583 36.8703 24.1029 36.8585Z"
-        />
-      </symbol>
-    </svg>
-  </body>
+  <div class="to-top">
+    <a href="#"><span></span></a>
+  </div>
+
+  <!-- svgスプラウト -->
+  <svg style="display: none">
+    <!-- svgオブジェクト01 -->
+    <symbol id="tab_icon01" viewBox="0 0 61 56">
+      <path
+        d="M55.7626 24.9055C55.7561 24.5942 55.6719 24.2897 55.5179 24.0204C55.085 23.255 54.1325 22.768 52.6891 22.5726C51.8539 22.4595 51.0686 22.321 50.355 22.1609C48.1676 21.6668 45.9261 21.464 43.6871 21.5577C41.8034 21.6296 39.9247 21.8025 38.0589 22.0757C37.6636 22.1367 37.2045 22.211 36.6955 22.2937C32.9157 22.9061 25.2258 24.1516 20.4493 23.1914C19.8004 21.9483 19.6886 20.8376 20.1174 19.887C21.0484 17.8223 24.2006 16.8551 25.3419 16.5666C26.6929 18.6611 28.4101 19.95 30.4502 20.4C34.2449 21.2368 37.74 18.8528 37.887 18.7512C37.9993 18.6733 38.084 18.561 38.1287 18.4307C38.1735 18.3004 38.176 18.159 38.1359 18.0272C38.0957 17.8953 38.015 17.78 37.9056 17.698C37.7962 17.6161 37.6639 17.5718 37.5279 17.5717C37.1831 17.547 36.8504 17.4321 36.5624 17.238C35.9271 16.8463 35.4075 16.2882 35.0582 15.6223C33.7579 13.1911 31.8808 12.2848 30.8026 11.9528C32.9971 6.61926 30.1438 3.13315 30.0152 2.98092L29.9977 2.96182C29.3095 2.20962 29.6965 0.846008 29.7001 0.834547C29.7362 0.714509 29.737 0.586417 29.7025 0.465912C29.668 0.345406 29.5997 0.237701 29.5058 0.155948C29.412 0.0741952 29.2968 0.0219311 29.1742 0.0055379C29.0516 -0.0108553 28.9269 0.00933183 28.8154 0.063634C25.7848 1.53574 23.9802 4.27825 23.5958 7.99434C23.4591 9.40501 23.5082 10.8279 23.7417 12.2254C22.2798 12.1258 20.8122 12.1578 19.3558 12.3209C18.7802 12.3782 7.8524 13.567 3.00233 22.3311C0.86774 26.1884 0.66821 30.8194 2.46812 34.7188C3.93635 37.9003 6.36365 40.3484 9.68581 42.0087C8.71483 43.0519 7.91764 44.2485 7.32553 45.5515C5.27019 50.0701 0.925528 49.4071 0.74294 49.3767C0.608302 49.3536 0.469915 49.375 0.348196 49.4378C0.226477 49.5006 0.127874 49.6015 0.0669346 49.7255C0.00599538 49.8494 -0.0140521 49.99 0.00975009 50.1265C0.0335523 50.2629 0.0999435 50.388 0.199128 50.4832C2.26445 52.4659 4.89917 53.6339 7.46143 53.4502C12.3232 53.1016 16.3027 48.8398 17.7869 47.0057C18.3981 46.2403 19.0769 45.5331 19.8148 44.8929C19.8425 44.8957 19.8703 44.8967 19.8981 44.8958C22.9888 44.6958 26.9524 44.913 26.9826 44.9149C27.0872 44.9224 27.1896 44.9275 27.2939 44.934C26.1099 45.7858 25.1314 46.8986 24.4318 48.189C23.4091 50.0508 20.7889 53.9384 16.7348 53.9661C17.4647 53.4066 18.0354 52.6607 18.3885 51.8044C18.7416 50.9481 18.8645 50.0121 18.7448 49.0919C18.7369 49.0065 18.7124 48.9235 18.6726 48.8479C18.6328 48.7722 18.5785 48.7053 18.513 48.6511C18.4475 48.597 18.372 48.5566 18.2909 48.5323C18.2098 48.5081 18.1248 48.5004 18.0408 48.5099C17.9567 48.5193 17.8754 48.5456 17.8015 48.5873C17.7276 48.6289 17.6627 48.6851 17.6104 48.7525C17.5581 48.8199 17.5196 48.8972 17.497 48.9799C17.4745 49.0625 17.4684 49.1489 17.4791 49.234C17.5993 50.1982 17.3768 51.1743 16.8516 51.987C16.2829 52.8118 15.4504 53.4113 14.4954 53.6838C14.3561 53.7137 14.2306 53.7903 14.1392 53.9011C14.0478 54.0119 13.9956 54.1507 13.991 54.2951C13.9864 54.4396 14.0297 54.5815 14.114 54.698C14.1982 54.8146 14.3185 54.8991 14.4557 54.9381C15.1961 55.1526 15.9619 55.2631 16.7318 55.2665C21.4349 55.2665 24.3956 50.9088 25.5443 48.8174C26.2127 47.5737 27.1819 46.5228 28.3606 45.7638C28.8069 45.4846 29.2751 45.2432 29.7604 45.0419C29.7679 45.0387 29.7741 45.0339 29.7814 45.0305C29.9806 45.033 30.1799 45.0358 30.3768 45.0358C43.2886 45.0358 51.0942 39.6194 53.9889 37.1385C54.6775 36.5478 55.5498 36.2231 56.4516 36.2217H58.028C58.689 36.2307 59.3375 36.0384 59.8897 35.6697C61.2935 34.7078 61.0987 33.1562 60.7527 32.3352C60.7768 31.3475 60.6221 26.7075 55.7626 24.9055ZM16.8028 46.1859C15.7272 47.5147 11.8695 51.8739 7.38143 52.1607C5.64666 52.2714 3.97758 51.7628 2.40016 50.6467C4.22096 50.428 6.93456 49.4949 8.48713 46.0816C8.50426 46.0419 10.2387 42.0929 12.9538 41.4042C13.1164 41.3615 13.2558 41.2553 13.3417 41.1088C13.4276 40.9623 13.4529 40.7873 13.4122 40.6219C13.3714 40.4565 13.268 40.3142 13.1243 40.2259C12.9806 40.1375 12.8084 40.1104 12.6451 40.1504C11.9562 40.3347 11.3084 40.6511 10.7367 41.0825C7.42849 39.5529 5.0332 37.23 3.62143 34.1708C1.99508 30.648 2.1788 26.4586 4.11273 22.9641C8.65767 14.7507 19.3786 13.6169 19.4863 13.6066C19.4891 13.6066 19.4916 13.6052 19.4944 13.6049C19.4972 13.6045 19.4998 13.6049 19.5025 13.6049C19.5296 13.6016 22.2164 13.279 24.4504 13.6031C24.5545 13.6181 24.6606 13.6067 24.7593 13.57C24.858 13.5332 24.9462 13.4723 25.016 13.3926C25.0859 13.3129 25.1352 13.2169 25.1597 13.1132C25.1841 13.0094 25.1829 12.9012 25.1561 12.798C24.8082 11.2557 24.7101 9.66624 24.8657 8.09195C25.165 5.27914 26.3249 3.17842 28.3188 1.83009C28.3178 2.56349 28.5778 3.27261 29.0511 3.8269C29.2339 4.05229 31.6999 7.23966 29.3259 12.1247C29.2802 12.2188 29.2577 12.3227 29.2604 12.4276C29.2631 12.5324 29.2909 12.635 29.3414 12.7265C29.392 12.818 29.4637 12.8956 29.5504 12.9527C29.6372 13.0097 29.7363 13.0445 29.8392 13.054C29.8644 13.0563 32.3768 13.3203 33.9397 16.2396C34.3984 17.1099 35.0796 17.8386 35.9119 18.3491C35.9187 18.353 35.9254 18.3572 35.9322 18.3614C34.7062 18.9296 32.7251 19.5838 30.7128 19.1361C28.9058 18.735 27.3826 17.5125 26.1861 15.5016C26.119 15.3889 26.0196 15.2997 25.9011 15.246C25.7827 15.1922 25.6509 15.1764 25.5234 15.2007C25.314 15.2405 20.3761 16.2154 18.9611 19.3468C18.4905 20.3903 18.4619 21.5302 18.873 22.7487C18.2279 22.5226 17.6382 22.1584 17.1439 21.6807C16.7715 21.3105 16.4889 20.8576 16.3183 20.3578C16.2926 20.2767 16.2514 20.2016 16.197 20.1367C16.1426 20.0719 16.0761 20.0186 16.0013 19.9799C15.9266 19.9412 15.845 19.9179 15.7613 19.9113C15.6777 19.9047 15.5935 19.915 15.5138 19.9416C15.434 19.9681 15.3602 20.0104 15.2967 20.066C15.2331 20.1216 15.1809 20.1894 15.1433 20.2655C15.1056 20.3416 15.0831 20.4245 15.0772 20.5094C15.0712 20.5944 15.0818 20.6797 15.1085 20.7604C15.3396 21.4499 15.7258 22.0753 16.2364 22.5871C19.8671 26.3295 30.9451 24.5342 36.8967 23.5698C37.4018 23.4879 37.8567 23.4141 38.25 23.3538C40.0706 23.0875 41.9038 22.9191 43.7419 22.8491C45.8702 22.7599 48.0008 22.9525 50.08 23.4222C50.8286 23.5901 51.6497 23.7352 52.5205 23.8531C53.8503 24.033 54.2125 24.3636 54.4875 24.8977C54.1884 24.9953 53.8796 25.0594 53.5667 25.0887C53.0597 25.1389 52.5486 25.1268 52.0444 25.0528C48.7179 24.6291 45.3413 25.1733 42.3079 26.6221C40.1967 27.6661 38.3412 29.1743 36.8762 31.0369C35.4934 32.7606 31.6433 36.7752 25.7733 36.8228C25.6063 36.8263 25.4474 36.8963 25.3307 37.0176C25.2141 37.1389 25.1491 37.3019 25.1497 37.4714C25.1504 37.6409 25.2167 37.8034 25.3343 37.9238C25.4519 38.0441 25.6114 38.1128 25.7784 38.115H25.7837C32.1944 38.0632 36.3674 33.7183 37.8637 31.8527C39.2104 30.1383 40.9164 28.7497 42.858 27.7879C45.6667 26.4453 48.7938 25.9409 51.8744 26.3335C52.4803 26.4213 53.0944 26.4347 53.7035 26.3734C54.1846 26.3307 54.6574 26.219 55.1076 26.0415C58.2168 27.0979 59.1332 29.4414 59.3914 30.9733C58.2853 30.2141 56.9887 29.7911 55.6538 29.7541H55.6463C48.5758 29.1288 42.6804 34.6042 42.2251 35.0388C36.9626 39.3374 28.3898 40.4252 28.3044 40.4359C28.2919 40.4375 28.2791 40.4396 28.2667 40.4417L23.8272 41.2578C23.5885 41.2945 21.6636 41.6479 19.0891 43.8218C18.2545 44.5341 17.4889 45.3257 16.8028 46.1859ZM53.1405 36.1745C51.4334 37.6074 49.5684 38.8347 47.5828 39.8318C48.1036 38.9825 48.5335 38.0793 48.8653 37.1374C48.9234 36.9765 48.9161 36.7988 48.8451 36.6433C48.774 36.4879 48.645 36.3674 48.4865 36.3085C48.408 36.2793 48.3246 36.2661 48.241 36.2696C48.1575 36.2732 48.0754 36.2933 47.9996 36.329C47.8464 36.4011 47.7277 36.532 47.6696 36.6929C46.3896 40.2394 44.6931 41.1272 44.6505 41.1486C44.6449 41.1513 44.6404 41.1553 44.6349 41.1579C43.4666 41.6172 42.2753 42.0139 41.066 42.3464C41.836 41.3685 42.4179 40.2523 42.7813 39.0561C43.894 35.5956 45.0966 34.4228 45.2743 34.2637C46.6541 33.3033 48.1437 32.5165 49.7105 31.9207C49.3236 32.4888 48.9907 33.0928 48.7162 33.7246C48.6795 33.8016 48.6587 33.8854 48.655 33.9709C48.6513 34.0563 48.6649 34.1417 48.6949 34.2216C48.7248 34.3016 48.7705 34.3745 48.8292 34.4359C48.8879 34.4972 48.9584 34.5458 49.0362 34.5786C49.1922 34.6265 49.3594 34.6206 49.5117 34.5619C49.664 34.5031 49.7928 34.3948 49.878 34.2539C50.9468 31.8401 52.1161 31.2816 52.3038 31.2048C53.3788 31.0049 54.4752 30.9512 55.5642 31.0452C55.5874 31.0473 55.6126 31.0478 55.6361 31.0476H55.6532C55.2547 31.7001 54.9557 32.41 54.7663 33.1531C54.4521 34.2702 53.8967 35.3023 53.1405 36.1745ZM34.6838 43.5284C35.078 43.0641 35.401 42.5421 35.6418 41.9801C35.6448 41.9728 35.648 41.9652 35.6508 41.9579C35.6572 41.9417 36.2707 40.3889 37.1379 39.4114C38.9841 38.6842 40.735 37.7291 42.351 36.5674C42.0568 37.2495 41.7964 37.9461 41.571 38.6546C40.4404 42.1716 38.4011 42.9439 38.1882 43.0159C37.0774 43.23 35.9109 43.4052 34.6838 43.5289V43.5284ZM21.6862 43.5297C23.0804 42.6914 23.9877 42.5409 24.0167 42.5365C24.0211 42.5365 24.025 42.534 24.0293 42.5334C24.0337 42.5328 24.0399 42.5334 24.0453 42.5319L28.1075 41.785C27.6992 42.5026 27.1411 43.1207 26.4723 43.596C25.538 43.5559 23.6324 43.4907 21.6862 43.5303V43.5297ZM28.2932 43.6944C28.8698 43.0678 29.3246 42.3363 29.6335 41.5384C31.4828 41.2113 33.3069 40.7517 35.0923 40.1632C34.8608 40.5867 34.6534 41.0233 34.4711 41.4708C33.8052 43.0016 32.7341 43.5624 32.4382 43.6928C31.117 43.7545 29.7361 43.7601 28.2929 43.6949L28.2932 43.6944ZM59.1772 34.5993C58.8355 34.8231 58.4356 34.9383 58.029 34.9299H56.4516C56.1001 34.9311 55.7497 34.9695 55.4061 35.0445C55.6507 34.5481 55.8476 34.0288 55.9941 33.4941C56.3518 32.1761 56.8536 31.521 57.0724 31.2837C58.0291 31.5615 58.8943 32.096 59.5768 32.8309C59.6894 33.0979 60.0071 34.0308 59.1768 34.5998L59.1772 34.5993Z" />
+      <path
+        d="M15.632 18.3503C15.7106 18.3793 15.7941 18.3922 15.8776 18.3884C15.9612 18.3846 16.0432 18.3641 16.1189 18.3281C16.1946 18.2921 16.2626 18.2412 16.319 18.1785C16.3753 18.1158 16.4189 18.0424 16.4473 17.9626C16.4836 17.8607 16.5229 17.7598 16.5649 17.6598C16.5976 17.5818 16.6149 17.4979 16.6157 17.4131C16.6165 17.3282 16.6008 17.2441 16.5695 17.1654C16.5383 17.0867 16.492 17.015 16.4335 16.9545C16.3749 16.8939 16.3052 16.8456 16.2282 16.8124C16.1513 16.7792 16.0687 16.7617 15.9851 16.7609C15.9015 16.7601 15.8185 16.776 15.741 16.8077C15.6634 16.8394 15.5928 16.8864 15.5331 16.9458C15.4734 17.0052 15.4259 17.076 15.3931 17.154C15.3419 17.2761 15.2939 17.3995 15.2499 17.5231C15.2214 17.6028 15.2088 17.6875 15.2126 17.7723C15.2164 17.857 15.2366 17.9402 15.2721 18.017C15.3076 18.0938 15.3576 18.1628 15.4194 18.22C15.4811 18.2772 15.5534 18.3215 15.632 18.3503Z" />
+      <path
+        d="M32.2644 31.1229C32.3978 31.1231 32.5279 31.0804 32.636 31.001L33.2451 30.556C33.3797 30.4549 33.4696 30.304 33.4954 30.1361C33.5212 29.9682 33.4808 29.7968 33.3829 29.6589C33.285 29.521 33.1375 29.4278 32.9724 29.3995C32.8072 29.3712 32.6378 29.41 32.5006 29.5075L31.8917 29.9526C31.7823 30.0325 31.7007 30.1455 31.6587 30.2754C31.6167 30.4053 31.6164 30.5454 31.6578 30.6756C31.6992 30.8057 31.7803 30.9191 31.8893 30.9995C31.9983 31.0799 32.1296 31.1231 32.2644 31.1229Z" />
+      <path
+        d="M21.4239 30.6779C21.7756 30.6779 22.0607 30.3886 22.0607 30.0317C22.0607 29.6748 21.7756 29.3855 21.4239 29.3855C21.0722 29.3855 20.7871 29.6748 20.7871 30.0317C20.7871 30.3886 21.0722 30.6779 21.4239 30.6779Z" />
+      <path
+        d="M14.5643 35.6319C14.439 35.6445 14.3202 35.6945 14.2228 35.7756C14.1255 35.8568 14.0541 35.9653 14.0176 36.0876C13.9811 36.2099 13.9811 36.3405 14.0177 36.4627C14.0543 36.585 14.1258 36.6935 14.2232 36.7746C14.3205 36.8556 14.4394 36.9055 14.5647 36.9181C14.6901 36.9306 14.8162 36.9051 14.9273 36.8448C15.0383 36.7846 15.1293 36.6923 15.1887 36.5796C15.248 36.4668 15.2731 36.3388 15.2608 36.2116C15.2526 36.1272 15.2281 36.0452 15.1886 35.9703C15.1492 35.8954 15.0956 35.8292 15.0309 35.7754C14.9662 35.7215 14.8917 35.6811 14.8117 35.6565C14.7316 35.6319 14.6475 35.6236 14.5643 35.6319Z" />
+      <path
+        d="M11.287 28.1631C11.1616 28.1757 11.0428 28.2257 10.9455 28.3068C10.8482 28.3879 10.7768 28.4965 10.7402 28.6188C10.7037 28.7411 10.7038 28.8716 10.7404 28.9939C10.777 29.1162 10.8485 29.2247 10.9458 29.3057C11.0432 29.3868 11.1621 29.4367 11.2874 29.4492C11.4127 29.4617 11.5389 29.4362 11.6499 29.376C11.761 29.3157 11.852 29.2234 11.9113 29.1107C11.9707 28.998 11.9958 28.87 11.9834 28.7428C11.9753 28.6583 11.9507 28.5763 11.9113 28.5014C11.8719 28.4265 11.8183 28.3603 11.7536 28.3064C11.6889 28.2526 11.6144 28.2122 11.5343 28.1876C11.4543 28.163 11.3702 28.1547 11.287 28.1631Z" />
+    </symbol>
+    <!-- svgオブジェクト02 -->
+    <symbol id="tab_icon02" viewBox="0 0 63 65">
+      <path
+        d="M34.5028 34.0437C34.4581 33.8823 34.3521 33.7455 34.2081 33.6632C34.0642 33.5809 33.8939 33.56 33.7347 33.6049C33.6337 33.6337 33.5323 33.6617 33.4305 33.6887C33.3488 33.7074 33.2717 33.7426 33.2037 33.7922C33.1357 33.8418 33.0783 33.9048 33.0349 33.9774C32.9914 34.05 32.9628 34.1307 32.9508 34.2148C32.9388 34.2988 32.9436 34.3845 32.9649 34.4667C32.9862 34.5488 33.0236 34.6257 33.0749 34.6929C33.1262 34.76 33.1902 34.816 33.2633 34.8575C33.3364 34.8989 33.4169 34.925 33.5001 34.9342C33.5834 34.9434 33.6676 34.9355 33.7477 34.9109C33.8559 34.882 33.9634 34.8524 34.0703 34.8222C34.2292 34.7769 34.364 34.6696 34.4451 34.5237C34.5262 34.3777 34.5469 34.2052 34.5028 34.0437Z" />
+      <path
+        d="M61.0541 37.9705C58.4859 38.6208 55.795 38.5796 53.2473 37.8511C53.6608 36.5762 53.8967 35.249 53.9481 33.9078C54.1208 29.1756 52.0234 25.2698 47.8825 22.6124C45.9507 21.3873 43.8228 20.5144 41.5947 20.0331C40.4088 19.7725 39.2433 19.5941 38.3419 19.4782C38.536 18.7239 38.7791 17.9835 39.0697 17.2618C39.1183 17.1492 39.1335 17.0246 39.1135 16.9033C39.0934 16.782 39.039 16.6693 38.9567 16.579C38.8745 16.4886 38.7682 16.4245 38.6506 16.3946C38.5331 16.3646 38.4095 16.37 38.295 16.4102C35.312 17.4663 32.6826 19.3537 30.7077 21.856C28.2393 22.1416 26.3176 23.1534 25.1489 24.7854C25.1443 24.792 25.1391 24.7995 25.1346 24.8063C25.0125 24.9915 22.3069 28.9993 17.5834 28.5153C19.1559 27.0299 22.005 23.752 22.713 18.9691C23.6477 12.6584 21.9594 8.09767 20.8844 5.95945C22.8907 6.66398 26.5781 8.6828 28.2142 14.234C28.2808 14.4873 29.0325 17.1183 31.9481 18.8822C32.0901 18.9681 32.2598 18.9932 32.4201 18.9521C32.5803 18.9109 32.7179 18.8068 32.8025 18.6628C32.8871 18.5187 32.9119 18.3464 32.8713 18.1838C32.8308 18.0213 32.7282 17.8817 32.5863 17.7958C30.0477 16.2604 29.424 13.9296 29.4186 13.9088C29.4166 13.9001 29.4142 13.8913 29.4116 13.8826C26.8859 5.29535 19.9598 4.38117 19.6661 4.34695C19.5461 4.33289 19.4246 4.3545 19.3165 4.40916C19.2084 4.46382 19.1182 4.54918 19.057 4.65485C18.9958 4.76052 18.9661 4.88197 18.9717 5.00442C18.9772 5.12687 19.0177 5.24506 19.0881 5.34461C19.1252 5.39594 22.6971 10.5647 21.4805 18.7816C20.5892 24.7999 15.8514 28.3521 15.8043 28.3874C15.7083 28.4578 15.634 28.5545 15.5902 28.6662C15.5464 28.7779 15.5348 28.9 15.557 29.0181C15.5791 29.1362 15.6339 29.2455 15.715 29.3331C15.7962 29.4207 15.9002 29.483 16.015 29.5128C16.7734 29.7126 17.5536 29.8149 18.3371 29.8174C23.1327 29.8174 25.9599 25.8183 26.161 25.524C26.937 24.4425 28.1012 23.7086 29.6286 23.3309C28.2224 25.4665 27.1744 27.8236 26.5269 30.3066C26.2774 31.3273 25.8562 32.2966 25.2818 33.1719C24.8967 33.7584 24.4365 34.2903 23.9132 34.7538C20.4201 34.7619 16.9305 34.5284 13.4687 34.0549C13.4598 34.0535 13.4509 34.0524 13.442 34.0515C4.67762 33.1036 1.38661 37.8449 1.25079 38.0472C1.19763 38.1264 1.16289 38.2167 1.14918 38.3115C1.13548 38.4063 1.14317 38.503 1.17167 38.5943C2.15909 41.7583 3.76025 44.6899 5.88092 47.2166C8.15003 51.2492 12.5239 54.4678 15.8036 56.4616C19.4826 58.698 24.7748 59.9692 28.0123 59.9692C31.7604 59.9603 35.454 59.0576 38.7951 57.3338C39.9893 58.1476 42.0496 59.1146 45.1044 59.1146C46.4889 59.1042 47.8673 58.9275 49.2108 58.5882C49.3262 58.5596 49.4311 58.4983 49.5133 58.4114C49.5954 58.3245 49.6515 58.2157 49.6748 58.0976C49.6982 57.9795 49.6878 57.8571 49.645 57.7448C49.6022 57.6324 49.5288 57.5348 49.4332 57.4634C49.4184 57.4523 47.9373 56.3287 46.7348 54.075C46.6959 54.0019 46.6431 53.9373 46.5796 53.8849C46.5161 53.8325 46.443 53.7933 46.3646 53.7695C46.2861 53.7458 46.2038 53.7379 46.1224 53.7465C46.041 53.755 45.962 53.7798 45.89 53.8193C45.818 53.8588 45.7544 53.9123 45.7027 53.9768C45.6511 54.0413 45.6125 54.1155 45.5892 54.1951C45.5658 54.2747 45.5582 54.3582 45.5667 54.4409C45.5751 54.5235 45.5996 54.6036 45.6386 54.6767C46.2052 55.7455 46.9125 56.7312 47.7409 57.6067C44.035 58.2617 41.5447 57.4692 40.0697 56.6421C45.0608 53.7617 48.3685 49.7685 49.7606 47.8662C49.9998 47.879 50.2435 47.8867 50.4918 47.8867C52.0623 47.9013 53.6192 47.5909 55.0674 46.9744C58.1394 45.6372 60.4119 42.8811 61.8214 38.7827C61.8592 38.6726 61.8662 38.554 61.8417 38.44C61.8173 38.326 61.7622 38.2211 61.6826 38.1369C61.6031 38.0527 61.5021 37.9925 61.391 37.9628C61.2798 37.9332 61.1627 37.9353 61.0526 37.969L61.0541 37.9705ZM28.0113 58.7049C25.5812 58.7049 19.9347 57.4989 16.4442 55.3769C13.3959 53.5237 9.37186 50.586 7.17946 46.962C8.28474 46.0503 12.1111 43.6257 18.3981 47.1482C18.5374 47.2234 21.8664 49.0096 26.8583 49.8617C31.4135 50.6392 38.2399 50.7317 45.0375 46.8362C46.0922 47.2496 47.1884 47.5446 48.3064 47.716C45.6562 51.1382 38.5946 58.7049 28.0113 58.7049ZM54.5859 45.81C50.1533 47.7455 45.3011 45.5798 45.2526 45.5577C45.1625 45.5156 45.0636 45.4963 44.9646 45.5015C44.8655 45.5066 44.7691 45.5361 44.6837 45.5874C38.1338 49.4451 31.5106 49.3667 27.1078 48.6219C22.3061 47.8096 19.0185 46.0507 18.9934 46.0371C14.6598 43.6092 11.3593 43.8196 9.35278 44.4235C8.29763 44.7348 7.3111 45.2486 6.44663 45.9369C4.70525 43.7194 3.3566 41.2119 2.46076 38.5261C3.21176 37.6277 6.32489 34.5563 13.2969 35.3065C13.8565 35.3913 23.1626 36.7611 31.0261 35.4867C31.1873 35.458 31.3308 35.3661 31.4258 35.2308C31.5208 35.0956 31.5596 34.9279 31.5338 34.7639C31.508 34.6 31.4197 34.4528 31.2879 34.3544C31.1561 34.2559 30.9915 34.214 30.8295 34.2376C29.1282 34.5023 27.4126 34.662 25.6922 34.716C25.9134 34.4485 26.1209 34.1696 26.3137 33.8804C26.9684 32.8848 27.4489 31.782 27.7341 30.6206C28.2984 28.3951 30.6073 21.2286 37.4263 18.1192C36.5419 20.8576 35.1885 27.0006 39.4116 30.2855C38.6606 31.261 37.561 32.0849 36.1154 32.7455C36.0407 32.7796 35.9735 32.8282 35.9174 32.8887C35.8613 32.9492 35.8175 33.0203 35.7885 33.0979C35.7595 33.1756 35.7459 33.2583 35.7484 33.3413C35.7509 33.4243 35.7694 33.506 35.8031 33.5817C35.8367 33.6574 35.8846 33.7257 35.9442 33.7826C36.0038 33.8395 36.0739 33.8839 36.1504 33.9134C36.2269 33.9428 36.3084 33.9566 36.3902 33.9541C36.472 33.9516 36.5525 33.9327 36.6271 33.8986C39.4419 32.6125 41.1411 30.743 41.6772 28.3417C41.6794 28.3321 41.6814 28.3229 41.6829 28.3128C41.7014 28.2097 42.0987 25.7639 39.6919 23.8242C39.5624 23.7199 39.3974 23.6721 39.2332 23.6912C39.069 23.7103 38.9189 23.7949 38.8161 23.9263C38.7133 24.0576 38.6661 24.2251 38.685 24.3917C38.7038 24.5584 38.7872 24.7106 38.9166 24.815C40.6716 26.2289 40.4794 27.9245 40.4574 28.0815C40.3692 28.4687 40.2402 28.8452 40.0725 29.2044C37.466 27.0733 37.534 23.4232 38.0576 20.7173C38.9496 20.8292 40.1359 21.0067 41.3394 21.2716C41.346 21.2733 41.3536 21.2748 41.3605 21.2761C43.4453 21.7356 45.4365 22.5561 47.2467 23.7017C51.0234 26.1381 52.8585 29.5562 52.7012 33.8608C52.6547 35.0766 52.4417 36.2799 52.0685 37.4361C51.5886 37.2389 51.1216 37.011 50.6702 36.7538C50.5261 36.6715 50.3557 36.6507 50.1964 36.6959C50.0372 36.7411 49.9022 36.8487 49.8211 36.9949C49.74 37.1412 49.7195 37.3141 49.7641 37.4757C49.8086 37.6373 49.9146 37.7743 50.0588 37.8565C54.085 40.1521 58.2526 39.812 60.236 39.4525C58.9429 42.5995 57.0453 44.7356 54.5859 45.8096V45.81Z" />
+      <path
+        d="M19.7411 38.888L18.9926 39.192C18.9161 39.2226 18.8464 39.2681 18.7874 39.3261C18.7284 39.3841 18.6812 39.4533 18.6487 39.5298C18.6161 39.6063 18.5988 39.6886 18.5977 39.772C18.5966 39.8553 18.6118 39.9381 18.6423 40.0154C18.6728 40.0928 18.7181 40.1633 18.7756 40.2229C18.8331 40.2824 18.9016 40.3298 18.9772 40.3624C19.0528 40.395 19.134 40.4121 19.2161 40.4127C19.2983 40.4133 19.3797 40.3975 19.4558 40.3661L20.2044 40.062C20.2808 40.0315 20.3505 39.9859 20.4096 39.928C20.4686 39.87 20.5157 39.8007 20.5483 39.7242C20.5808 39.6477 20.5981 39.5654 20.5992 39.4821C20.6003 39.3987 20.5852 39.316 20.5546 39.2386C20.5241 39.1612 20.4788 39.0907 20.4213 39.0312C20.3639 38.9716 20.2953 38.9242 20.2197 38.8916C20.1441 38.859 20.0629 38.842 19.9808 38.8413C19.8987 38.8407 19.8172 38.8566 19.7411 38.888Z" />
+      <path
+        d="M32.4096 39.8868C32.4746 39.7345 32.478 39.5624 32.419 39.4075C32.3601 39.2527 32.2435 39.1276 32.0945 39.0592C31.9455 38.9907 31.7759 38.9845 31.6224 39.0418C31.4689 39.0991 31.3437 39.2153 31.2739 39.3654C31.2163 39.494 29.891 42.5431 32.2459 45.088C32.3633 45.2026 32.5183 45.269 32.6811 45.2742C32.8439 45.2794 33.0028 45.2231 33.127 45.1162C33.1867 45.0594 33.2349 44.9912 33.2686 44.9155C33.3023 44.8398 33.321 44.7581 33.3236 44.6751C33.3262 44.5921 33.3126 44.5093 33.2836 44.4316C33.2547 44.3539 33.2109 44.2828 33.1548 44.2223C31.3827 42.3071 32.3643 39.9902 32.4096 39.8868Z" />
+      <path
+        d="M35.962 39.1864C36.0302 39.0336 36.0357 38.8596 35.9775 38.7026C35.9192 38.5457 35.8018 38.4187 35.6513 38.3495C35.5007 38.2803 35.3292 38.2747 35.1745 38.3338C35.0199 38.393 34.8947 38.512 34.8265 38.6648C34.7691 38.7934 33.4437 41.8424 35.7988 44.3873C35.9216 44.5201 36.4473 44.616 36.6798 44.4155C36.7407 44.3595 36.7899 44.2915 36.8244 44.2158C36.8588 44.14 36.8779 44.058 36.8805 43.9746C36.8831 43.8912 36.8692 43.8081 36.8395 43.7303C36.8097 43.6525 36.7649 43.5815 36.7076 43.5217C34.9362 41.6074 35.9161 39.2921 35.962 39.1864Z" />
+      <path
+        d="M39.1683 37.8382C39.2334 37.6859 39.2368 37.5138 39.1778 37.359C39.1189 37.2041 39.0023 37.079 38.8533 37.0106C38.7043 36.9422 38.5347 36.9359 38.3812 36.9932C38.2277 37.0505 38.1025 37.1668 38.0327 37.3169C37.975 37.4455 36.6498 40.4945 39.0047 43.0396C39.1274 43.1723 39.6486 43.284 39.8856 43.0678C39.9459 43.0113 39.9944 42.9432 40.0285 42.8675C40.0625 42.7918 40.0814 42.7099 40.084 42.6268C40.0866 42.5436 40.0728 42.4607 40.0435 42.3829C40.0143 42.3052 39.97 42.2341 39.9134 42.1739C38.1405 40.2578 39.1242 37.939 39.1683 37.8382Z" />
+    </symbol>
+    <!-- svgオブジェクト03 -->
+    <symbol id="tab_icon03" viewBox="0 0 64 66">
+      <path
+        d="M16.8257 41.8201C16.2331 41.8068 15.6545 41.6342 15.1489 41.3201L4.81293 35.2024C4.34535 35.0057 3.94574 34.6727 3.6646 34.2456C3.38345 33.8185 3.2334 33.3164 3.2334 32.8028C3.2334 32.2891 3.38345 31.787 3.6646 31.3599C3.94574 30.9328 4.34535 30.5998 4.81293 30.4031L9.01773 27.9353C10.8771 26.9045 12.8518 26.1043 14.8993 25.5519L22.3233 23.74C24.4167 23.2945 26.5679 23.2002 28.6913 23.4607L38.2273 24.9154C39.9298 25.0653 41.6361 24.675 43.1105 23.7984L46.5025 21.4799C46.7139 21.3353 46.9732 21.2817 47.2234 21.331C47.4737 21.3803 47.6944 21.5285 47.8369 21.743C47.9795 21.9574 48.0323 22.2205 47.9837 22.4745C47.9351 22.7284 47.7891 22.9523 47.5777 23.097L44.1601 25.4155C42.294 26.556 40.1124 27.0484 37.9457 26.8183L28.4097 25.3895C26.5313 25.1697 24.6305 25.253 22.7777 25.6363L15.3601 27.4677C13.492 27.9757 11.6897 28.706 9.99053 29.6433L5.76013 32.0916C5.60527 32.1507 5.46648 32.2463 5.3552 32.3705C5.24392 32.4947 5.16335 32.644 5.12013 32.806C5.16335 32.9681 5.24392 33.1173 5.3552 33.2416C5.46648 33.3658 5.60527 33.4613 5.76013 33.5204L16.1025 39.638C16.2314 39.7395 16.3816 39.8093 16.5415 39.842C16.7014 39.8747 16.8666 39.8693 17.0241 39.8264C17.1424 39.7125 17.2329 39.5722 17.2885 39.4166C17.344 39.2611 17.3631 39.0945 17.3441 38.9302L17.4465 32.0981C17.4465 31.8398 17.5477 31.592 17.7277 31.4093C17.9077 31.2266 18.1519 31.124 18.4065 31.124C18.6611 31.124 18.9053 31.2266 19.0854 31.4093C19.2654 31.592 19.3665 31.8398 19.3665 32.0981L19.2833 38.9561C19.3176 39.4656 19.217 39.9751 18.9919 40.4319C18.7668 40.8886 18.4255 41.276 18.0033 41.5539C17.6405 41.7457 17.2345 41.8375 16.8257 41.8201Z" />
+      <path
+        d="M54.6371 33.4035C54.1172 33.4049 53.602 33.3035 53.1203 33.1048L51.4755 32.4554C49.8883 31.8059 47.4371 30.7019 45.9971 29.9875L43.4371 28.6887C43.3178 28.6364 43.2101 28.5601 43.1206 28.4643C43.0312 28.3686 42.9619 28.2554 42.9168 28.1316C42.8718 28.0078 42.852 27.876 42.8587 27.7443C42.8653 27.6125 42.8983 27.4835 42.9556 27.3651C43.0129 27.2466 43.0933 27.1412 43.1919 27.0552C43.2905 26.9693 43.4053 26.9045 43.5294 26.8649C43.6534 26.8254 43.784 26.8117 43.9134 26.8249C44.0428 26.8381 44.1682 26.8778 44.2819 26.9417L46.8419 28.2406C48.2435 28.9354 50.6435 30.02 52.1859 30.6499L53.8307 31.2994C54.0866 31.404 54.3604 31.4565 54.6363 31.4537C54.9121 31.451 55.1848 31.393 55.4386 31.2833C55.6924 31.1735 55.9224 31.014 56.1154 30.814C56.3085 30.6139 56.4607 30.3772 56.5635 30.1174L58.8803 24.2725C58.9235 24.1485 58.9909 24.0346 59.0786 23.9378C59.1662 23.8409 59.2723 23.7631 59.3904 23.7089C59.5085 23.6548 59.6362 23.6255 59.7658 23.6228C59.8954 23.6201 60.0242 23.644 60.1444 23.6931C60.2646 23.7423 60.3737 23.8156 60.4653 23.9087C60.5568 24.0018 60.6288 24.1128 60.6769 24.2349C60.7251 24.357 60.7484 24.4877 60.7454 24.6192C60.7424 24.7507 60.7132 24.8802 60.6595 24.9999L58.3427 30.8448C58.0446 31.596 57.5331 32.2403 56.8733 32.6959C56.2135 33.1515 55.4352 33.3978 54.6371 33.4035Z" />
+      <path
+        d="M59.5197 43.6126C59.3406 43.6094 59.1659 43.5553 59.0155 43.4566C58.8651 43.3579 58.7449 43.2185 58.6685 43.0541L56.5181 38.1898C56.2511 37.6369 55.8036 37.195 55.2517 36.9392C54.6997 36.6834 54.0775 36.6297 53.4909 36.7871L53.0109 36.9364C51.3981 37.43 48.7485 38.2353 47.1165 38.6704L43.2765 39.742C43.034 39.8023 42.7779 39.7644 42.5625 39.6363C42.347 39.5082 42.1893 39.2999 42.1227 39.0557C42.0561 38.8116 42.0858 38.5507 42.2057 38.3284C42.3255 38.1061 42.5259 37.9399 42.7645 37.8651L46.6045 36.7936C48.2301 36.339 50.8541 35.5661 52.4605 35.0726L52.9405 34.9232C53.9673 34.6415 55.0588 34.7327 56.0263 35.1809C56.9939 35.6292 57.7768 36.4063 58.2397 37.3781L60.3901 42.2423C60.4549 42.3901 60.4825 42.552 60.4702 42.7133C60.458 42.8746 60.4063 43.0302 60.32 43.1662C60.2336 43.3022 60.1152 43.4142 59.9755 43.4922C59.8358 43.5701 59.6791 43.6115 59.5197 43.6126Z" />
+      <path
+        d="M31.4239 44.0997C30.6452 44.1082 29.868 44.0276 29.1071 43.8594L20.8575 41.9111C20.6097 41.8517 20.3953 41.6948 20.2615 41.475C20.1276 41.2551 20.0853 40.9904 20.1439 40.7389C20.2025 40.4874 20.3571 40.2698 20.5737 40.134C20.7904 39.9982 21.0513 39.9553 21.2991 40.0148L29.5487 41.9631C31.3113 42.2941 33.1273 42.1781 34.8351 41.6254L36.9023 40.8395C38.7627 40.1577 40.7754 40.0248 42.7071 40.4564L45.0303 41.1772C45.2756 41.2539 45.4808 41.4263 45.6008 41.6565C45.7208 41.8866 45.7458 42.1558 45.6703 42.4047C45.5948 42.6536 45.4249 42.8618 45.198 42.9836C44.9712 43.1054 44.706 43.1308 44.4607 43.0541L42.1375 42.3332C40.6113 42.0321 39.0335 42.1509 37.5679 42.6774L35.5071 43.4438C34.1919 43.8931 32.8116 44.1149 31.4239 44.0997Z" />
+      <path
+        d="M11.5137 33.5009C12.2418 33.5009 12.8321 32.9019 12.8321 32.1631C12.8321 31.4242 12.2418 30.8253 11.5137 30.8253C10.7856 30.8253 10.1953 31.4242 10.1953 32.1631C10.1953 32.9019 10.7856 33.5009 11.5137 33.5009Z" />
+      <path
+        d="M24.1029 36.8585C23.8852 36.8594 23.6737 36.7852 23.5031 36.6482C23.3324 36.5111 23.2127 36.3193 23.1636 36.1041C23.1145 35.889 23.1389 35.6633 23.2328 35.464C23.3267 35.2648 23.4846 35.1039 23.6805 35.0076L27.3797 33.1957H24.9605H21.6773C21.5512 33.1948 21.4265 33.1688 21.3104 33.1191C21.1942 33.0693 21.0889 32.9968 21.0003 32.9058C20.9118 32.8147 20.8417 32.7068 20.7943 32.5883C20.7468 32.4698 20.7228 32.343 20.7237 32.215C20.7228 32.0866 20.7473 31.9593 20.7957 31.8407C20.8441 31.722 20.9155 31.6144 21.0055 31.5242C21.0956 31.434 21.2026 31.363 21.3202 31.3155C21.4378 31.2679 21.5635 31.2448 21.6901 31.2474H24.9733C25.9781 31.2474 27.6293 31.2474 28.6341 31.2474H29.8309C30.8677 31.2474 31.4309 31.5721 31.5845 32.228C31.7381 32.884 31.3477 33.449 30.4389 33.8971L24.5573 36.7805C24.4143 36.8436 24.2583 36.8703 24.1029 36.8585Z" />
+    </symbol>
+  </svg>
+</body>
+
 </html>

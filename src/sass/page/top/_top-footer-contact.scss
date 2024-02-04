@@ -1,14 +1,16 @@
 @use "global" as *;
 
-.page-foot-contact {
+.top-footer-contact {
   margin-top: rem(106);
+
   @include mq("md") {
     margin-top: rem(147);
   }
 }
 
-.page-foot-contact--thanks {
+.top-footer-contact--thanks {
   margin-top: rem(142);
+
   @include mq("md") {
     margin-top: rem(120);
   }

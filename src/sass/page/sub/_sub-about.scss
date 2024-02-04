@@ -2,10 +2,6 @@
 
 .sub-about__section {
   position: relative;
-  margin-top: rem(52);
-  @include mq("md") {
-    margin-top: rem(230);
-  }
 }
 
 .sub-about__section::after {

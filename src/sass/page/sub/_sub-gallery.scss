@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.sub-gallery__section-title {
-  margin-top: rem(36);
-  @include mq("md") {
-    margin-top: rem(120);
-  }
-}
-
 .sub-gallery__items {
   margin-top: rem(40);
   display: grid;
@@ -14,6 +7,7 @@
   grid-auto-flow: dense;
   gap: rem(8);
   width: 100%;
+
   @include mq("md") {
     margin-top: rem(83);
     grid-template-columns: repeat(11, 1fr);
@@ -24,43 +18,33 @@
 .sub-gallery__item {
   cursor: pointer;
   width: 100%;
+  aspect-ratio: 345 / 219;
+
+  @include mq("md") {
+    aspect-ratio: 580 / 369;
+    grid-column: span 6;
+    grid-row: span 1;
+  }
 }
 
-.sub-gallery__item--img:nth-child(6n + 1) {
+.sub-gallery__item:nth-child(6n + 1) {
   aspect-ratio: 345 / 523;
+
   @include mq("md") {
     aspect-ratio: 492 / 746;
     grid-column: span 5;
-    grid-row: 1 / span 2;
+    grid-row: span 2;
     height: 100%;
   }
 }
 
-.sub-gallery__item--img:nth-child(6n + 2),
-.sub-gallery__item--img:nth-child(6n + 3) {
-  aspect-ratio: 345 / 219;
-  @include mq("md") {
-    aspect-ratio: 580 / 369;
-    grid-column: 6 / span 6;
-    grid-row: span 1;
-  }
-}
-.sub-gallery__item--img:nth-child(6n + 4),
-.sub-gallery__item--img:nth-child(6n + 5) {
-  aspect-ratio: 345 / 219;
-  @include mq("md") {
-    aspect-ratio: 580 / 369;
-    grid-column: 1 / span 6;
-    grid-row: span 1;
-  }
-}
-
-.sub-gallery__item--img:nth-child(6n + 6) {
+.sub-gallery__item:nth-child(6n + 6) {
   aspect-ratio: 345 / 523;
+
   @include mq("md") {
     aspect-ratio: 492 / 746;
-    grid-column: 7 / span 5;
-    grid-row: 3 / span 2;
+    grid-column: span 5;
+    grid-row: span 2;
     height: 100%;
   }
 }
@@ -71,6 +55,7 @@
   height: 100%;
   display: block;
 }
+
 /*=========================================================
 # モーダルウインドウ
 =========================================================*/
@@ -91,16 +76,13 @@
 .sub-gallery__modal img {
   display: block;
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
-  max-width: calc(100% - 24px * 2);
-  max-height: rem(586);
+  max-width: 80%;
+  max-height: 80%;
   width: 100%;
   height: 100%;
-  @include mq("md") {
-    width: rem(920);
-  }
 }

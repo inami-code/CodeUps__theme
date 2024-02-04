@@ -3,6 +3,7 @@
 .info {
   padding: rem(83) 0;
   background: $light-green;
+
   @include mq("md") {
     padding: rem(102) 0;
   }
@@ -51,6 +52,7 @@
 
 .info__lead {
   margin-top: rem(24);
+
   @include mq("md") {
     margin-top: rem(-4);
     width: 47.7%;
@@ -64,6 +66,7 @@
   color: $black;
   padding-bottom: rem(6);
   border-bottom: 1px solid $green;
+
   @include mq("md") {
     font-size: rem(24);
     padding-bottom: rem(4);

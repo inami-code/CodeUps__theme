@@ -16,6 +16,7 @@
 
 .mv-movie-bg__container {
   display: none;
+
   @include mq("md") {
     display: flex;
     height: 100vh;
@@ -40,10 +41,12 @@
     opacity: 0;
     transform: translateY(100px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     visibility: hidden;
     opacity: 0;
@@ -76,10 +79,12 @@
     opacity: 0;
     transform: translateY(150px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     visibility: hidden;
     opacity: 0;
@@ -104,9 +109,11 @@
   width: 100%;
   background-color: #fff;
   z-index: 100;
-  animation-name: fadeOut; /* 定義したアニメーションを指定 */
+  animation-name: fadeOut;
+  /* 定義したアニメーションを指定 */
   animation-duration: 4.5s;
-  animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+  animation-fill-mode: forwards;
+  /* アニメーション終了後に最終ステップのスタイルを維持 */
   opacity: 1;
 }
 
@@ -114,9 +121,11 @@
   0% {
     opacity: 1;
   }
+
   60% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

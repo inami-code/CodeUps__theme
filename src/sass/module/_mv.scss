@@ -18,6 +18,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+
   @include mq("md") {
     top: 55.8%;
   }
@@ -46,6 +47,7 @@
   text-align: center;
   color: $white;
   margin-top: rem(8);
+
   @include mq("md") {
     margin-top: rem(12);
   }
@@ -58,6 +60,7 @@
 
 .mv__image {
   aspect-ratio: 375 / 667;
+
   @include mq("md") {
     aspect-ratio: 1440 / 768;
   }

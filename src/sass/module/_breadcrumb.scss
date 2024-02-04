@@ -8,6 +8,7 @@
   margin-top: 0;
   padding-top: rem(88);
   background-color: $green;
+
   @include mq("md") {
     padding-top: rem(99);
   }

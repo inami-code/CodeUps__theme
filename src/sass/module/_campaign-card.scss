@@ -54,6 +54,7 @@
   padding-left: rem(16);
   padding-right: rem(16);
   margin-top: auto;
+
   @include mq("md") {
     padding-bottom: rem(40);
   }
@@ -65,6 +66,7 @@
   color: $black;
   text-align: center;
   margin-top: rem(12);
+
   @include mq("md") {
     font-size: rem(16);
     margin-top: rem(16);
@@ -77,6 +79,7 @@
   align-items: end;
   gap: rem(18);
   margin-top: rem(12);
+
   @include mq("md") {
     gap: rem(30);
   }
@@ -91,6 +94,7 @@
   text-decoration: line-through;
   text-decoration-style: solid;
   text-decoration-color: #c94800;
+
   @include mq("md") {
     font-size: clamp(rem(16), 10vw, rem(24));
   }

@@ -2,6 +2,7 @@
 
 .mv-movie__text {
   display: none;
+
   @include mq("md") {
     display: flex;
     align-items: center;
@@ -15,9 +16,12 @@
     left: 0;
     right: 0;
     z-index: 100000;
-    animation-name: fadeOut; /* 定義したアニメーションを指定 */
-    animation-duration: 3s; /* アニメーションの時間 */
-    animation-fill-mode: forwards; /* アニメーション終了後に最終ステップのスタイルを維持 */
+    animation-name: fadeOut;
+    /* 定義したアニメーションを指定 */
+    animation-duration: 3s;
+    /* アニメーションの時間 */
+    animation-fill-mode: forwards;
+    /* アニメーション終了後に最終ステップのスタイルを維持 */
     background-color: $white;
     visibility: hidden;
     opacity: 0;
@@ -35,9 +39,11 @@
   0% {
     opacity: 1;
   }
+
   60% {
     opacity: 1;
   }
+
   100% {
     visibility: hidden;
     opacity: 0;
