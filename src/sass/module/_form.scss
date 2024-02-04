@@ -1,5 +1,8 @@
 @use "global" as *;
 
+.form{
+  text-align: center;
+}
 
 .form__item {
   font-size: rem(16);
@@ -87,6 +90,7 @@ select {
   font-size: rem(16);
   padding-left: rem(23);
   position: relative;
+  text-align: left;
 }
 
 [type="checkbox"]+span::before {
@@ -153,10 +157,11 @@ textarea {
   padding: 0 rem(30);
   font-size: rem(14);
   color: $black;
+  text-align: center;
+  display: inline-block;
 
   @include mq("md") {
     margin-top: rem(80);
-    text-align: center;
     padding: 0;
   }
 }
@@ -176,10 +181,6 @@ textarea {
   height: rem(22);
   top: 0;
   transform: translateY(0%);
-
-  @include mq("md") {
-    left: rem(162);
-  }
 }
 
 .form__privacy [type="checkbox"]+span::after {
