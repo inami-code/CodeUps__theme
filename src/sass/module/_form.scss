@@ -187,10 +187,6 @@ textarea {
   width: calc(rem(18) * 0.9);
   height: calc(rem(18) * 0.5);
   margin-left: 0.2em;
-
-  @include mq("md") {
-    left: rem(162);
-  }
 }
 
 .form__button {
